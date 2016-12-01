@@ -1,0 +1,561 @@
+//Armor
+item.ender_rite_helmet.name=Ender-rite Helmet
+item.ender_rite_chestplate.name=Ender-rite Chestplate
+item.ender_rite_leggings.name=Ender-rite Leggings
+item.ender_rite_boots.name=Ender-rite Boots
+item.ruby_helmet.name=Ruby Helmet
+item.ruby_chestplate.name=Ruby Chestplate
+item.ruby_leggings.name=Ruby Leggings
+item.ruby_boots.name=Ruby Boots
+    //Color Armor
+item.black_helmet.name=Black Helmet
+item.black_chestplate.name=Black Chestplate
+item.black_leggings.name=Black Leggings
+item.black_boots.name=Black Boots
+
+item.blue_helmet.name=Blue Helmet
+item.blue_chestplate.name=Blue Chestplate
+item.blue_leggings.name=Blue Leggings
+item.blue_boots.name=Blue Boots
+
+item.cyan_helmet.name=Cyan Helmet
+item.cyan_chestplate.name=Cyan Chestplate
+item.cyan_leggings.name=Cyan Leggings
+item.cyan_boots.name=Cyan Boots
+
+item.green_helmet.name=Green Helmet
+item.green_chestplate.name=Green Chestplate
+item.green_leggings.name=Green Leggings
+item.green_boots.name=Green Boots
+
+item.lime_helmet.name=Lime Helmet
+item.lime_chestplate.name=Lime Chestplate
+item.lime_leggings.name=Lime Leggings
+item.lime_boots.name=Lime Boots
+
+item.magenta_helmet.name=Magenta Helmet
+item.magenta_chestplate.name=Magenta Chestplate
+item.magenta_leggings.name=Magenta Leggings
+item.magenta_boots.name=Magenta Boots
+
+item.orange_helmet.name=Orange Helmet
+item.orange_chestplate.name=Orange Chestplate
+item.orange_leggings.name=Orange Leggings
+item.orange_boots.name=Orange Boots
+
+item.pink_helmet.name=Pink Helmet
+item.pink_chestplate.name=Pink Chestplate
+item.pink_leggings.name=Pink Leggings
+item.pink_boots.name=Pink Boots
+
+item.purple_helmet.name=Purple Helmet
+item.purple_chestplate.name=Purple Chestplate
+item.purple_leggings.name=Purple Leggings
+item.purple_boots.name=Purple Boots
+
+item.red_helmet.name=Red Helmet
+item.red_chestplate.name=Red Chestplate
+item.red_leggings.name=Red Leggings
+item.red_boots.name=Red Boots
+
+item.white_helmet.name=White Helmet
+item.white_chestplate.name=White Chestplate
+item.white_leggings.name=White Leggings
+item.white_boots.name=White Boots
+
+item.yellow_helmet.name=Yellow Helmet
+item.yellow_chestplate.name=Yellow Chestplate
+item.yellow_leggings.name=Yellow Leggings
+item.yellow_boots.name=Yellow Boots
+    //Gem Armor
+item.Amethyst_Helmet.name=Amethyst Helmet
+item.Amethyst_Chestplate.name=Amethyst Chestplate
+item.Amethyst_Leggings.name=Amethyst Leggings
+item.Amethyst_Boots.name=Amethyst Boots
+
+item.Carnelian_Helmet.name=Carnelian Helmet
+item.Carnelian_Chestplate.name=Carnelian Chestplate
+item.Carnelian_Leggings.name=Carnelian Leggings
+item.Carnelian_Boots.name=Carnelian Boots
+
+item.Jade_Helmet.name=Jade Helmet
+item.Jade_Chestplate.name=Jade Chestplate
+item.Jade_Leggings.name=Jade Leggings
+item.Jade_Boots.name=Jade Boots
+
+item.Jasper_Helmet.name=Jasper Helmet
+item.Jasper_Chestplate.name=Jasper Chestplate
+item.Jasper_Leggings.name=Jasper Leggings
+item.Jasper_Boots.name=Jasper Boots
+
+item.Malachite_Helmet.name=Malachite Helmet
+item.Malachite_Chestplate.name=Malachite Chestplate
+item.Malachite_Leggings.name=Malachite Leggings
+item.Malachite_Boots.name=Malachite Boots
+
+item.Moonstone_Helmet.name=Moonstone Helmet
+item.Moonstone_Chestplate.name=Moonstone Chestplate
+item.Moonstone_Leggings.name=Moonstone Leggings
+item.Moonstone_Boots.name=Moonstone Boots
+
+item.Onyx_Helmet.name=Onyx Helmet
+item.Onyx_Chestplate.name=Onyx Chestplate
+item.Onyx_Leggings.name=Onyx Leggings
+item.Onyx_Boots.name=Onyx Boots
+
+item.Peridot_Helmet.name=Peridot Helmet
+item.Peridot_Chestplate.name=Peridot Chestplate
+item.Peridot_Leggings.name=Peridot Leggings
+item.Peridot_Boots.name=Peridot Boots
+
+item.Sapphire_Helmet.name=Sapphire Helmet
+item.Sapphire_Chestplate.name=Sapphire Chestplate
+item.Sapphire_Leggings.name=Sapphire Leggings
+item.Sapphire_Boots.name=Sapphire Boots
+
+item.Tanzanite_Helmet.name=Tanzanite Helmet
+item.Tanzanite_Chestplate.name=Tanzanite Chestplate
+item.Tanzanite_Leggings.name=Tanzanite Leggings
+item.Tanzanite_Boots.name=Tanzanite Boots
+
+item.Tiger_Eye_Helmet.name=Tiger Eye Helmet
+item.Tiger_Eye_Chestplate.name=Tiger Eye Chestplate
+item.Tiger_Eye_Leggings.name=Tiger Eye Leggings
+item.Tiger_Eye_Boots.name=Tiger Eye Boots
+
+item.Topaz_Helmet.name=Topaz Helmet
+item.Topaz_Chestplate.name=Topaz Chestplate
+item.Topaz_Leggings.name=Topaz Leggings
+item.Topaz_Boots.name=Topaz Boots
+//Tools
+item.ender_rite_pickaxe.name=Ender-rite Pickaxe
+item.ender_rite_axe.name=Ender-rite Axe
+item.ender_rite_spade.name=Ender-rite Spade
+item.ender_rite_sword.name=Ender-rite Sword
+item.ender_rite_hoe.name=Ender-rite Hoe
+item.jeff_knife.name=Jeff's Knife
+item.Dry-Axe.name=Dry-Axe
+    //Nightmare Swords
+item.black_nightmare_sword.name=Black Nightmare Sword
+item.blue_nightmare_sword.name=Blue Nightmare Sword
+item.cyan_nightmare_sword.name=Cyan Nightmare Sword
+item.diamond_nightmare_sword.name=Diamond Nightmare Sword
+item.gold_nightmare_sword.name=Gold Nightmare Sword
+item.green_nightmare_sword.name=Green Nightmare Sword
+item.iron_nightmare_sword.name=Iron Nightmare Sword
+item.lime_nightmare_sword.name=Lime Nightmare Sword
+item.magenta_nightmare_sword.name=Magenta Nightmare Sword
+item.orange_nightmare_sword.name=Orange Nightmare Sword
+item.pink_nightmare_sword.name=Pink Nightmare Sword
+item.purple_nightmare_sword.name=Purple Nightmare Sword
+item.red_nightmare_sword.name=Red Nightmare Sword
+item.stone_nightmare_sword.name=Stone Nightmare Sword
+item.white_nightmare_sword.name=White Nightmare Sword
+item.wooden_nightmare_sword.name=Wooden Nightmare Sword
+item.yellow_nightmare_sword.name=Yellow Nightmare Sword
+item.ender_rite_nightmare_sword.name=Ender-rite Nightmare Sword
+//Items
+item.ender_rite_shard.name=Ender-rite Shard
+item.bluestone.name=Bluestone
+item.Ender_rite_bow.name=Ender-rite Bow
+item.Ender_rite_elytra.name=Ender-rite Elytra
+item.wing_right.name=Wing Right
+item.wing_left.name=Wing Left
+item.FlintAndIce.name=Flint and Ice
+item.scythe.name=Scythe
+item.Blank_Part.name=Blank Pannel
+item.Blue_Part.name=Blue Pannel
+item.Green_Part.name=Green Pannel
+item.Red_Part.name=Red Pannel
+item.Nightmare_Gem.name=Nightmare Gem
+  //SEEDS
+item.seeds_white_melon.name=White Melon Seeds
+item.seeds_blue_melon.name=Blue Melon Seeds
+item.seeds_purple_melon.name=Purple Melon Seeds
+item.seeds_red_melon.name=Red Melon Seeds
+item.seeds_yellow_melon.name=Yellow Melon Seeds
+  //Gems
+item.amethyst.name=Amethyst
+item.carnelian.name=Carnelian
+item.jade.name=Jade
+item.jasper.name=Jasper
+item.malachite.name=Malachite
+item.moonstone.name=Moonstone
+item.onyx.name=Onyx
+item.peridot.name=Peridot
+item.sapphire.name=Sapphire
+item.tanzanite.name=Tanzanite
+item.tiger_eye.name=Tiger Eye
+item.topaz.name=Topaz
+item.vermarine.name=Vermarine
+  //Color shards
+item.rainbow_shard.name=Rainbow Shard
+item.black_shard.name=Black Shard
+item.blue_shard.name=Blue Shard
+item.cyan_shard.name=Cyan Shard
+item.green_shard.name=Green Shard
+item.lime_shard.name=Lime Shard
+item.magenta_shard.name=Magenta Shard
+item.orange_shard.name=Orange Shard
+item.pink_shard.name=Pink Shard
+item.purple_shard.name=Purple Shard
+item.red_shard.name=Red Shard
+item.white_shard.name=White Shard
+item.yellow_shard.name=Yellow Shard
+
+//Foods
+item.bubblegum.name=Bubblegum
+item.ender_rite_apple.name=Ender-rite Apple
+    //Melon
+item.black_melon.name=Black Melon
+item.blue_melon.name=Blue Melon
+item.cyan_melon.name=Cyan Melon
+item.green_melon.name=Green Melon
+item.lime_melon.name=Lime Melon
+item.magenta_melon.name=Magenta Melon
+item.orange_melon.name=Orange Melon
+item.pink_melon.name=Pink Melon
+item.purple_melon.name=Purple Melon
+item.red_melon.name=Red Melon
+item.violet_melon.name=Violet Melon
+item.white_melon.name=White Melon
+item.yellow_melon.name=Yellow Melon
+    //Ice Food
+item.ice_beef.name=Ice Beef
+item.ice_chicken.name=Ice Chicken
+item.ice_porkchop.name=Ice Porkchop
+
+//Blocks
+tile.ender_rite_ore.name=Ender-rite Ore
+tile.ender_rite_block.name=Ender-rite Block
+tile.ender_rite_stairs.name=Ender-rite Stairs
+tile.ender_rite_slab.name=Ender-rite Slab
+tile.ender_rite_slab_double.name=Ender-rite Slab Double
+tile.iron_ore.name=End Iron Ore
+tile.coal_ore.name=End Coal Ore
+tile.gold_ore.name=End Gold Ore
+tile.diamond_ore.name=End Diamond Ore
+tile.emerald_ore.name=End Emerald Ore
+tile.bluestone_ore.name=Bluestone Ore
+tile.lit_bluestone_ore.name=Lit Bluestone Ore
+tile.bluestone_torch.name=Bluestone Torch
+tile.unlit_bluestone_torch.name=Unlit Bluestone Torch
+tile.bluestone_wire.name=Bluestone Wire
+tile.end_ruby_ore.name=End Ruby Ore
+tile.ruby_block.name=Ruby Block
+tile.end_lapis_ore.name=End Lapis Ore
+tile.nightmare_ore.name=Nightmare Ore
+tile.nightmare_block.name=Nightmare Block
+tile.nightmare_dirt.name=Nightmare Dirt
+tile.nightmare_grass.name=Nightmare Grass
+tile.nightmare_stone.name=Nightmare Stone
+tile.powered_repeater.name=Powered Repeater
+tile.unpowered_repeater.name=Unpowered Repeater
+tile.bubblegum_ore.name=Bubblegum Ore
+tile.dark_brick.name=Dark Brick
+tile.dark_brick_stairs.name=Dark Brick Stairs
+tile.light_brick.name=Light Brick
+tile.light_brick_stairs.name=Light Brick Stairs
+tile.mixed_brick.name=Mixed Brick
+tile.mixed_brick_stairs.name=Mixed Brick Stairs
+tile.aged_brick.name=Aged Brick
+tile.aged_brick_stairs.name=Aged Brick Stairs
+tile.clay_dark.name=Dark Clay
+tile.clay_light.name=Light Clay
+    //Ice
+tile.ice_stone.name=Ice Stone
+tile.ice_stone_polished.name=Ice Stone Polished
+tile.ice_stone_pillar.name=Ice Stone Pillar
+tile.ice_stonebrick.name=Ice Stonebrick
+tile.ice_cobblestone.name=Ice Cobblestone
+tile.ice_planks.name=Ice Planks
+tile.ice_log.name=Ice Log
+tile.ice_leaves.name=Ice Leaves
+tile.ice_dirt.name=Ice Dirt
+tile.ice_grass.name=Ice Grass
+tile.ice_fire.name=Cold Fire
+tile.ice_portal.name=Ice Portal
+        //Stairs
+tile.ice_stone_stairs.name=Ice Stone Stairs
+tile.ice_stonebrick_stairs.name=Ice Stonebrick Stairs
+tile.ice_cobblestone_stairs.name=Ice Cobblestone Stairs
+    //Fire
+tile.fire_stone.name=Fire Stone
+tile.fire_stone_polished.name=Fire Stone Polished
+tile.fire_stone_pillar.name=Fire Stone Pillar
+tile.fire_stonebrick.name=Fire Stonebrick
+tile.fire_cobblestone.name=Fire Cobblestone
+tile.fire_planks.name=Fire Planks
+tile.fire_log.name=Fire Log
+tile.fire_sapling.name=Fire Sapling
+tile.fire_leaves.name=Fire Leaves
+tile.fire_dirt.name=Fire Dirt
+tile.fire_grass.name=Fire Grass
+tile.burned_fire.name=Hot Fire
+tile.fire_portal.name=Fire Portal
+        //Stairs
+tile.fire_stone_stairs.name=Fire Stone Stairs
+tile.fire_stonebrick_stairs.name=Fire Stonebrick Stairs
+tile.fire_cobblestone_stairs.name=Fire Cobblestone Stairs
+    //Nightmare
+tile.nightmare_stone.name=Nightmare Stone
+tile.nightmare_stone_polished.name=Nightmare Stone Polished
+tile.nightmare_stone_pillar.name=Nightmare Stone Pillar
+tile.nightmare_stonebrick.name=Nightmare Stonebrick
+tile.nightmare_cobblestone.name=Nightmare Cobblestone
+tile.nightmare_ore.name=Nightmare Ore
+tile.nightmare_block.name=Nightmare Block
+tile.nightmare_dirt.name=Nightmare Dirt
+tile.nightmare_grass.name=Nightmare Grass
+tile.nightmare_fire.name=Flames of Fear
+tile.nightmare_portal.name=Nightmare Portal
+        //Stairs
+tile.nightmare_stone_stairs.name=Nightmare Stone Stairs
+tile.nightmare_stonebrick_stairs.name=Nightmare Stonebrick Stairs
+tile.nightmare_cobblestone_stairs.name=Nightmare Cobblestone Stairs
+    //Sandstone
+tile.sandstone_polished.name=Sandstone Polished
+tile.sandstone_pillar.name=Sandstone Pillar
+tile.sandstone_brick.name=Sandstone Brick
+tile.sandstone_cobblestone.name=Sandstone Cobblestone
+        //Stairs
+tile.sandstone_brick_stairs.name=Sandstone Brick Stairs
+tile.sandstone_cobblestone_stairs.name=Sandstone Cobblestone Stairs
+    //Marble
+tile.marble.name=Marble
+tile.marble_polished.name=Marble Polished
+tile.marble_pillar.name=Marble Pillar
+tile.marble_brick.name=Marble Brick
+tile.marble_cobblestone.name=Marble Cobblestone
+        //Stairs
+tile.marble_stairs.name=Marble Stairs
+tile.marble_brick_stairs.name=Marble Brick Stairs
+tile.marble_cobblestone_stairs.name=Marble Cobblestone Stairs
+    //Granite
+tile.granite.name=Granite
+tile.granite_polished.name=Granite Polished
+tile.granite_pillar.name=Granite Pillar
+tile.granite_brick.name=Granite Brick
+tile.granite_cobblestone.name=Granite Cobblestone
+        //Stairs
+tile.granite_stairs.name=Granite Stairs
+tile.granite_brick_stairs.name=Granite Brick Stairs
+tile.granite_cobblestone_stairs.name=Granite Cobblestone Stairs
+    //Diorite
+tile.diorite.name=Diorite
+tile.diorite_polished.name=Diorite Polished
+tile.diorite_pillar.name=Diorite Pillar
+tile.diorite_brick.name=Diorite Brick
+tile.diorite_cobblestone.name=Diorite Cobblestone
+        //Stairs
+tile.diorite_stairs.name=Diorite Stairs
+tile.diorite_brick_stairs.name=Diorite Brick Stairs
+tile.diorite_cobblestone_stairs.name=Diorite Cobblestone Stairs
+    //Andesite
+tile.andesite.name=Andesite
+tile.andesite_polished.name=Andesite Polished
+tile.andesite_pillar.name=Andesite Pillar
+tile.andesite_brick.name=Andesite Brick
+tile.andesite_cobblestone.name=Andesite Cobblestone
+        //Stairs
+tile.andesite_stairs.name=Andesite Stairs
+tile.andesite_brick_stairs.name=Andesite Brick Stairs
+tile.andesite_cobblestone_stairs.name=Andesite Cobblestone Stairs
+    //Slate
+tile.slate.name=Slate
+tile.slate_polished.name=Slate Polished
+tile.slate_pillar.name=Slate Pillar
+tile.slate_brick.name=Slate Brick
+tile.slate_cobblestone.name=Slate Cobblestone
+        //Stairs
+tile.slate_stairs.name=Slate Stairs
+tile.slate_brick_stairs.name=Slate Brick Stairs
+tile.slate_cobblestone_stairs.name=Slate Cobblestone Stairs
+    //Stone
+tile.stone_polished.name=Stone Polished
+tile.stone_pillar.name=Stone Pillar
+    //Red Sandstone
+tile.red_sandstone.name=Red Sandstone
+tile.red_sandstone_polished.name=Red Sandstone Polished
+tile.red_sandstone_pillar.name=Red Sandstone Pillar
+tile.red_sandstone_brick.name=Red Sandstone Brick
+tile.red_sandstone_cobblestone.name=Red Sandstone Cobblestone
+        //Stairs
+tile.red_sandstone_stairs.name=Red Sandstone Stairs
+tile.red_sandstone_brick_stairs.name=Red Sandstone Brick Stairs
+tile.red_sandstone_cobblestone_stairs.name=Red Sandstone Cobblestone Stairs
+    //Basalt
+tile.basalt.name=Basalt
+tile.basalt_polished.name=Basalt Polished
+tile.basalt_pillar.name=Basalt Pillar
+tile.basalt_brick.name=Basalt Brick
+tile.basalt_cobblestone.name=Basalt Cobblestone
+        //Stairs
+tile.basalt_stairs.name=Basalt Stairs
+tile.basalt_brick_stairs.name=Basalt Brick Stairs
+tile.basalt_cobblestone_stairs.name=Basalt Cobblestone Stairs
+    //Rhyolite
+tile.rhyolite.name=Rhyolite
+tile.rhyolite_polished.name=Rhyolite Polished
+tile.rhyolite_pillar.name=Rhyolite Pillar
+tile.rhyolite_brick.name=Rhyolite Brick
+tile.rhyolite_cobblestone.name=Rhyolite Cobblestone
+        //Stairs
+tile.rhyolite_stairs.name=Rhyolite Stairs
+tile.rhyolite_brick_stairs.name=Rhyolite Brick Stairs
+tile.rhyolite_cobblestone_stairs.name=Rhyolite Cobblestone Stairs
+    //Dacite
+tile.dacite.name=Dacite
+tile.dacite_polished.name=Dacite Polished
+tile.dacite_pillar.name=Dacite Pillar
+tile.dacite_brick.name=Dacite Brick
+tile.dacite_cobblestone.name=Dacite Cobblestone
+        //Stairs
+tile.dacite_stairs.name=Dacite Stairs
+tile.dacite_brick_stairs.name=Dacite Brick Stairs
+tile.dacite_cobblestone_stairs.name=Dacite Cobblestone Stairs
+    //Trachyte
+tile.trachyte.name=Trachyte
+tile.trachyte_polished.name=Trachyte Polished
+tile.trachyte_pillar.name=Trachyte Pillar
+tile.trachyte_brick.name=Trachyte Brick
+tile.trachyte_cobblestone.name=Trachyte Cobblestone
+        //Stairs
+tile.trachyte_stairs.name=Trachyte Stairs
+tile.trachyte_brick_stairs.name=Trachyte Brick Stairs
+tile.trachyte_cobblestone_stairs.name=Trachyte Cobblestone Stairs
+    //Color ores/blocks
+tile.black_ore.name=Black Ore
+tile.black_block.name=Black Block
+tile.blue_ore.name=Blue Ore
+tile.blue_block.name=Blue Block
+tile.cyan_ore.name=Cyan Ore
+tile.cyan_block.name=Cyan Block
+tile.green_ore.name=Green Ore
+tile.green_block.name=Green Block
+tile.lime_ore.name=Lime Ore
+tile.lime_block.name=Lime Block
+tile.magenta_ore.name=Magenta Ore
+tile.magenta_block.name=Magenta Block
+tile.orange_ore.name=Orange Ore
+tile.orange_block.name=Orange Block
+tile.pink_ore.name=Pink Ore
+tile.pink_block.name=Pink Block
+tile.purple_ore.name=Purple Ore
+tile.purple_block.name=Purple Block
+tile.red_ore.name=Red Ore
+tile.red_block.name=Red Block
+tile.white_ore.name=White Ore
+tile.white_block.name=White Block
+tile.yellow_ore.name=Yellow Ore
+tile.yellow_block.name=Yellow Block
+        //Bricks
+tile.black_brick.name=Black Brick
+tile.blue_brick.name=Blue Brick
+tile.cyan_brick.name=Cyan Brick
+tile.green_brick.name=Green Brick
+tile.lime_brick.name=Lime Brick
+tile.magenta_brick.name=Magenta Brick
+tile.orange_brick.name=Orange Brick
+tile.pink_brick.name=Pink Brick
+tile.purple_brick.name=Purple Brick
+tile.red_brick.name=Red Brick
+tile.white_brick.name=White Brick
+tile.yellow_brick.name=Yellow Brick
+            //Stairs
+tile.black_brick_stairs.name=Black Brick Stairs
+tile.blue_brick_stairs.name=Blue Brick Stairs
+tile.cyan_brick_stairs.name=Cyan Brick Stairs
+tile.green_brick_stairs.name=Green Brick Stairs
+tile.lime_brick_stairs.name=Lime Brick Stairs
+tile.magenta_brick_stairs.name=Magenta Brick Stairs
+tile.orange_brick_stairs.name=Orange Brick Stairs
+tile.pink_brick_stairs.name=Pink Brick Stairs
+tile.purple_brick_stairs.name=Purple Brick Stairs
+tile.red_brick_stairs.name=Red Brick Stairs
+tile.white_brick_stairs.name=White Brick Stairs
+tile.yellow_brick_stairs.name=Yellow Brick Stairs
+    //Gem Ores/Blocks
+tile.amethyst_ore.name=Amethyst Ore
+tile.carnelian_ore.name=Carnelian Ore
+tile.jade_ore.name=Jade Ore
+tile.jasper_ore.name=Jasper Ore
+tile.malachite_ore.name=Malachite Ore
+tile.moonstone_ore.name=Moonstone Ore
+tile.onyx_ore.name=Onyx Ore
+tile.peridot_ore.name=Peridot Ore
+tile.sapphire_ore.name=Sapphire Ore
+tile.tanzanite_ore.name=Tanzanite Ore
+tile.tiger_eye_ore.name=Tiger Eye Ore
+tile.topaz_ore.name=Topaz Ore
+tile.vermarine_ore.name=Vermarine Ore
+        //Ores
+tile.amethyst_block.name=Amethyst Block
+tile.carnelian_block.name=Carnelian Block
+tile.jade_block.name=Jade Block
+tile.jasper_block.name=Jasper Block
+tile.malachite_block.name=Malachite Block
+tile.moonstone_block.name=Moonstone Block
+tile.onyx_block.name=Onyx Block
+tile.peridot_block.name=Peridot Block
+tile.sapphire_block.name=Sapphire Block
+tile.tanzanite_block.name=Tanzanite Block
+tile.tiger_eye_block.name=Tiger Eye Block
+tile.topaz_block.name=Topaz Block
+tile.vermarine_block.name=Vermarine Block
+tile.vermarine_stairs.name=Vermarine Stairs
+tile.vermarine_slab.name=Vermarine Slab
+
+//Creative Tabs
+itemGroup.tabBlocks=Overload Blocks
+itemGroup.tabItems=Overload Items
+itemGroup.tabTech=Overload Technology
+itemGroup.tabTransport=Overload Transportation
+itemGroup.tabMisc=Overload Misc
+itemGroup.tabFood=Overload Food
+itemGroup.tabTools=Overload Tools
+itemGroup.tabArmor=Overload Armor
+itemGroup.tabWeapons=Overload Weapons
+
+//Entity
+    //Monsters
+entity.overload.Zombie Alex.name=Zombie Alex
+entity.overload.Zombie jeb_.name=Zombie jeb_
+entity.overload.Zombie Notch.name=Zombie Notch
+entity.overload.Zombie Dinnerbone.name=Zombie Dinnerbone
+entity.overload.Zombie DryAxe.name=Zombie DryAxe
+entity.overload.Zombie cubic_control.name=Zombie cubic_control
+entity.overload.Zombie super_sonic_10.name=Zombie super_sonic_10
+entity.overload.Zombie Cow.name=Zombie Cow
+entity.overload.Jeff The Killer.name=Jeff The Killer
+entity.overload.Injured Steve.name=Injured Steve
+entity.overload.Mantis Man.name=Mantis Man
+entity.overload.Stalker.name=Stalker
+        //Nightmares
+entity.overload.Nightmare Cubic.name=Nightmare Cubic
+entity.overload.Dead Angel.name=Dead Angel
+entity.overload.Stalking Warrior.name=Stalking Warrior
+entity.overload.Unknown.name=Unknown
+entity.overload.Nightmare Villager.name=Nightmare Villager
+entity.overload.Nightmare Steve.name=Nightmare Steve
+entity.overload.Nightmare Alex.name=Nightmare Alex
+entity.overload.Nightmare Herobrine.name=Nightmare Herobrine
+entity.overload.Null.name=Null
+entity.overload.Pumpkin.name=Pumpkin
+entity.overload.Headless.name=Headless
+entity.overload.Fake Headless Horseman.name=Fake Headless Horseman
+entity.overload.Nightmare.name=Nightmare
+        //Dragons
+entity.overload.Dragon Phantom White.name=Dragon Phantom White
+entity.overload.Dragon Phantom Blue.name=Dragon Phantom Blue
+entity.overload.Dragon Phantom Green.name=Dragon Phantom Green
+entity.overload.Dragon Phantom Light Blue.name=Dragon Phantom Light Blue
+entity.overload.Dragon Phantom Red.name=Dragon Phantom Red
+entity.overload.Dragon Phantom Yellow.name=Dragon Phantom Yellow
+        //Bosses
+entity.overload.Death.name=Death
+    //Animals
+entity.overload.Frosted Cow.name=Frosted Cow
+entity.overload.Frosted Pig.name=Frosted Pig
+entity.overload.Frosted Chicken.name=Frosted Chicken
+entity.overload.Frosted Sheep.name=Frosted Sheep

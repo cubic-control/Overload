@@ -1,0 +1,31 @@
+//Deutsch
+//German
+
+//Entity
+entity.Zombie_Alex.name=Zombie Alex
+entity.Zombie_Jeb.name=Zombie Jeb
+entity.Zombie_Notch.name=Zombie Notch
+entity.Zombie_Dinnerbone.name=Dinnerbone
+entity.Zombie_DryAxe.name=Zombie DryAxe
+entity.Zombie_cubic.name=Zombie cubic
+entity.EntityJeff.name=Jeff Das Mörder
+entity.Zombie_Cow.name=Zombie Kuh
+
+//Creative Tabs
+itemGroup.tabBlocks=Overload Die Blöcke
+itemGroup.tabItems=Overload Artikel
+itemGroup.tabTech=Overload Technologie
+itemGroup.tabTransport=Overload Transport
+itemGroup.tabMisc=Overload Verschiedenes
+itemGroup.tabFood=Overload Essen
+itemGroup.tabTools=Overload Werkzeuge
+itemGroup.tabCombat=Overload Kampf
+
+//Tools
+item.ender_rite_pickaxe.name=Ender-rite Spitzhacke
+item.ender_rite_axe.name=Ender-rite Axt
+item.ender_rite_spade.name=Ender-rite Spaten
+item.ender_rite_sword.name=Ender-rite Schwert
+item.ender_rite_hoe.name=Ender-rite wie
+item.jeff_knife.name=Jeff's Messer
+item.Dry-Axe.name=Trocken-Axt

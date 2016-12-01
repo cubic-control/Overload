@@ -1,0 +1,18 @@
+{
+      "Jeff.step": {
+    "category" : "master",
+    "sounds" : [ "Jeff_Steps" ]
+    },
+      "Jeff.death": {
+    "category" : "master",
+    "sounds" : [ "Jeff_Scream" ]
+    },
+      "Unknown.HURT": {
+    "category" : "master",
+    "sounds" : [ "UnknownHurt" ]
+    },
+      "Unknown.DEATH": {
+    "category" : "master",
+    "sounds" : [ "UnknownDeath" ]
+    }
+}
