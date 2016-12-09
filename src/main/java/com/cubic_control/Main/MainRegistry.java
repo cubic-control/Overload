@@ -23,6 +23,7 @@ import com.cubic_control.Tools.MTools;
 import com.cubic_control.World.MWorld;
 import com.cubic_control.lib.RefStrings;
 
+import cpw.mods.fml.client.event.ConfigChangedEvent;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
@@ -73,5 +74,12 @@ public class MainRegistry {
 	}
 	@EventHandler
 	public static void Postload(FMLPostInitializationEvent PostEvent){
+	}
+	
+	@SubscribeEvent
+	public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent eventArgs) {
+		if(eventArgs.modID.equals(RefStrings.MODID)){
+			MConfiguration.syncConfig();
+		}
 	}
 }

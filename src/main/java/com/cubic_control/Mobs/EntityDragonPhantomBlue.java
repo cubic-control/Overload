@@ -239,8 +239,10 @@ public class EntityDragonPhantomBlue extends EntityMob implements IEntityMultiPa
                     d6 = -50.0D;
                 }
 
-                Vec3 vec3 = this.worldObj.getWorldVec3Pool().getVecFromPool(this.targetX - this.posX, this.targetY - this.posY, this.targetZ - this.posZ).normalize();
-                Vec3 vec32 = this.worldObj.getWorldVec3Pool().getVecFromPool((double)MathHelper.sin(this.rotationYaw * (float)Math.PI / 180.0F), this.motionY, (double)(-MathHelper.cos(this.rotationYaw * (float)Math.PI / 180.0F))).normalize();
+                Vec3 vec3 = Vec3.createVectorHelper(this.targetX - this.posX, this.targetY - this.posY, this.targetZ - this.posZ).normalize();
+                //Vec3 vec3 = this.worldObj.getWorldVec3Pool().getVecFromPool(this.targetX - this.posX, this.targetY - this.posY, this.targetZ - this.posZ).normalize();
+                Vec3 vec32 = Vec3.createVectorHelper((double)MathHelper.sin(this.rotationYaw * (float)Math.PI / 180.0F), this.motionY, (double)(-MathHelper.cos(this.rotationYaw * (float)Math.PI / 180.0F))).normalize();
+                //Vec3 vec32 = this.worldObj.getWorldVec3Pool().getVecFromPool((double)MathHelper.sin(this.rotationYaw * (float)Math.PI / 180.0F), this.motionY, (double)(-MathHelper.cos(this.rotationYaw * (float)Math.PI / 180.0F))).normalize();
                 float f5 = (float)(vec32.dotProduct(vec3) + 0.5D) / 1.5F;
 
                 if (f5 < 0.0F)
@@ -272,7 +274,8 @@ public class EntityDragonPhantomBlue extends EntityMob implements IEntityMultiPa
                     this.moveEntity(this.motionX, this.motionY, this.motionZ);
                 }
 
-                Vec3 vec31 = this.worldObj.getWorldVec3Pool().getVecFromPool(this.motionX, this.motionY, this.motionZ).normalize();
+                Vec3 vec31 = Vec3.createVectorHelper(this.motionX, this.motionY, this.motionZ).normalize();
+                //Vec3 vec31 = this.worldObj.getWorldVec3Pool().getVecFromPool(this.motionX, this.motionY, this.motionZ).normalize();
                 float f9 = (float)(vec31.dotProduct(vec32) + 1.0D) / 2.0F;
                 f9 = 0.8F + 0.15F * f9;
                 this.motionX *= (double)f9;

@@ -54,6 +54,7 @@ public class MConfiguration extends Configuration{
 	 * Add Biome IDs to config file.
 	 */
 	private static void addBiomeIDs() {
+		config.getCategory(ConfigTypes.BIOMES);
 		BiomeIDs.ICE = config.getInt("Realm_of_Ice", ConfigTypes.BIOMES, 50, 0, 255, "Numerical ID of the Ice Biome.");
 		BiomeIDs.IceForest = config.getInt("Forest_of_Ice", ConfigTypes.BIOMES, 51, 0, 255, "Numerical ID of the Ice Forest Biome.");
 		BiomeIDs.FIRE = config.getInt("Realm_of_Fire", ConfigTypes.BIOMES, 52, 0, 255, "Numerical ID of the Fire Biome.");
@@ -66,6 +67,7 @@ public class MConfiguration extends Configuration{
 	 * Add Dimension IDs to config file.
 	 */
 	private static void addDimensionIDs() {
+		config.getCategory(ConfigTypes.DIMENSIONS);
 		DimensionIDs.Nightmare_Realm = config.getInt("Nightmare_Realm", ConfigTypes.DIMENSIONS, 35, -100, 100, "Numerical ID of the Nightmare Realm.");
 		DimensionIDs.Realm_of_Fire = config.getInt("Realm_of_Fire", ConfigTypes.DIMENSIONS, 36, -100, 100, "Numerical ID of the Fire Realm.");
 		DimensionIDs.Realm_of_Ice = config.getInt("Realm_of_Ice", ConfigTypes.DIMENSIONS, 34, -100, 100, "Numerical ID of the Ice Realm.");
@@ -75,6 +77,7 @@ public class MConfiguration extends Configuration{
 	 * Add Booleans to config file.
 	 */
 	public static void addBooleans(){
+		config.getCategory(ConfigTypes.BOOLEANS);
 		DropOverride = config.getBoolean("DropOverride", ConfigTypes.BOOLEANS, true, "Enable override of vanila drops.");
 		TextureOverride = config.getBoolean("TextureOverride", ConfigTypes.BOOLEANS, true, "Enable override of vanila textures.");
 		SpawnEndOres = config.getBoolean("SpawnEndOres", ConfigTypes.BOOLEANS, true, "Enable spawning of End ores.");

@@ -40,7 +40,7 @@ public class ModBlockPumpkin extends BlockPumpkin{
 			this.setBlockName(name + "_" + FN);
 			GameRegistry.registerBlock(this, name + "_" + FN);
 		}
-		this.setBlockTextureName(RefStrings.MODID + ":/pumpkin/" + name);
+		this.setBlockTextureName(RefStrings.MODID + ":pumpkin/" + name);
 	}
 	
 	@SideOnly(Side.CLIENT)
