@@ -14,5 +14,29 @@
       "Unknown.DEATH": {
     "category" : "master",
     "sounds" : [ "UnknownDeath" ]
+    },
+      "Death.HURT": {
+    "category" : "master",
+    "sounds" : [ "death_hurt" ]
+    },
+      "Death.DEATH": {
+    "category" : "master",
+    "sounds" : [ "death_death" ]
+    },
+      "Death.IDLE": {
+    "category" : "master",
+    "sounds" : [ "death_idle" ]
+    },
+      "NightmareVillager.HURT": {
+    "category" : "master",
+    "sounds" : [ "nightmare_villager_hurt" ]
+    },
+      "NightmareVillager.DEATH": {
+    "category" : "master",
+    "sounds" : [ "nightmare_villager_death" ]
+    },
+      "NightmareVillager.IDLE": {
+    "category" : "master",
+    "sounds" : [ "nightmare_villager_idle" ]
     }
 }
