@@ -6,7 +6,7 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-import com.cubic_control.cubic_core.Utils.ModUtils;
+import com.cubic_control.cubic_core.Utils.CubicUtils;
 import com.cubic_control.overload.CreativeTabs.MCreativeTabs;
 import com.cubic_control.overload.lib.RefStrings;
 
@@ -38,7 +38,7 @@ public class LightArmor extends ItemArmor{
 		super.onArmorTick(world, player, itemStack);
 		if(itemStack.getItem() instanceof LightArmor){
 			if(world.isRemote){
-				ModUtils.addLightToEntity(world, player);
+				CubicUtils.addLightToEntity(world, player);
 			}
 		}
 		if(itemStack.getItem() == MArmor.light_boots){

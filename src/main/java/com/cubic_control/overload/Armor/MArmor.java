@@ -191,6 +191,11 @@ public class MArmor {
 	public static Item death_chestplate;
 	public static Item death_leggings;
 	public static Item death_boots;
+	/*Death*/
+	public static Item super_slime_helmet;
+	public static Item super_slime_chestplate;
+	public static Item super_slime_leggings;
+	public static Item super_slime_boots;
 
 	private static void InitializeItem() {
 		/**Colored Armor*/

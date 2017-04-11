@@ -1,5 +1,7 @@
 package com.cubic_control.overload.Entity;
 
+import com.cubic_control.overload.lib.RefStrings;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.SharedMonsterAttributes;

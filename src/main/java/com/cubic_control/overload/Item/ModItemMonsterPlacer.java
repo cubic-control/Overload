@@ -55,7 +55,7 @@ public class ModItemMonsterPlacer extends ItemMonsterPlacer
         setUnlocalizedName("spawn_egg_"+parSpawnName.toLowerCase());
         GameRegistry.registerItem(this, "spawnEgg"+parSpawnName);
         // DEBUG
-        System.out.println("Spawn egg constructor for "+entityToSpawnName+" created");
+        //System.out.println("Spawn egg constructor for "+entityToSpawnName+" created");
         
         BlockDispenser.dispenseBehaviorRegistry.putObject(this, BlockDispenser.dispenseBehaviorRegistry.getObject(Items.spawn_egg));
     }

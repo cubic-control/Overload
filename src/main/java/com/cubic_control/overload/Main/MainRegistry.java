@@ -47,6 +47,10 @@ public class MainRegistry {
 	@Mod.Instance(RefStrings.MODID)
 	public static MainRegistry instance;
 	
+	// Version checking instance
+	public static VersionChecker versionChecker;
+	public static boolean haveWarnedVersionOutOfDate = false;
+	
 	public static boolean isOtherModLoaded;
 	
 	@EventHandler
@@ -73,6 +77,8 @@ public class MainRegistry {
 		Dimension.registerWorldProvider();
 		Dimension.registerDimensions();
 		proxy.registerRenderInfo();
+		
+		MOreDictionary.reg();
 	}
 	@EventHandler
 	public static void load(FMLInitializationEvent event){
@@ -81,6 +87,9 @@ public class MainRegistry {
 	}
 	@EventHandler
 	public static void Postload(FMLPostInitializationEvent PostEvent){
+		MainRegistry.versionChecker = new VersionChecker();
+		Thread versionCheckThread = new Thread(MainRegistry.versionChecker, "Version Check");
+		versionCheckThread.start();
 	}
 	
 	@SubscribeEvent

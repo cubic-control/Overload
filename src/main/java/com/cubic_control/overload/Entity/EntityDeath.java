@@ -5,6 +5,7 @@ import com.cubic_control.overload.Item.MItems;
 import com.cubic_control.overload.Tools.MTools;
 import com.cubic_control.overload.lib.RefStrings;
 
+import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.IEntityLivingData;
@@ -25,6 +26,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.MathHelper;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 
@@ -122,6 +125,21 @@ public class EntityDeath extends EntityMob implements IBossDisplayData{
 	@Override
 	public void onUpdate() {
 		super.onUpdate();
+	}
+	
+	@Override
+	public boolean attackEntityFrom(DamageSource par1DamageSource, float par2) {
+		EntityLiving entityToSpawn = new EntityDeathGuard(this.worldObj);
+		
+		if(!this.worldObj.isRemote) {
+			entityToSpawn.setLocationAndAngles(this.posX, this.posY, this.posZ, 
+					MathHelper.wrapAngleTo180_float(this.worldObj.rand.nextFloat() * 360.0F), 0.0F);
+			this.worldObj.spawnEntityInWorld(entityToSpawn);
+			entityToSpawn.onSpawnWithEgg((IEntityLivingData)null);
+			entityToSpawn.playLivingSound();
+		}
+		
+		return super.attackEntityFrom(par1DamageSource, par2);
 	}
 
 }

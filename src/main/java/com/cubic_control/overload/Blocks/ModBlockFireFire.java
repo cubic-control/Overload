@@ -22,7 +22,6 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
-import com.cubic_control.cubic_core.Utils.ModUtils;
 import com.cubic_control.overload.Util.SomeModUtils;
 import com.cubic_control.overload.lib.RefStrings;
 import com.google.common.collect.Maps;

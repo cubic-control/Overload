@@ -173,6 +173,7 @@ public class MItems {
 	public static Item death_heart;
 	public static Item ice_door;
 	public static Item fire_door;
+	public static Item super_slime_ball;
 	//Mob Drops
 	public static Item ice_egg;
 	public static Item ice_feather;
@@ -350,6 +351,7 @@ public class MItems {
 		death_heart = new ModItem("d_heart");
 		ice_door = new ModItemDoor("ice_door", "door_ice");
 		fire_door = new ModItemDoor("fire_door", "door_fire");
+		super_slime_ball = new ModItem("super_slimeball");
 		//Mob Drops
 		ice_egg = new ModItemEgg("ice_egg");
 		ice_feather = new ModItem("ice_feather", "ice_feather");

@@ -69,6 +69,7 @@ public class MBlocks {
 	public static Block duplicator;
 	public static Block rainbow_fire;
 	public static Block rainbow_portal;
+	public static Block super_slime;
 	//Ice
 	public static Block ice_stone;
 	public static Block ice_stone_polished;
@@ -521,6 +522,7 @@ public class MBlocks {
 		duplicator = new ModBlockDuplicator("duplicator");
 		rainbow_fire = new ModBlockFireRainbow("rainbow_fire");
 		rainbow_portal = new ModBlockPortalRainbow("rainbow_portal");
+		super_slime = new ModBlockSuperSlime("super_slime");
 		//Ice
 		ice_stone = new ModStone("ice_stone");
 		ice_stone_polished = new ModBlock(Material.rock, "ice_stone_polished", "pickaxe", 0, 3f, 30f, Block.soundTypeStone);

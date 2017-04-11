@@ -354,6 +354,7 @@ public class MCraftingManager {
 		GameRegistry.addRecipe(new ItemStack(MItems.fire_stick, 4), "X", "X", 'X', MBlocks.fire_planks);
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.stick), MItems.ice_stick, Blocks.fire);
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.stick), MItems.fire_stick, Blocks.ice);
+		GameRegistry.addRecipe(new ItemStack(MItems.super_slime_ball, 8), "XXX", "XYX", "XXX", 'X', Items.slime_ball, 'Y', MItems.Nightmare_Gem);
 		//Colors
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.cyan_shard), MItems.blue_shard, MItems.green_shard);
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.green_shard), MItems.blue_shard, MItems.yellow_shard);
@@ -389,6 +390,7 @@ public class MCraftingManager {
 		GameRegistry.addRecipe(new ItemStack(MBlocks.light_brick, 2), "X", "X", 'X', MBlocks.light_brick_side);
 		GameRegistry.addRecipe(new ItemStack(MBlocks.dark_brick, 2), "X", "X", 'X', MBlocks.dark_brick_side);
 		GameRegistry.addShapedRecipe(new ItemStack(MBlocks.light_pyramid), " X ", "X X", "XXX", 'X', MItems.light_shard);
+		GameRegistry.addRecipe(new ItemStack(MBlocks.super_slime), "XXX", "XXX", "XXX", 'X', MItems.super_slime_ball);
 		//Ice
 		GameRegistry.addRecipe(new ItemStack(MBlocks.ice_stonebrick, 4), "XX", "XX", 'X', MBlocks.ice_stone_polished);
 		GameRegistry.addRecipe(new ItemStack(MBlocks.ice_stone_polished, 2), "X", "X", 'X', MBlocks.ice_stone);
