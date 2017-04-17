@@ -497,12 +497,12 @@ public class MBlocks {
 		end_lapis_ore = new End_Ore(Material.rock, "end_lapis_ore", 3f, 15f, 1, "lapis_ore");
 		bluestone_ore = new bluestone_ore(Material.rock, "bluestone_ore");
 		lit_bluestone_ore = new lit_bluestone_ore(Material.rock, "lit_bluestone_ore", "bluestone_ore");
-		bluestone_torch = new bluestone_torch(true, "bluestone_torch");
-		unlit_bluestone_torch = new unlit_bluestone_torch(false, "unlit_bluestone_torch");
-		bluestone_wire = new bluestone_wire(Material.circuits, "bluestone_wire");
+		bluestone_torch = new ModBlockBluestoneTorch(true, "bluestone_torch", "bluestone_torch_on");
+		unlit_bluestone_torch = new ModBlockBluestoneTorch(false, "unlit_bluestone_torch", "bluestone_torch_off");
+		bluestone_wire = new ModBlockBluestoneWire("bluestone_wire");
 		ruby_block = new ruby_block(Material.iron, "ruby_block");
-		powered_repeater = new BlockBluestoneRepeater(true, "repeater_on");
-		unpowered_repeater = new BlockBluestoneRepeater(false, "repeater_off");
+		//powered_repeater = new BlockBluestoneRepeater(true, "repeater_on");
+		//unpowered_repeater = new BlockBluestoneRepeater(false, "repeater_off");
 		bubblegum_ore = new ModBlockOre(Material.rock, "bubblegum_ore", 1);
 		dark_brick = new ModBlock(Material.rock, "dark_brick", "pickaxe", 0, 2f, 30f, Block.soundTypeStone);
 		dark_brick_stairs = new ModBlockStairs("dark_brick_stairs", dark_brick, 0, "pickaxe", "dark_brick");

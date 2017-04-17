@@ -174,6 +174,7 @@ public class MItems {
 	public static Item ice_door;
 	public static Item fire_door;
 	public static Item super_slime_ball;
+	public static Item teleporter;
 	//Mob Drops
 	public static Item ice_egg;
 	public static Item ice_feather;
@@ -322,7 +323,7 @@ public class MItems {
 	//Items
 		ender_rite_shard = new ModItem("ender_rite_shard", "ender_rite_shard");
 		bluestone = new ItemBluestone("bluestone").setTextureName(RefStrings.MODID + ":bluestone");
-		repeater = new ItemRepeater("repeater");
+		//repeater = new ItemRepeater("repeater");
 		Ender_rite_bow = new ItemEnder_rite_bow("Ender_rite_bow");
 		Ender_rite_elytra = new ModItemElytra(ender_rite_shard, ModArmorMaterial.ender_rite_armor, "Ender-rite_elytra");
 		wing_right = new ModItem("wing_right", "wing_right");
@@ -352,6 +353,7 @@ public class MItems {
 		ice_door = new ModItemDoor("ice_door", "door_ice");
 		fire_door = new ModItemDoor("fire_door", "door_fire");
 		super_slime_ball = new ModItem("super_slimeball");
+		teleporter = new ModItemTeleporter("teleporter");
 		//Mob Drops
 		ice_egg = new ModItemEgg("ice_egg");
 		ice_feather = new ModItem("ice_feather", "ice_feather");
@@ -464,6 +466,8 @@ public class MItems {
 		ModSpawnEgg = new ModItemMonsterPlacer("Death Guard", 0x00B5B5, 0xB5B5B5, "Death Guard");
 		ModSpawnEgg = new ModItemMonsterPlacer("Plastic Cow", 0x806547, 0x949494, "Plastic Cow");
 		ModSpawnEgg = new ModItemMonsterPlacer("Plastic Chicken", 0xEDEDED, 0xFF6E6E, "Plastic Chicken");
+		ModSpawnEgg = new ModItemMonsterPlacer("Fire Villager", 0xD60019, 0xDEDEDE, "Fire Villager");
+		ModSpawnEgg = new ModItemMonsterPlacer("Ice Villager", 0x00D6BD, 0xDEDEDE, "Ice Villager");
 			//Dragons
 		ModSpawnEgg = new ModItemMonsterPlacer("Dragon Phantom White", 0xFFFFFF, 0xC4C0C0, "Dragon Phantom White");
 		ModSpawnEgg = new ModItemMonsterPlacer("Dragon Phantom Blue", 0x0000FF, 0xC4C0C0, "Dragon Phantom Blue");

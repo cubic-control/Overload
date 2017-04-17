@@ -12,7 +12,7 @@ http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2595317-
 # Credits	
 -cubic_control: coder/texturer/modeler		
 	
-#Copyright	
+# Copyright	
 TERMS AND CONDITIONS 	
 0. USED TERMS 	
 MOD - modification, plugin, a piece of software that interfaces with the Minecraft client to extend, add, change or remove original capabilities. 	

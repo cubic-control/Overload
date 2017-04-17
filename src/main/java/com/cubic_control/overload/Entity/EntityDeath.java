@@ -32,9 +32,12 @@ import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 
 public class EntityDeath extends EntityMob implements IBossDisplayData{
+	public int timeUntilNextGuard;
 
 	public EntityDeath(World par1World) {
 		super(par1World);
+		this.timeUntilNextGuard = 0;
+		
 		this.isImmuneToFire = true;
 		this.getNavigator().setEnterDoors(true);
 		this.tasks.addTask(0, new EntityAISwimming(this));
@@ -46,10 +49,10 @@ public class EntityDeath extends EntityMob implements IBossDisplayData{
 		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true));
 		this.setSize(0.6F, 1.8F);
 	}
-	
+	@Override
 	protected void applyEntityAttributes() {
         super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(35.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(45.0D);
         this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.37000000000000000D);
         this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10.5D);
         if(this.worldObj.difficultySetting == EnumDifficulty.EASY){
@@ -60,7 +63,7 @@ public class EntityDeath extends EntityMob implements IBossDisplayData{
         	this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(350.5D);
         }
     }
-	
+	@Override
 	protected void entityInit() {
         super.entityInit();
         this.getDataWatcher().addObject(15, Byte.valueOf((byte)0));
@@ -71,17 +74,15 @@ public class EntityDeath extends EntityMob implements IBossDisplayData{
 	protected boolean isAIEnabled() {
         return true;
     }
-	
+	@Override
 	protected Item getDropItem() {
 		return MItems.death_heart;
 	}
-	/**
-	* Get this Entity's EnumCreatureAttribute
-	*/
+	@Override
 	public EnumCreatureAttribute getCreatureAttribute() {
 		return EnumCreatureAttribute.UNDEAD;
 	}
-	    
+	
 	/**
 	* Makes entity wear random armor based on difficulty
 	*/
@@ -96,9 +97,9 @@ public class EntityDeath extends EntityMob implements IBossDisplayData{
 	public boolean canBreatheUnderwater(){return true;}
 	@Override
 	public boolean canDespawn(){return false;}
-	    
+	@Override
 	protected void fall(float par1) {}
-	    
+	@Override
 	public IEntityLivingData onSpawnWithEgg(IEntityLivingData data) {
 		data = super.onSpawnWithEgg(data);
 	        
@@ -106,7 +107,6 @@ public class EntityDeath extends EntityMob implements IBossDisplayData{
 	        
 		return data;
 	}
-	
 	@Override
 	protected String getDeathSound() {
 		return RefStrings.MODID + ":Death.DEATH";
@@ -116,29 +116,28 @@ public class EntityDeath extends EntityMob implements IBossDisplayData{
 	protected String getLivingSound() {
 		return RefStrings.MODID + ":Death.IDLE";
 	}
-	
 	@Override
 	protected String getHurtSound() {
         return RefStrings.MODID + ":Death.HURT";
     }
-	
 	@Override
-	public void onUpdate() {
-		super.onUpdate();
+	public void onLivingUpdate() {
+		--this.timeUntilNextGuard;
+		super.onLivingUpdate();
 	}
-	
 	@Override
 	public boolean attackEntityFrom(DamageSource par1DamageSource, float par2) {
 		EntityLiving entityToSpawn = new EntityDeathGuard(this.worldObj);
 		
-		if(!this.worldObj.isRemote) {
+		if(!this.worldObj.isRemote && this.timeUntilNextGuard <= 0) {
 			entityToSpawn.setLocationAndAngles(this.posX, this.posY, this.posZ, 
 					MathHelper.wrapAngleTo180_float(this.worldObj.rand.nextFloat() * 360.0F), 0.0F);
 			this.worldObj.spawnEntityInWorld(entityToSpawn);
 			entityToSpawn.onSpawnWithEgg((IEntityLivingData)null);
 			entityToSpawn.playLivingSound();
+			
+			this.timeUntilNextGuard = 100;
 		}
-		
 		return super.attackEntityFrom(par1DamageSource, par2);
 	}
 

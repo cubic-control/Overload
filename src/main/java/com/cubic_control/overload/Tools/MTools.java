@@ -79,6 +79,8 @@ public class MTools {
 	public static Item scythe;
 	public static Item StalkingSpear;
 	public static Item d_scythe;
+	public static Item cubic_sword;
+	public static Item DayAxe;
 	
 	public static void InitializeTool() {
 		//Stone Tools
@@ -148,9 +150,11 @@ public class MTools {
 		trachyte_machete = new ModItemMachete(ModToolMaterial.trachyte_tools, "trachyte_machete");
 		/*Miscellaneous Tools*/
 		jeff_knife = new ModItemSword(ModToolMaterial.jeff_knifeTool, "jeff_knife").setCreativeTab(null);
-		NightAxe = new ModItemSword(ToolMaterial.EMERALD, "NightAxe");
+		NightAxe = new ModItemTimeAxe(ToolMaterial.EMERALD, "NightAxe", 13000);
 		scythe = new ModItemScythe(ToolMaterial.WOOD, "scythe");
 		StalkingSpear = new ModItemSword(ToolMaterial.EMERALD, "StalkingSpear");
 		d_scythe = new ModItemDeathScythe(ModToolMaterial.d_ToolMaterial, "d_scythe");
+		cubic_sword = new ModItemCubicSword(ToolMaterial.WOOD, "cubic_sword");
+		DayAxe = new ModItemTimeAxe(ToolMaterial.EMERALD, "DayAxe", 1000);
 	}
 }

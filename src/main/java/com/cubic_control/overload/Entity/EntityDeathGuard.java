@@ -48,7 +48,7 @@ public class EntityDeathGuard extends EntityMob{
 	
 	protected void applyEntityAttributes() {
         super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(20.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(40.0D);
         this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.25000000000000000D);
         this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(5.0D);
         if(this.worldObj.difficultySetting == EnumDifficulty.EASY){
@@ -92,12 +92,20 @@ public class EntityDeathGuard extends EntityMob{
 			this.setCurrentItemOrArmor(2, new ItemStack(MArmor.white_leggings));
 			this.setCurrentItemOrArmor(3, new ItemStack(MArmor.white_chestplate));
 			this.setCurrentItemOrArmor(4, new ItemStack(MArmor.white_helmet));
+			
+			if(rand.nextInt(100) < 50){
+				this.enchantEquipment();
+			}
 		}else{
 			this.setCurrentItemOrArmor(0, new ItemStack(MItems.black_nightmare_sword));
 			this.setCurrentItemOrArmor(1, new ItemStack(MArmor.black_boots));
 			this.setCurrentItemOrArmor(2, new ItemStack(MArmor.black_leggings));
 			this.setCurrentItemOrArmor(3, new ItemStack(MArmor.black_chestplate));
 			this.setCurrentItemOrArmor(4, new ItemStack(MArmor.black_helmet));
+			
+			if(rand.nextInt(100) < 50){
+				this.enchantEquipment();
+			}
 		}
 	}
 	@Override

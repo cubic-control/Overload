@@ -61,6 +61,8 @@ public class NewModEntities {
 				EntityRegistry.addSpawn(EntityIceGuard.class, 5, 1, 5, EnumCreatureType.monster, iceSpawnBiomes);
 				EntityRegistry.addSpawn(EntityFireWarrior.class, 5, 1, 5, EnumCreatureType.monster, fireSpawnBiomes);
 				EntityRegistry.addSpawn(EntityIceWarrior.class, 5, 1, 5, EnumCreatureType.monster, iceSpawnBiomes);
+				EntityRegistry.addSpawn(EntityFireVillager.class, 5, 1, 5, EnumCreatureType.monster, fireSpawnBiomes);
+				EntityRegistry.addSpawn(EntityIceVillager.class, 5, 1, 5, EnumCreatureType.monster, iceSpawnBiomes);
 				//NIGHTMARES
 				EntityRegistry.addSpawn(EntityNightmareCubic.class, 25, 1, 5, EnumCreatureType.monster, nightmareSpawnBiomes);
 				EntityRegistry.addSpawn(EntityDeadAngel.class, 25, 1, 5, EnumCreatureType.monster, nightmareSpawnBiomes);

@@ -355,6 +355,7 @@ public class MCraftingManager {
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.stick), MItems.ice_stick, Blocks.fire);
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.stick), MItems.fire_stick, Blocks.ice);
 		GameRegistry.addRecipe(new ItemStack(MItems.super_slime_ball, 8), "XXX", "XYX", "XXX", 'X', Items.slime_ball, 'Y', MItems.Nightmare_Gem);
+		GameRegistry.addRecipe(new ItemStack(MItems.teleporter), "ABA", "CDC", "EFE", 'A', MItems.ender_rite_shard, 'B', MItems.Nightmare_Gem, 'C', Items.ender_pearl, 'D', MItems.Red_Part, 'E', Items.ender_eye, 'F', MItems.rainbow_shard);
 		//Colors
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.cyan_shard), MItems.blue_shard, MItems.green_shard);
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.green_shard), MItems.blue_shard, MItems.yellow_shard);

@@ -1,7 +1,10 @@
 package com.cubic_control.overload.Events;
 
+import com.cubic_control.cubic_core.Utils.CubicUtils;
+import com.cubic_control.overload.Tools.MTools;
 import com.cubic_control.overload.lib.RefStrings;
 
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;

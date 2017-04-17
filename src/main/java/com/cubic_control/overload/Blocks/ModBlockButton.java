@@ -12,13 +12,11 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.IIcon;
 
-public class ModBlockButton extends BlockButton
-{
-    private static final String __OBFID = "CL_00000319";
+public class ModBlockButton extends BlockButton {
+	private Block block;
 
-    protected ModBlockButton(boolean p_i45396_1_, Block block, float B, float C)
-    {
-        super(p_i45396_1_);
+    protected ModBlockButton(boolean bool, Block block, float B, float C) {
+        super(bool);
         this.setHardness(B);
 		this.setResistance(C);
         this.setStepSound(block.stepSound);
@@ -28,14 +26,15 @@ public class ModBlockButton extends BlockButton
         this.setHarvestLevel(block.getHarvestTool(0), block.getHarvestLevel(0));
         this.setCreativeTab(MCreativeTabs.tabTech);
         GameRegistry.registerBlock(this, block.getUnlocalizedName() + "_button");
+        
+        this.block = block;
     }
 
     /**
      * Gets the block's texture. Args: side, meta
      */
     @SideOnly(Side.CLIENT)
-    public IIcon getIcon(int p_149691_1_, int p_149691_2_)
-    {
-        return this.blockIcon;
+    public IIcon getIcon(int i1, int i2) {
+        return block.getBlockTextureFromSide(1);
     }
 }

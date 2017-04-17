@@ -1,8 +1,10 @@
 package com.cubic_control.overload.Tools;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
 public class ModItemDeathScythe extends ModItemScythe{
@@ -12,13 +14,15 @@ public class ModItemDeathScythe extends ModItemScythe{
 	}
 	
 	@Override
-	public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ) {
+	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
 		if(world != null){
-			world.addWeatherEffect(new EntityLightningBolt(world, x, y, z));
-			return true;
-		}else{
-			return false;
+			MovingObjectPosition mop = Minecraft.getMinecraft().renderViewEntity.rayTrace(200, 1.0F);
+			if(!world.isRemote){
+				world.addWeatherEffect(new EntityLightningBolt(world, mop.blockX, mop.blockY, mop.blockZ));
+			}
 		}
+		
+		return stack;
 	}
 
 }

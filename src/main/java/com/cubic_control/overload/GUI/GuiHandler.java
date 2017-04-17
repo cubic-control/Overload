@@ -1,6 +1,6 @@
 package com.cubic_control.overload.GUI;
 
-import com.cubic_control.overload.TileEntity.TileEntityIceFurnaceEntity;
+import com.cubic_control.overload.TileEntity.TileEntityIceFurnace;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ContainerWorkbench;

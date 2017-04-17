@@ -20,6 +20,7 @@ import com.cubic_control.overload.Entity.EntityFakeHeadless;
 import com.cubic_control.overload.Entity.EntityFireArcher;
 import com.cubic_control.overload.Entity.EntityFireAssassin;
 import com.cubic_control.overload.Entity.EntityFireGuard;
+import com.cubic_control.overload.Entity.EntityFireVillager;
 import com.cubic_control.overload.Entity.EntityFireWarrior;
 import com.cubic_control.overload.Entity.EntityFrostedChicken;
 import com.cubic_control.overload.Entity.EntityFrostedCow;
@@ -30,6 +31,7 @@ import com.cubic_control.overload.Entity.EntityHeadless;
 import com.cubic_control.overload.Entity.EntityIceArcher;
 import com.cubic_control.overload.Entity.EntityIceAssassin;
 import com.cubic_control.overload.Entity.EntityIceGuard;
+import com.cubic_control.overload.Entity.EntityIceVillager;
 import com.cubic_control.overload.Entity.EntityIceWarrior;
 import com.cubic_control.overload.Entity.EntityInjuredSteve;
 import com.cubic_control.overload.Entity.EntityJeffTheKiller;
@@ -75,6 +77,7 @@ import com.cubic_control.overload.Render.RenderFakeHeadless;
 import com.cubic_control.overload.Render.RenderFireArcher;
 import com.cubic_control.overload.Render.RenderFireAssassin;
 import com.cubic_control.overload.Render.RenderFireGuard;
+import com.cubic_control.overload.Render.RenderFireVillager;
 import com.cubic_control.overload.Render.RenderFireWarrior;
 import com.cubic_control.overload.Render.RenderFrostedChicken;
 import com.cubic_control.overload.Render.RenderFrostedCow;
@@ -85,10 +88,12 @@ import com.cubic_control.overload.Render.RenderHeadless;
 import com.cubic_control.overload.Render.RenderIceArcher;
 import com.cubic_control.overload.Render.RenderIceAssassin;
 import com.cubic_control.overload.Render.RenderIceGuard;
+import com.cubic_control.overload.Render.RenderIceVillager;
 import com.cubic_control.overload.Render.RenderIceWarrior;
 import com.cubic_control.overload.Render.RenderInjuredSteve;
 import com.cubic_control.overload.Render.RenderJeff;
 import com.cubic_control.overload.Render.RenderMantisMan;
+import com.cubic_control.overload.Render.RenderModBlockBluestoneWire;
 import com.cubic_control.overload.Render.RenderNightmare;
 import com.cubic_control.overload.Render.RenderNightmareAlex;
 import com.cubic_control.overload.Render.RenderNightmareCubic;
@@ -145,6 +150,8 @@ public class ClientProxy extends ServerProxy{
 		RenderingRegistry.registerEntityRenderingHandler(EntityIceGuard.class, new RenderIceGuard(new ModelBiped(), 0.5f));
 		RenderingRegistry.registerEntityRenderingHandler(EntityFireWarrior.class, new RenderFireWarrior(new ModelBiped(), 0.5f));
 		RenderingRegistry.registerEntityRenderingHandler(EntityIceWarrior.class, new RenderIceWarrior(new ModelBiped(), 0.5f));
+		RenderingRegistry.registerEntityRenderingHandler(EntityFireVillager.class, new RenderFireVillager(new ModelBiped(), 0.5f));
+		RenderingRegistry.registerEntityRenderingHandler(EntityIceVillager.class, new RenderIceVillager(new ModelBiped(), 0.5f));
 		//Nightmares
 		RenderingRegistry.registerEntityRenderingHandler(EntityNightmareCubic.class, new RenderNightmareCubic(new ModelBiped64x64(), 0.5f));
 		RenderingRegistry.registerEntityRenderingHandler(EntityDeadAngel.class, new RenderDeadAngel(new ModelAngel(), 0.5f));
@@ -183,5 +190,6 @@ public class ClientProxy extends ServerProxy{
 	
 	public void registerRenders() {
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityLightPyramidEntity.class, new TileEntityLightPyramidRenderer());
+		RenderingRegistry.registerBlockHandler(new RenderModBlockBluestoneWire());
 	}
 }
