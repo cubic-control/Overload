@@ -18,6 +18,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 
 public class ModBlockOre extends BlockOre{
+	private Random rand = new Random();
 
 	protected ModBlockOre(Material material, String string, int level) {
 		super();
@@ -35,37 +36,30 @@ public class ModBlockOre extends BlockOre{
 		this.setStepSound(soundTypeStone);
 		GameRegistry.registerBlock(this, string);
 	}
-	
-	public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
-    {
-        return this == MBlocks.nightmare_ore ? MItems.Nightmare_Gem :
-        	(this == MBlocks.ender_rite_ore ? MItems.ender_rite_shard :
-        		(this == MBlocks.bubblegum_ore ? MFoods.bubblegum :
-        			(this == MBlocks.ice_coal_ore ? Items.coal :
-        				(this == MBlocks.ice_diamond_ore ? Items.diamond :
-        					(this == MBlocks.ice_gold_ore ? Items.gold_ingot : Item.getItemFromBlock(this))))));
+	@Override
+	public Item getItemDropped(int i1, Random random, int i2) {
+        return this == MBlocks.nightmare_ore ? MItems.Nightmare_Gem :(
+        		this == MBlocks.ender_rite_ore ? MItems.ender_rite_shard :(
+        		this == MBlocks.bubblegum_ore ? MFoods.bubblegum :(
+        		this == MBlocks.ice_coal_ore ? Items.coal :(
+        		this == MBlocks.ice_diamond_ore ? Items.diamond :(
+        		this == MBlocks.ice_gold_ore ? Items.gold_ingot : (
+        		this == MBlocks.ruby_ore ? MItems.ruby :
+        				Item.getItemFromBlock(this)))))));
     }
-	
-	private Random rand = new Random();
     @Override
-    public int getExpDrop(IBlockAccess p_149690_1_, int p_149690_5_, int p_149690_7_)
-    {
-        if (this.getItemDropped(p_149690_5_, rand, p_149690_7_) != Item.getItemFromBlock(this))
-        {
+    public int getExpDrop(IBlockAccess access, int i1, int i2) {
+        if(this.getItemDropped(i1, rand, i2) != Item.getItemFromBlock(this)){
             int j1 = 0;
 
-            if (this == MBlocks.ice_coal_ore)
-            {
+            if(this == MBlocks.ice_coal_ore){
                 j1 = MathHelper.getRandomIntegerInRange(rand, 0, 2);
-            }
-            else if (this == MBlocks.ice_diamond_ore)
-            {
+            }else if(this == MBlocks.ice_diamond_ore){
                 j1 = MathHelper.getRandomIntegerInRange(rand, 3, 7);
             }
-
             return j1;
         }
         return 0;
     }
-
+    
 }

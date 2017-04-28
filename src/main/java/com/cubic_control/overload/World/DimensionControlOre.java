@@ -51,6 +51,13 @@ public class DimensionControlOre implements IWorldGenerator{
 	}
 	
 	private void generateFIRE(Random random, int chunkX, int chunkZ, World world) {
+		addOre(MBlocks.fire_coal_ore, MBlocks.fire_stone, random, world, chunkX, chunkZ, 1, 84, 5, 10, 88);
+		addOre(MBlocks.fire_diamond_ore, MBlocks.fire_stone, random, world, chunkX, chunkZ, 1, 16, 1, 10, 33);
+		addOre(MBlocks.fire_emerald_ore, MBlocks.fire_stone, random, world, chunkX, chunkZ, 4, 32, 1, 8, 22);
+		addOre(MBlocks.fire_gold_ore, MBlocks.fire_stone, random, world, chunkX, chunkZ, 2, 29, 4, 8, 44);
+		addOre(MBlocks.fire_iron_ore, MBlocks.fire_stone, random, world, chunkX, chunkZ, 1, 83, 4, 10, 77);
+		addOre(MBlocks.fire_lapis_ore, MBlocks.fire_stone, random, world, chunkX, chunkZ, 1, 31, 1, 8, 36);
+		addOre(MBlocks.fire_ruby_ore, MBlocks.fire_stone, random, world, chunkX, chunkZ, 4, 32, 1, 8, 22);
 	}
 	
 	private void generateNightmare(Random random, int chunkX, int chunkZ, World world) {

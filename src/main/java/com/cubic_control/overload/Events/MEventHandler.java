@@ -7,6 +7,7 @@ public class MEventHandler {
 	public static void registerEvents(){
 		FMLCommonHandler.instance().bus().register(new MEventWelcomeMessage());
 		FMLCommonHandler.instance().bus().register(new MEventUpdateChecker());
+		MinecraftForge.EVENT_BUS.register(new MEventArmor());
 	}
 
 }

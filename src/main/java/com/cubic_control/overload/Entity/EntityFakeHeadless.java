@@ -40,7 +40,7 @@ public class EntityFakeHeadless extends EntityMob{
 		this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityLiving.class, 8.0F));
 		this.tasks.addTask(8, new EntityAILookIdle(this));
 		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
-		this.setSize(0.6F, 1.8F);
+		this.setSize(0.6F, 1.92F);
 		EntityHitList();
 	}
 

@@ -12,11 +12,14 @@ import net.minecraft.entity.IRangedAttackMob;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAIHurtByTarget;
+import net.minecraft.entity.ai.EntityAILookIdle;
 import net.minecraft.entity.ai.EntityAIMoveIndoors;
+import net.minecraft.entity.ai.EntityAIMoveThroughVillage;
 import net.minecraft.entity.ai.EntityAIMoveTowardsRestriction;
 import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityAIOpenDoor;
 import net.minecraft.entity.ai.EntityAIRestrictOpenDoor;
+import net.minecraft.entity.ai.EntityAISwimming;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.monster.IMob;
@@ -35,31 +38,29 @@ public class EntityFireBase extends EntityFakeMob{
 		this.getNavigator().setEnterDoors(true);
 		this.getNavigator().setAvoidsWater(true);
 		this.isImmuneToFire = true;
+		this.tasks.addTask(0, new EntityAISwimming(this));
+		
 		this.tasks.addTask(3, new EntityAIWander(this, 1.0D));
 		this.tasks.addTask(4, new EntityAIMoveIndoors(this));
 		this.tasks.addTask(5, new EntityAIRestrictOpenDoor(this));
 		this.tasks.addTask(6, new EntityAIOpenDoor(this, true));
 		this.tasks.addTask(7, new EntityAIMoveTowardsRestriction(this, 0.3F));
+		this.tasks.addTask(8, new EntityAIMoveThroughVillage(this, 0.6D, true));
+		this.tasks.addTask(9, new EntityAILookIdle(this));
 		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
 		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityIceBase.class, 0, true));
 		this.targetTasks.addTask(3, new EntityAINearestAttackableTarget(this, EntityLiving.class, 0, true, false, IMob.mobSelector));
 	}
-	
+	//@Override
+	//protected boolean canDespawn() {return false;}
 	@Override
-	protected boolean isAIEnabled() {
-        return true;
-    }
-	
+	protected boolean isAIEnabled() {return true;}
 	@Override
 	public EnumCreatureAttribute getCreatureAttribute() {
 		return EnumCreatureAttribute.UNDEFINED;
 	}
-	
 	@Override
-	public boolean canBreatheUnderwater() {
-		return false;
-	}
-	
+	public boolean canBreatheUnderwater() {return false;}
 	@Override
 	public void onUpdate() {
 		super.onUpdate();
@@ -67,11 +68,9 @@ public class EntityFireBase extends EntityFakeMob{
 		if(this.getHealth() < this.getMaxHealth()){
 			this.heal(0.01f);
 		}
-		
 		if(this.getAttackTarget() == null){
 			this.attackTime = 0;
 		}
-		
 		if(this.getAttackTarget() instanceof EntityFireBase){
 			this.setAttackTarget(this.getAttackTarget().getAITarget());
 		}

@@ -47,6 +47,7 @@ public class MBlocks {
 	public static Block bluestone_wire;
 	public static Block end_ruby_ore;
 	public static Block ruby_block;
+	public static Block ruby_ore;
 	public static Block end_lapis_ore;
 	public static Block powered_repeater;
 	public static Block unpowered_repeater;
@@ -90,8 +91,21 @@ public class MBlocks {
 	public static Block door_ice;
 		//Stairs
 	public static Block ice_stone_stairs;
+	public static Block ice_stone_polished_stairs;
 	public static Block ice_stonebrick_stairs;
 	public static Block ice_cobblestone_stairs;
+	public static Block ice_planks_stairs;
+		//Slabs
+	public static Block ice_stone_slab;
+	public static Block ice_stone_slab_double;
+	public static Block ice_stone_polished_slab;
+	public static Block ice_stone_polished_slab_double;
+	public static Block ice_stonebrick_slab;
+	public static Block ice_stonebrick_slab_double;
+	public static Block ice_cobblestone_slab;
+	public static Block ice_cobblestone_slab_double;
+	public static Block ice_planks_slab;
+	public static Block ice_planks_slab_double;
 	//Fire
 	public static Block fire_stone;
 	public static Block fire_stone_polished;
@@ -110,10 +124,25 @@ public class MBlocks {
 	public static Block fire_portal;
 	public static Block fire_crafting_table;
 	public static Block door_fire;
+	public static Block fire_furnace;
+	public static Block fire_furnace_lit;
 		//Stairs
 	public static Block fire_stone_stairs;
+	public static Block fire_stone_polished_stairs;
 	public static Block fire_stonebrick_stairs;
 	public static Block fire_cobblestone_stairs;
+	public static Block fire_planks_stairs;
+		//Slabs
+	public static Block fire_stone_slab;
+	public static Block fire_stone_slab_double;
+	public static Block fire_stone_polished_slab;
+	public static Block fire_stone_polished_slab_double;
+	public static Block fire_stonebrick_slab;
+	public static Block fire_stonebrick_slab_double;
+	public static Block fire_cobblestone_slab;
+	public static Block fire_cobblestone_slab_double;
+	public static Block fire_planks_slab;
+	public static Block fire_planks_slab_double;
 	//Nightmare
 	public static Block nightmare_stone;
 	public static Block nightmare_stone_polished;
@@ -128,14 +157,25 @@ public class MBlocks {
 	public static Block nightmare_portal;
 		//Stairs
 	public static Block nightmare_stone_stairs;
+	public static Block nightmare_stone_polished_stairs;
 	public static Block nightmare_stonebrick_stairs;
 	public static Block nightmare_cobblestone_stairs;
+		//Slabs
+	public static Block nightmare_stone_slab;
+	public static Block nightmare_stone_slab_double;
+	public static Block nightmare_stone_polished_slab;
+	public static Block nightmare_stone_polished_slab_double;
+	public static Block nightmare_stonebrick_slab;
+	public static Block nightmare_stonebrick_slab_double;
+	public static Block nightmare_cobblestone_slab;
+	public static Block nightmare_cobblestone_slab_double;
 	//Sandstone
 	public static Block sandstone_polished;
 	public static Block sandstone_pillar;
 	public static Block sandstone_brick;
 	public static Block sandstone_cobblestone;
 		//Stairs
+	public static Block sandstone_polished_stairs;
 	public static Block sandstone_brick_stairs;
 	public static Block sandstone_cobblestone_stairs;
 	//Marble
@@ -304,6 +344,35 @@ public class MBlocks {
 	public static Block violet_stairs;
 	public static Block white_stairs;
 	public static Block yellow_stairs;
+		//Slabs
+	public static Block black_slab;
+	public static Block black_slab_double;
+	public static Block blue_slab;
+	public static Block blue_slab_double;
+	public static Block brown_slab;
+	public static Block brown_slab_double;
+	public static Block cyan_slab;
+	public static Block cyan_slab_double;
+	public static Block green_slab;
+	public static Block green_slab_double;
+	public static Block lime_slab;
+	public static Block lime_slab_double;
+	public static Block magenta_slab;
+	public static Block magenta_slab_double;
+	public static Block orange_slab;
+	public static Block orange_slab_double;
+	public static Block pink_slab;
+	public static Block pink_slab_double;
+	public static Block purple_slab;
+	public static Block purple_slab_double;
+	public static Block red_slab;
+	public static Block red_slab_double;
+	public static Block violet_slab;
+	public static Block violet_slab_double;
+	public static Block white_slab;
+	public static Block white_slab_double;
+	public static Block yellow_slab;
+	public static Block yellow_slab_double;
 		//Bricks
 	public static Block black_brick;
 	public static Block blue_brick;
@@ -474,6 +543,7 @@ public class MBlocks {
 	public static Block blue_pumpkin_8_lit;
 	public static BlockStem blue_pumpkin_stem;
 	/*DIMENSIONAL*/
+		//Ice
 	public static Block ice_coal_ore;
 	public static Block ice_diamond_ore;
 	public static Block ice_emerald_ore;
@@ -481,6 +551,14 @@ public class MBlocks {
 	public static Block ice_iron_ore;
 	public static Block ice_lapis_ore;
 	public static Block ice_ruby_ore;
+		//Fire
+	public static Block fire_coal_ore;
+	public static Block fire_diamond_ore;
+	public static Block fire_emerald_ore;
+	public static Block fire_gold_ore;
+	public static Block fire_iron_ore;
+	public static Block fire_lapis_ore;
+	public static Block fire_ruby_ore;
 	
 	public static void InitializeBlock(){
 		ender_rite_ore = new ModBlockOre(Material.rock, "ender_rite_ore", 2);
@@ -501,6 +579,7 @@ public class MBlocks {
 		unlit_bluestone_torch = new ModBlockBluestoneTorch(false, "unlit_bluestone_torch", "bluestone_torch_off");
 		bluestone_wire = new ModBlockBluestoneWire("bluestone_wire");
 		ruby_block = new ruby_block(Material.iron, "ruby_block");
+		ruby_ore = new ModBlockOre(Material.rock, "ruby_ore", 2);
 		//powered_repeater = new BlockBluestoneRepeater(true, "repeater_on");
 		//unpowered_repeater = new BlockBluestoneRepeater(false, "repeater_off");
 		bubblegum_ore = new ModBlockOre(Material.rock, "bubblegum_ore", 1);
@@ -543,8 +622,21 @@ public class MBlocks {
 		door_ice = new ModBlockDoor(ice_planks, "door_ice", 2f, 15f);
 			//Stairs
 		ice_stone_stairs = new ModBlockStairs("ice_stone_stairs", ice_stone, 0, "pickaxe", "ice_stone");
+		ice_stone_polished_stairs = new ModBlockStairs("ice_stone_polished", ice_stone_polished);
 		ice_stonebrick_stairs = new ModBlockStairs("ice_stonebrick_stairs", ice_stonebrick, 0, "pickaxe", "ice_stonebrick");
 		ice_cobblestone_stairs = new ModBlockStairs("ice_cobblestone_stairs", ice_cobblestone, 0, "pickaxe", "ice_cobblestone");
+		ice_planks_stairs = new ModBlockStairs("planks_ice", ice_planks);
+			//Slabs
+		ice_stone_slab_double = new ModBlockSlab(true, "ice_stone", 1.5f, 30f, ice_stone);
+		ice_stone_slab = new ModBlockSlab(false, "ice_stone", 1.5f, 30f, ice_stone);
+		ice_stone_polished_slab_double = new ModBlockSlab(true, "ice_stone_polished", 3f, 30f, ice_stone_polished);
+		ice_stone_polished_slab = new ModBlockSlab(false, "ice_stone_polished", 3f, 30f, ice_stone_polished);
+		ice_stonebrick_slab_double = new ModBlockSlab(true, "ice_stonebrick", 1.5f, 30f, ice_stonebrick);
+		ice_stonebrick_slab = new ModBlockSlab(false, "ice_stonebrick", 1.5f, 30f, ice_stonebrick);
+		ice_cobblestone_slab_double = new ModBlockSlab(true, "ice_cobblestone", 2f, 30f, ice_cobblestone);
+		ice_cobblestone_slab = new ModBlockSlab(false, "ice_cobblestone", 2f, 30f, ice_cobblestone);
+		ice_planks_slab_double = new ModBlockSlab(true, "planks_ice", 2f, 15f, ice_planks);
+		ice_planks_slab = new ModBlockSlab(false, "planks_ice", 2f, 15f, ice_planks);
 		//Fire
 		fire_stone = new ModStone("fire_stone");
 		fire_stone_polished = new ModBlock(Material.rock, "fire_stone_polished", "pickaxe", 0, 3f, 30f, Block.soundTypeStone);
@@ -555,7 +647,7 @@ public class MBlocks {
 		fire_fence = new ModBlockFence("planks_fire", Material.rock, "fire_fence");
 		fire_fence_gate = new ModBlockFenceGate("planks_fire", Material.ice, "fire_fence_gate");
 		fire_log = new ModBlockLogFire("log_fire", RefStrings.MODID + ":log_fire");
-		fire_sapling = new ModBlockSaplingFire("sapling_fire", Material.rock);
+		fire_sapling = new ModBlockSaplingFire("sapling_fire");
 		fire_leaves = new ModBlockLeavesFire(Material.rock, "leaves_fire");
 		fire_dirt = new ModBlockDirtFire("fire_dirt");
 		fire_grass = new ModBlockGrassFire(Material.grass, "fire_grass");
@@ -563,10 +655,25 @@ public class MBlocks {
 		fire_portal = new ModBlockPortalFire("fire_portal");
 		fire_crafting_table = new ModBlockWorkbenchFire("fire_crafting_table", 2f, 15f);
 		door_fire = new ModBlockDoor(fire_planks, "door_fire", 2f, 15f);
+		fire_furnace = new ModBlockFurnaceFire(false, "fire_furnace");
+		fire_furnace_lit = new ModBlockFurnaceFire(true, "fire_furnace");
 			//Stairs
 		fire_stone_stairs = new ModBlockStairs("fire_stone_stairs", fire_stone, 0, "pickaxe", "fire_stone");
+		fire_stone_polished_stairs = new ModBlockStairs("fire_stone_polished", fire_stone_polished);
 		fire_stonebrick_stairs = new ModBlockStairs("fire_stonebrick_stairs", fire_stonebrick, 0, "pickaxe", "fire_stonebrick");
 		fire_cobblestone_stairs = new ModBlockStairs("fire_cobblestone_stairs", fire_cobblestone, 0, "pickaxe", "fire_cobblestone");
+		fire_planks_stairs = new ModBlockStairs("planks_fire", fire_planks);
+			//Slabs
+		fire_stone_slab_double = new ModBlockSlab(true, "fire_stone", 1.5f, 30f, fire_stone);
+		fire_stone_slab = new ModBlockSlab(false, "fire_stone", 1.5f, 30f, fire_stone);
+		fire_stone_polished_slab_double = new ModBlockSlab(true, "fire_stone_polished", 3f, 30f, fire_stone_polished);
+		fire_stone_polished_slab = new ModBlockSlab(false, "fire_stone_polished", 3f, 30f, fire_stone_polished);
+		fire_stonebrick_slab_double = new ModBlockSlab(true, "fire_stonebrick", 1.5f, 30f, fire_stonebrick);
+		fire_stonebrick_slab = new ModBlockSlab(false, "fire_stonebrick", 1.5f, 30f, fire_stonebrick);
+		fire_cobblestone_slab_double = new ModBlockSlab(true, "fire_cobblestone", 2f, 30f, fire_cobblestone);
+		fire_cobblestone_slab = new ModBlockSlab(false, "fire_cobblestone", 2f, 30f, fire_cobblestone);
+		fire_planks_slab_double = new ModBlockSlab(true, "planks_fire", 2f, 15f, fire_planks);
+		fire_planks_slab = new ModBlockSlab(false, "planks_fire", 2f, 15f, fire_planks);
 		//Nightmare
 		nightmare_stone = new ModStone("nightmare_stone");
 		nightmare_stone_polished = new ModBlock(Material.rock, "nightmare_stone_polished", "pickaxe", 0, 3f, 30f, Block.soundTypeStone);
@@ -581,14 +688,25 @@ public class MBlocks {
 		nightmare_portal = new ModBlockPortalNightmare("nightmare_portal");
 			//Stairs
 		nightmare_stone_stairs = new ModBlockStairs("nightmare_stone_stairs", nightmare_stone, 0, "pickaxe", "nightmare_stone");
+		nightmare_stone_polished_stairs = new ModBlockStairs("nightmare_stone_polished", nightmare_stone_polished);
 		nightmare_stonebrick_stairs = new ModBlockStairs("nightmare_stonebrick_stairs", nightmare_stonebrick, 0, "pickaxe", "nightmare_stonebrick");
 		nightmare_cobblestone_stairs = new ModBlockStairs("nightmare_cobblestone_stairs", nightmare_cobblestone, 0, "pickaxe", "nightmare_cobblestone");
+			//Slabs
+		nightmare_stone_slab_double = new ModBlockSlab(true, "nightmare_stone", 1.5f, 30f, nightmare_stone);
+		nightmare_stone_slab = new ModBlockSlab(false, "nightmare_stone", 1.5f, 30f, nightmare_stone);
+		nightmare_stone_polished_slab_double = new ModBlockSlab(true, "nightmare_stone_polished", 3f, 30f, nightmare_stone_polished);
+		nightmare_stone_polished_slab = new ModBlockSlab(false, "nightmare_stone_polished", 3f, 30f, nightmare_stone_polished);
+		nightmare_stonebrick_slab_double = new ModBlockSlab(true, "nightmare_stonebrick", 1.5f, 30f, nightmare_stonebrick);
+		nightmare_stonebrick_slab = new ModBlockSlab(false, "nightmare_stonebrick", 1.5f, 30f, nightmare_stonebrick);
+		nightmare_cobblestone_slab_double = new ModBlockSlab(true, "nightmare_cobblestone", 2f, 30f, nightmare_cobblestone);
+		nightmare_cobblestone_slab = new ModBlockSlab(false, "nightmare_cobblestone", 2f, 30f, nightmare_cobblestone);
 		//Sandstone
 		sandstone_polished = new ModBlock(Material.rock, "sandstone_polished", "pickaxe", 0, 1f, 30f, Block.soundTypeStone);
 		sandstone_pillar = new ModBlockPillar(Blocks.sandstone, 1f, 30f, "sandstone_pillar");
 		sandstone_brick = new ModBlock(Material.rock, "sandstone_brick", "pickaxe", 0, 1f, 30f, Block.soundTypeStone);
 		sandstone_cobblestone = new ModBlock(Material.rock, "sandstone_cobblestone", "pickaxe", 0, 1f, 30f, Block.soundTypeStone);
 			//Stairs
+		sandstone_polished_stairs = new ModBlockStairs("sandstone_polished", sandstone_polished);
 		sandstone_brick_stairs = new ModBlockStairs("sandstone_brick_stairs", sandstone_brick, 0, "pickaxe", "sandstone_brick");
 		sandstone_cobblestone_stairs = new ModBlockStairs("sandstone_cobblestone_stairs", sandstone_cobblestone, 0, "pickaxe", "sandstone_cobblestone");
 		//Marble
@@ -811,6 +929,35 @@ public class MBlocks {
 		violet_stairs = new c_stairs("violet_block", violet_block);
 		white_stairs = new c_stairs("white_block", white_block);
 		yellow_stairs = new c_stairs("yellow_block", yellow_block);
+			//Slabs
+		black_slab_double = new ModBlockSlab(true, "black_block", 5f, 30f, black_block);
+		black_slab = new ModBlockSlab(false, "black_block", 5f, 30f, black_block);
+		blue_slab_double = new ModBlockSlab(true, "blue_block", 5f, 30f, blue_block);
+		blue_slab = new ModBlockSlab(false, "blue_block", 5f, 30f, blue_block);
+		brown_slab_double = new ModBlockSlab(true, "brown_block", 5f, 30f, brown_block);
+		brown_slab = new ModBlockSlab(false, "brown_block", 5f, 30f, brown_block);
+		cyan_slab_double = new ModBlockSlab(true, "cyan_block", 5f, 30f, cyan_block);
+		cyan_slab = new ModBlockSlab(false, "cyan_block", 5f, 30f, cyan_block);
+		green_slab_double = new ModBlockSlab(true, "green_block", 5f, 30f, green_block);
+		green_slab = new ModBlockSlab(false, "green_block", 5f, 30f, green_block);
+		lime_slab_double = new ModBlockSlab(true, "lime_block", 5f, 30f, lime_block);
+		lime_slab = new ModBlockSlab(false, "lime_block", 5f, 30f, lime_block);
+		magenta_slab_double = new ModBlockSlab(true, "magenta_block", 5f, 30f, magenta_block);
+		magenta_slab = new ModBlockSlab(false, "magenta_block", 5f, 30f, magenta_block);
+		orange_slab_double = new ModBlockSlab(true, "orange_block", 5f, 30f, orange_block);
+		orange_slab = new ModBlockSlab(false, "orange_block", 5f, 30f, orange_block);
+		pink_slab_double = new ModBlockSlab(true, "pink_block", 5f, 30f, pink_block);
+		pink_slab = new ModBlockSlab(false, "pink_block", 5f, 30f, pink_block);
+		purple_slab_double = new ModBlockSlab(true, "purple_block", 5f, 30f, purple_block);
+		purple_slab = new ModBlockSlab(false, "purple_block", 5f, 30f, purple_block);
+		red_slab_double = new ModBlockSlab(true, "red_block", 5f, 30f, red_block);
+		red_slab = new ModBlockSlab(false, "red_block", 5f, 30f, red_block);
+		violet_slab_double = new ModBlockSlab(true, "violet_block", 5f, 30f, violet_block);
+		violet_slab = new ModBlockSlab(false, "violet_block", 5f, 30f, violet_block);
+		white_slab_double = new ModBlockSlab(true, "white_block", 5f, 30f, white_block);
+		white_slab = new ModBlockSlab(false, "white_block", 5f, 30f, white_block);
+		yellow_slab_double = new ModBlockSlab(true, "yellow_block", 5f, 30f, yellow_block);
+		yellow_slab = new ModBlockSlab(false, "yellow_block", 5f, 30f, yellow_block);
 			//Bricks
 		black_brick = new c_block(Material.iron, "black_brick");
 		blue_brick = new c_block(Material.iron, "blue_brick");
@@ -927,6 +1074,7 @@ public class MBlocks {
 		blue_pumpkin_8_lit = new ModBlockPumpkin(true, true, "blue_pumpkin", 8);
 		blue_pumpkin_stem = new ModBlockStem(blue_pumpkin, "blue_pumpkin_stem", "pumpkin/");
 		/*DIMENSIONAL*/
+			//Ice
 		ice_coal_ore = new ModBlockOre(Material.rock, "ice_coal_ore", 0);
 		ice_diamond_ore = new ModBlockOre(Material.rock, "ice_diamond_ore", 2);
 		ice_emerald_ore = new ModBlockOre(Material.rock, "ice_emerald_ore", 2);
@@ -934,5 +1082,13 @@ public class MBlocks {
 		ice_iron_ore = new ModBlockOre(Material.rock, "ice_iron_ore", 1);
 		ice_lapis_ore = new ModBlockOre(Material.rock, "ice_lapis_ore", 1);
 		ice_ruby_ore = new ModBlockOre(Material.rock, "ice_ruby_ore", 2);
+			//Fire
+		fire_coal_ore = new ModBlockOre(Material.rock, "fire_coal_ore", 0);
+		fire_diamond_ore = new ModBlockOre(Material.rock, "fire_diamond_ore", 2);
+		fire_emerald_ore = new ModBlockOre(Material.rock, "fire_emerald_ore", 2);
+		fire_gold_ore = new ModBlockOre(Material.rock, "fire_gold_ore", 2);
+		fire_iron_ore = new ModBlockOre(Material.rock, "fire_iron_ore", 1);
+		fire_lapis_ore = new ModBlockOre(Material.rock, "fire_lapis_ore", 1);
+		fire_ruby_ore = new ModBlockOre(Material.rock, "fire_ruby_ore", 2);
 	}
 }

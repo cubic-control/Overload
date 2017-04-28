@@ -31,6 +31,9 @@ public class ModBlockDirtIce extends Block
     protected ModBlockDirtIce(String name)
     {
         super(Material.ground);
+        this.setResistance(3f);
+        this.setHardness(0.6f);
+        this.setHarvestLevel("shovel", 0);
         this.setCreativeTab(MCreativeTabs.tabBlocks);
         this.setBlockName(name);
         this.setBlockTextureName(RefStrings.MODID + ":" + name);

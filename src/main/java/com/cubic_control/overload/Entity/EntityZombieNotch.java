@@ -90,7 +90,7 @@ public class EntityZombieNotch extends EntityZombie{
 
     protected Item getDropItem() {
     	Random rand = new Random();
-        if(rand.nextInt() > 5){
+        if(rand.nextInt(1) == 0){
         	return Items.golden_apple;
         }else{
         	ItemStack stack = new ItemStack(Items.golden_apple, 1, 1);
@@ -111,7 +111,7 @@ public class EntityZombieNotch extends EntityZombie{
                 this.dropItem(Items.iron_ingot, 1);
                 break;
             case 1:
-                this.dropItem(Items.carrot, 1);
+                this.dropItem(Items.apple, 1);
                 break;
             case 2:
                 this.dropItem(Items.rotten_flesh, 1);

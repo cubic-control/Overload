@@ -28,22 +28,14 @@ public class EntityIceBase extends EntityMob{
 		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true));
 		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityFireBase.class, 0, true));
 	}
-	
 	@Override
-	protected boolean isAIEnabled() {
-        return true;
-    }
-	
+	protected boolean isAIEnabled() {return true;}
 	@Override
 	public EnumCreatureAttribute getCreatureAttribute() {
 		return EnumCreatureAttribute.UNDEFINED;
 	}
-	
 	@Override
-	public boolean canBreatheUnderwater() {
-		return true;
-	}
-	
+	public boolean canBreatheUnderwater() {return true;}
 	@Override
 	public void onUpdate() {
 		super.onUpdate();
@@ -51,11 +43,9 @@ public class EntityIceBase extends EntityMob{
 		if(this.getHealth() < this.getMaxHealth()){
 			this.heal(0.01f);
 		}
-		
 		if(this.getAttackTarget() == null){
 			this.attackTime = 0;
 		}
-		
 		if(this.getAttackTarget() instanceof EntityIceBase){
 			this.setAttackTarget(this.getAttackTarget().getAITarget());
 		}

@@ -29,4 +29,5 @@ public class ModToolMaterial {
 	//Miscellaneous
 	public static ToolMaterial jeff_knifeTool = EnumHelper.addToolMaterial("jeff_knifeTool", 0, 43110, 0.0F, 10.0F, 140);
 	public static ToolMaterial d_ToolMaterial = EnumHelper.addToolMaterial("d_ToolMaterial", 5, 99999, 5.8F, 39.5F, 50);
+	public static ToolMaterial cubic_tools = EnumHelper.addToolMaterial("cubic_tools", 8, 2020, 16.0F, 96.0F, 10);
 }

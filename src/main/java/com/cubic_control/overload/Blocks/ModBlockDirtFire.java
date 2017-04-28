@@ -18,6 +18,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.ForgeDirection;
 
 public class ModBlockDirtFire extends Block
 {
@@ -31,6 +32,9 @@ public class ModBlockDirtFire extends Block
     protected ModBlockDirtFire(String name)
     {
         super(Material.ground);
+        this.setResistance(3f);
+        this.setHardness(0.6f);
+        this.setHarvestLevel("shovel", 0);
         this.setCreativeTab(MCreativeTabs.tabBlocks);
         this.setBlockName(name);
         this.setBlockTextureName(RefStrings.MODID + ":" + name);
@@ -146,5 +150,9 @@ public class ModBlockDirtFire extends Block
         }
 
         return l;
+    }
+    @Override
+    public boolean isFlammable(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+    	return false;
     }
 }

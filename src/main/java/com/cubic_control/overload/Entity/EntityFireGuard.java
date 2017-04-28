@@ -13,6 +13,7 @@ import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAIHurtByTarget;
 import net.minecraft.entity.ai.EntityAILookIdle;
 import net.minecraft.entity.ai.EntityAIMoveThroughVillage;
+import net.minecraft.entity.ai.EntityAIMoveTowardsTarget;
 import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityAISwimming;
 import net.minecraft.entity.ai.EntityAIWander;
@@ -33,12 +34,11 @@ public class EntityFireGuard extends EntityFireBase{
 
 	public EntityFireGuard(World par1World) {
 		super(par1World);
-		this.tasks.addTask(0, new EntityAISwimming(this));
 		this.tasks.addTask(1, new EntityAIAttackOnCollide(this, 1.0D, true));
-		this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
-		this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityIceGuard.class, 8.0F));
-		this.tasks.addTask(8, new EntityAILookIdle(this));
-		this.setSize(0.6F, 1.8F);
+		this.tasks.addTask(10, new EntityAIMoveTowardsTarget(this, 0.9D, 32.0F));
+		this.tasks.addTask(11, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
+		this.tasks.addTask(11, new EntityAIWatchClosest(this, EntityIceGuard.class, 8.0F));
+		this.setSize(0.6F, 1.92F);
 	}
 	
 	protected void applyEntityAttributes()

@@ -41,11 +41,5 @@ public class Flight_Armor extends ItemArmor{
 	            player.fallDistance = 0.0f;
 	        }
 		}
-		
-		if(player.inventory.armorItemInSlot(0) == null || !player.getCurrentArmor(0).getItem().equals(MArmor.flight_boots)){
-			if(player.capabilities.isFlying == true && player.capabilities.isCreativeMode == false){
-	            player.capabilities.allowFlying=false;
-	        }
-		}
     }
 }

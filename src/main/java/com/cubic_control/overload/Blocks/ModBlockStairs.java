@@ -26,4 +26,17 @@ public class ModBlockStairs extends BlockStairs {
 		GameRegistry.registerBlock(this, name);
 	}
 	
+	public ModBlockStairs(String name, Block block) {
+		super(block, 0);
+		this.setLightOpacity(0);
+		this.setCreativeTab(MCreativeTabs.tabBlocks);
+		//this.setHardness(A);
+		//this.setResistance(B);
+		this.setHarvestLevel(block.getHarvestTool(0), block.getHarvestLevel(0));
+		//this.setStepSound(sound);
+		this.setBlockName(name + "_stairs");
+		this.setBlockTextureName(RefStrings.MODID + ":" + name);
+		GameRegistry.registerBlock(this, name + "_stairs");
+	}
+	
 }

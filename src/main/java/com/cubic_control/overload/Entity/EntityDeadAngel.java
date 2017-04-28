@@ -51,7 +51,7 @@ public class EntityDeadAngel extends EntityMob{
 		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
 		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityJeffTheKiller.class, 0, true));
 		this.targetTasks.addTask(3, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true));
-		this.setSize(0.6F, 1.8F);
+		this.setSize(0.6F, 1.92F);
 	}
 	protected void applyEntityAttributes()
     {

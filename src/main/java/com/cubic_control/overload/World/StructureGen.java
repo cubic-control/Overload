@@ -3,10 +3,9 @@ package com.cubic_control.overload.World;
 import java.util.Random;
 
 import com.cubic_control.overload.Dimensions.DimensionIDs;
-import com.cubic_control.overload.World.Gen.FireGenIcePortal;
-import com.cubic_control.overload.World.Gen.FireGenMarker;
-import com.cubic_control.overload.World.Gen.IceGenFirePortal;
-import com.cubic_control.overload.World.Gen.IceGenMarker;
+import com.cubic_control.overload.World.Gen.FireGenMarker2;
+import com.cubic_control.overload.World.Gen.IceGenMarker2;
+import com.cubic_control.overload.lib.RefStrings;
 
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
@@ -32,22 +31,24 @@ public class StructureGen implements IWorldGenerator{
 	
 	private void addStructure(WorldGenerator gen, Random random, int chunkX, int chunkZ, World world, int spawnChance){
 		for(int i = 0; i < spawnChance; i++){
-			int i1 = chunkX + random.nextInt(16);
-			int i2 = chunkZ + random.nextInt(16);
-			int i3 = world.getHeightValue(i1, i2);
+			int x = chunkX + random.nextInt(16);
+			int z = chunkZ + random.nextInt(16);
+			int y = world.getHeightValue(x, z);
 			
-			gen.generate(world, random, i1, i2, i3);
+			if(random.nextBoolean() == true){
+				gen.generate(world, random, x, y, z);
+			}
+			//DEBUG
+			//System.out.println("["+RefStrings.NAME+"]:"+this.getClass().getCanonicalName()+":addStructure:"+gen.toString());
 		}
 	}
 
 	private void generateICE(Random random, int chunkX, int chunkZ, World world) {
-		addStructure(new IceGenMarker(true), random, chunkX, chunkZ, world, 15);
-		addStructure(new IceGenFirePortal(true), random, chunkX, chunkZ, world, 5);
+		addStructure(new IceGenMarker2(), random, chunkX, chunkZ, world, 5);
 	}
 	
 	private void generateFIRE(Random random, int chunkX, int chunkZ, World world) {
-		addStructure(new FireGenMarker(true), random, chunkX, chunkZ, world, 15);
-		addStructure(new FireGenIcePortal(true), random, chunkX, chunkZ, world, 5);
+		addStructure(new FireGenMarker2(), random, chunkX, chunkZ, world, 5);
 	}
 	
 	private void generateNIGHTMARE(Random random, int chunkX, int chunkZ, World world) {

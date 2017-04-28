@@ -27,4 +27,5 @@ import net.minecraft.src.FMLRenderAccessLibrary;
 
 public class RenderModBlockIDs extends RenderBlocks{
 	public static final int BLUESTONE_WIRE = RenderingRegistry.getNextAvailableRenderId();
+	public static final int FURNACE_FIRE = RenderingRegistry.getNextAvailableRenderId();
 }

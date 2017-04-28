@@ -38,6 +38,46 @@ public class ModBlockSlab extends BlockSlab{
 			GameRegistry.registerBlock(this, ModItemSlab.class, name + "_slab_double");
 		}
 	}
+	
+	public ModBlockSlab(boolean isFull, String name, float A, float B, String Tname, Block block) {
+		super(isFull, block.getMaterial());
+		this.setHardness(A);
+		this.setResistance(B);
+		this.setHarvestLevel(block.getHarvestTool(0), block.getHarvestLevel(0));
+		this.setStepSound(block.stepSound);
+		this.setBlockTextureName(RefStrings.MODID + ":" + Tname);
+		if(isFull == false){
+			ModItemSlab.ModBlockSlab = this;
+			this.setLightOpacity(0);
+			this.setCreativeTab(MCreativeTabs.tabBlocks);
+			this.setBlockName(name + "_slab");
+			GameRegistry.registerBlock(this, ModItemSlab.class, name + "_slab");
+		}else{
+			ModItemSlab.ModBlockSlabDouble = this;
+			this.setBlockName(name + "_slab_double");
+			GameRegistry.registerBlock(this, ModItemSlab.class, name + "_slab_double");
+		}
+	}
+	
+	public ModBlockSlab(boolean isFull, String name, float A, float B, Block block) {
+		super(isFull, block.getMaterial());
+		this.setHardness(A);
+		this.setResistance(B);
+		this.setHarvestLevel(block.getHarvestTool(0), block.getHarvestLevel(0));
+		this.setStepSound(block.stepSound);
+		this.setBlockTextureName(RefStrings.MODID + ":" + name);
+		if(isFull == false){
+			ModItemSlab.ModBlockSlab = this;
+			this.setLightOpacity(0);
+			this.setCreativeTab(MCreativeTabs.tabBlocks);
+			this.setBlockName(name + "_slab");
+			GameRegistry.registerBlock(this, ModItemSlab.class, name + "_slab");
+		}else{
+			ModItemSlab.ModBlockSlabDouble = this;
+			this.setBlockName(name + "_slab_double");
+			GameRegistry.registerBlock(this, ModItemSlab.class, name + "_slab_double");
+		}
+	}
 
 	@Override
 	public String func_150002_b(int var1) {

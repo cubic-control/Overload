@@ -25,6 +25,7 @@ import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.Direction;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.ForgeDirection;
 
 public class ModBlockPortalFire extends BlockBreakable {
 	public static final int[][] field_150001_a = new int[][] {new int[0], {3, 1}, {2, 0}};
@@ -382,4 +383,8 @@ public class ModBlockPortalFire extends BlockBreakable {
 			}
 		}
 	}
+	@Override
+    public boolean isFlammable(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+    	return false;
+    }
 }

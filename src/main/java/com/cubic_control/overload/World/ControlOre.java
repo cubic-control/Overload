@@ -46,20 +46,22 @@ public class ControlOre implements IWorldGenerator {
 		// TODO Auto-generated method stub
 	}
 	private void generateOverworld(Random random, int chunkX, int chunkZ, World world) {
-		addOre(MBlocks.ender_rite_ore, Blocks.stone, random, world, chunkX, chunkZ, 5, 45, 1, 5, 25);
-		addOre(MBlocks.nightmare_ore, Blocks.stone, random, world, chunkX, chunkZ, 5, 25, 1, 3, 15);
+		addOre(MBlocks.ender_rite_ore, Blocks.stone, random, world, chunkX, chunkZ, 5, 45, 1, 5, 15);
+		addOre(MBlocks.nightmare_ore, Blocks.stone, random, world, chunkX, chunkZ, 0, 25, 1, 3, 20);
 		addOre(MBlocks.bubblegum_ore, Blocks.stone, random, world, chunkX, chunkZ, 25, 45, 1, 5, 35);
-		addOre(MBlocks.clay_dark, Blocks.clay, random, world, chunkX, chunkZ, 5, 256, 1, 5, 35);
-		addOre(MBlocks.clay_light, Blocks.clay, random, world, chunkX, chunkZ, 5, 256, 1, 5, 35);
-		addOre(MBlocks.andesite, Blocks.stone, random, world, chunkX, chunkZ, 5, 256, 5, 15, 40);
-		addOre(MBlocks.diorite, Blocks.stone, random, world, chunkX, chunkZ, 5, 256, 5, 15, 40);
-		addOre(MBlocks.granite, Blocks.stone, random, world, chunkX, chunkZ, 5, 256, 5, 15, 40);
-		addOre(MBlocks.marble, Blocks.stone, random, world, chunkX, chunkZ, 5, 256, 5, 15, 30);
-		addOre(MBlocks.slate, Blocks.stone, random, world, chunkX, chunkZ, 5, 256, 5, 15, 30);
-		addOre(MBlocks.basalt, Blocks.stone, random, world, chunkX, chunkZ, 5, 256, 5, 15, 30);
-		addOre(MBlocks.rhyolite, Blocks.stone, random, world, chunkX, chunkZ, 5, 256, 5, 15, 30);
-		addOre(MBlocks.dacite, Blocks.stone, random, world, chunkX, chunkZ, 5, 256, 5, 15, 30);
-		addOre(MBlocks.trachyte, Blocks.stone, random, world, chunkX, chunkZ, 5, 256, 5, 15, 30);
+		addOre(MBlocks.clay_dark, Blocks.clay, random, world, chunkX, chunkZ, 0, 256, 1, 5, 35);
+		addOre(MBlocks.clay_light, Blocks.clay, random, world, chunkX, chunkZ, 0, 256, 1, 5, 35);
+		addOre(MBlocks.ruby_ore, Blocks.stone, random, world, chunkX, chunkZ, 0, 35, 1, 8, 22);
+		//Stones
+		addOre(MBlocks.andesite, Blocks.stone, random, world, chunkX, chunkZ, 0, 256, 5, 15, 30);
+		addOre(MBlocks.diorite, Blocks.stone, random, world, chunkX, chunkZ, 0, 256, 5, 15, 30);
+		addOre(MBlocks.granite, Blocks.stone, random, world, chunkX, chunkZ, 0, 256, 5, 15, 30);
+		addOre(MBlocks.marble, Blocks.stone, random, world, chunkX, chunkZ, 0, 256, 5, 15, 30);
+		addOre(MBlocks.slate, Blocks.stone, random, world, chunkX, chunkZ, 0, 256, 5, 15, 30);
+		addOre(MBlocks.basalt, Blocks.stone, random, world, chunkX, chunkZ, 0, 256, 5, 15, 30);
+		addOre(MBlocks.rhyolite, Blocks.stone, random, world, chunkX, chunkZ, 0, 256, 5, 15, 30);
+		addOre(MBlocks.dacite, Blocks.stone, random, world, chunkX, chunkZ, 0, 256, 5, 15, 30);
+		addOre(MBlocks.trachyte, Blocks.stone, random, world, chunkX, chunkZ, 0, 256, 5, 15, 30);
 		//Gem Ores
 		addOre(MBlocks.Amethyst_Ore, Blocks.stone, random, world, chunkX, chunkZ, 3, 40, 1, 2, 27);
 		addOre(MBlocks.Carnelian_Ore, Blocks.stone, random, world, chunkX, chunkZ, 3, 40, 1, 2, 27);
@@ -84,13 +86,13 @@ public class ControlOre implements IWorldGenerator {
 	}
 	private void generateEnd(Random random, int chunkX, int chunkZ, World world) {
 		if(MConfiguration.SpawnEndOres){
-			addOre(MBlocks.end_iron_ore, Blocks.end_stone, random, world, chunkX, chunkZ, 1, 63, 4, 10, 77);
-			addOre(MBlocks.end_coal_ore, Blocks.end_stone, random, world, chunkX, chunkZ, 1, 63, 5, 10, 88);
-			addOre(MBlocks.end_gold_ore, Blocks.end_stone, random, world, chunkX, chunkZ, 1, 63, 4, 8, 44);
-			addOre(MBlocks.end_diamond_ore, Blocks.end_stone, random, world, chunkX, chunkZ, 1, 63, 1, 12, 33);
-			addOre(MBlocks.end_emerald_ore, Blocks.end_stone, random, world, chunkX, chunkZ, 1, 63, 1, 8, 22);
-			addOre(MBlocks.end_ruby_ore, Blocks.end_stone, random, world, chunkX, chunkZ, 1, 63, 1, 8, 22);
-			addOre(MBlocks.end_lapis_ore, Blocks.end_stone, random, world, chunkX, chunkZ, 1, 63, 1, 8, 3);
+			addOre(MBlocks.end_iron_ore, Blocks.end_stone, random, world, chunkX, chunkZ, 0, 256, 4, 10, 77);
+			addOre(MBlocks.end_coal_ore, Blocks.end_stone, random, world, chunkX, chunkZ, 0, 256, 5, 10, 88);
+			addOre(MBlocks.end_gold_ore, Blocks.end_stone, random, world, chunkX, chunkZ, 0, 256, 4, 8, 44);
+			addOre(MBlocks.end_diamond_ore, Blocks.end_stone, random, world, chunkX, chunkZ, 0, 256, 1, 12, 33);
+			addOre(MBlocks.end_emerald_ore, Blocks.end_stone, random, world, chunkX, chunkZ, 0, 256, 1, 8, 22);
+			addOre(MBlocks.end_ruby_ore, Blocks.end_stone, random, world, chunkX, chunkZ, 0, 256, 1, 8, 22);
+			addOre(MBlocks.end_lapis_ore, Blocks.end_stone, random, world, chunkX, chunkZ, 0, 256, 1, 8, 3);
 		}
 		
 	}

@@ -1,6 +1,7 @@
 package com.cubic_control.overload.Biomes;
 
 import com.cubic_control.overload.Blocks.MBlocks;
+import com.cubic_control.overload.lib.RefStrings;
 
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
@@ -108,6 +109,8 @@ public class BiomeDecoratorHelper {
                     if(block != Blocks.air || block != Blocks.lava){
                         if(blockA != Blocks.air || blockA != Blocks.lava){
                             BiomeDecoratorMod.SmallFireTree.generate(BiomeDecoratorMod.currentWorld, BiomeDecoratorMod.randomGenerator, chunkX, y, chunkZ);
+                            //DEBUG
+                			System.out.println("["+RefStrings.NAME+"]:"+BiomeDecoratorHelper.class.getCanonicalName()+":decorateBiome:Small Tree Generated At_"+chunkX+"_"+y+"_"+chunkZ);
                         }
                     }
                 }
@@ -121,6 +124,8 @@ public class BiomeDecoratorHelper {
                     if(block != Blocks.air || block != Blocks.lava){
                         if(blockA != Blocks.air || blockA != Blocks.lava){
                             BiomeDecoratorMod.BigFireTree.generate(BiomeDecoratorMod.currentWorld, BiomeDecoratorMod.randomGenerator, chunkX, y, chunkZ);
+                            //DEBUG
+                			System.out.println("["+RefStrings.NAME+"]:"+BiomeDecoratorHelper.class.getCanonicalName()+":decorateBiome:Big Tree Generated At_"+chunkX+"_"+y+"_"+chunkZ);
                         }
                     }
                 }

@@ -1,5 +1,7 @@
 package com.cubic_control.overload.Item;
 
+import com.cubic_control.overload.CreativeTabs.MCreativeTabs;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -13,6 +15,7 @@ public class ModItemTeleporter extends ModItem{
 
 	public ModItemTeleporter(String name) {
 		super(name);
+		this.setCreativeTab(MCreativeTabs.tabTech);
 		this.setMaxDamage(200);
 		this.isDamageable();
 	}

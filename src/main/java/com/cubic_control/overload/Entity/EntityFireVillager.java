@@ -78,21 +78,12 @@ public class EntityFireVillager extends EntityFireBase {
 
 	public EntityFireVillager(World par1World) {
 		super(par1World);
-		this.getNavigator().setBreakDoors(true);
-        this.getNavigator().setAvoidsWater(true);
-        this.tasks.addTask(0, new EntityAISwimming(this));
         this.tasks.addTask(1, new EntityAIAvoidEntity(this, EntityMob.class, 8.0F, 0.6D, 0.6D));
-        this.tasks.addTask(2, new EntityAIMoveIndoors(this));
-        this.tasks.addTask(3, new EntityAIRestrictOpenDoor(this));
-        this.tasks.addTask(4, new EntityAIOpenDoor(this, true));
-        this.tasks.addTask(5, new EntityAIMoveTowardsRestriction(this, 0.6D));
-        this.tasks.addTask(6, new EntityAIAttackOnCollide(this, 1.0D, true));
-        this.tasks.addTask(8, new EntityAILookIdle(this));
-        this.tasks.addTask(9, new EntityAIWatchClosest2(this, EntityPlayer.class, 3.0F, 1.0F));
-        this.tasks.addTask(9, new EntityAIWatchClosest2(this, EntityFireVillager.class, 5.0F, 0.02F));
-        this.tasks.addTask(9, new EntityAIWander(this, 0.6D));
-        this.tasks.addTask(10, new EntityAIWatchClosest(this, EntityLiving.class, 8.0F));
-		this.setSize(0.6F, 1.8F);
+        this.tasks.addTask(2, new EntityAIAttackOnCollide(this, 1.0D, true));
+        this.tasks.addTask(10, new EntityAIWatchClosest2(this, EntityPlayer.class, 3.0F, 1.0F));
+        this.tasks.addTask(10, new EntityAIWatchClosest2(this, EntityFireVillager.class, 5.0F, 0.02F));
+        this.tasks.addTask(11, new EntityAIWatchClosest(this, EntityLiving.class, 8.0F));
+        this.setSize(0.6F, 1.92F);
 	}
 	@Override
 	protected void applyEntityAttributes() {
@@ -176,8 +167,6 @@ public class EntityFireVillager extends EntityFireBase {
         }
         super.updateAITick();
     }
-	//@Override
-	//protected boolean canDespawn() {return false;}
 	
 	public void setPlaying(boolean par1) {
         this.isPlaying = par1;

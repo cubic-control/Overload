@@ -12,7 +12,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class RenderZombieNotch extends RenderZombie {
 	
-	private static final ResourceLocation Texture = new ResourceLocation(RefStrings.MODID + ":textures/mobs/zombie/Zombie_Notch.png");
+	private static final ResourceLocation Texture = new ResourceLocation(RefStrings.MODID + ":textures/mobs/zombie/zombie_Notch.png");
 	 
     public RenderZombieNotch(ModelBase par1ModelBase, float par2) {
             super();

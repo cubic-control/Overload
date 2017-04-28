@@ -1,11 +1,6 @@
 package com.cubic_control.overload.Blocks;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-
 import java.util.Random;
-
-import com.cubic_control.overload.TileEntity.TileEntityFireFurnace;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
@@ -14,7 +9,6 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
@@ -23,9 +17,22 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.ForgeDirection;
 
-public class ModBlockFireFurnace extends BlockContainer {
+import com.cubic_control.overload.CreativeTabs.MCreativeTabs;
+import com.cubic_control.overload.Main.MainRegistry;
+import com.cubic_control.overload.Render.RenderModBlockIDs;
+import com.cubic_control.overload.TileEntity.TileEntityFurnaceFire;
+import com.cubic_control.overload.lib.RefStrings;
+
+import cpw.mods.fml.common.network.internal.FMLNetworkHandler;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
+public class ModBlockFurnaceFire extends BlockContainer {
     private final Random field_149933_a = new Random();
     private final boolean field_149932_b;
     private static boolean field_149934_M;
@@ -34,14 +41,28 @@ public class ModBlockFireFurnace extends BlockContainer {
     @SideOnly(Side.CLIENT)
     private IIcon field_149936_O;
 
-    protected ModBlockFireFurnace(boolean isOn) {
+    protected ModBlockFurnaceFire(boolean isOn, String name) {
         super(Material.rock);
         this.field_149932_b = isOn;
+		this.setHardness(3.5f);
+		this.setResistance(17.5f);
+		this.setHarvestLevel("pickaxe", 0);
+		this.setStepSound(Block.soundTypeStone);
+		this.setBlockTextureName(RefStrings.MODID + ":" + name);
+		
+		if(isOn){
+			this.setCreativeTab(null);
+			this.setBlockName(name+"_lit");
+			GameRegistry.registerBlock(this, name+"_lit");
+		}else{
+			this.setCreativeTab(MCreativeTabs.tabBlocks);
+			this.setBlockName(name);
+			GameRegistry.registerBlock(this, name);
+		}
     }
     @Override
     public Item getItemDropped(int i1, Random rand, int i2) {
-    	//TODO: Replace with custom Furnace
-        return Item.getItemFromBlock(Blocks.furnace);
+        return Item.getItemFromBlock(MBlocks.fire_furnace);
     }
     @Override
     public void onBlockAdded(World world, int x, int y, int z) {
@@ -80,20 +101,20 @@ public class ModBlockFireFurnace extends BlockContainer {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister reg) {
-    	//TODO: Replace with custom textures
-        this.blockIcon = reg.registerIcon("furnace_side");
-        this.field_149936_O = reg.registerIcon(this.field_149932_b ? "furnace_front_on" : "furnace_front_off");
-        this.field_149935_N = reg.registerIcon("furnace_top");
+        this.blockIcon = reg.registerIcon(this.getTextureName()+"_side");
+        this.field_149936_O = reg.registerIcon(this.field_149932_b ? this.getTextureName()+"_front_on" : this.getTextureName()+"_front_off");
+        this.field_149935_N = reg.registerIcon(this.getTextureName()+"_top");
     }
     @Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_) {
         if(world.isRemote){
-            return true;
+            return false;
         }else{
-        	TileEntityFireFurnace tileentityfurnace = (TileEntityFireFurnace)world.getTileEntity(x, y, z);
+        	TileEntityFurnaceFire tileentityfurnace = (TileEntityFurnaceFire)world.getTileEntity(x, y, z);
 
             if(tileentityfurnace != null){
-                player.func_146101_a(tileentityfurnace);
+                player.openGui(MainRegistry.instance, 3, world, x, y, z);
+            	//FMLNetworkHandler.openGui(player, MainRegistry.instance, 3, world, x, y, z);
             }
             return true;
         }
@@ -105,10 +126,9 @@ public class ModBlockFireFurnace extends BlockContainer {
         field_149934_M = true;
 
         if(p_149931_0_){
-        	//TODO: Replace with custom Furnace
-        	world.setBlock(x, y, z, Blocks.lit_furnace);
+        	world.setBlock(x, y, z, MBlocks.fire_furnace_lit);
         }else{
-        	world.setBlock(x, y, z, Blocks.furnace);
+        	world.setBlock(x, y, z, MBlocks.fire_furnace);
         }
         field_149934_M = false;
         world.setBlockMetadataWithNotify(x, y, z, l, 2);
@@ -120,7 +140,7 @@ public class ModBlockFireFurnace extends BlockContainer {
     }
     @Override
     public TileEntity createNewTileEntity(World world, int i1) {
-        return new TileEntityFireFurnace();
+        return new TileEntityFurnaceFire();
     }
     @Override
     public void onBlockPlacedBy(World world, int p_149689_2_, int p_149689_3_, int p_149689_4_, EntityLivingBase p_149689_5_, ItemStack p_149689_6_) {
@@ -139,13 +159,13 @@ public class ModBlockFireFurnace extends BlockContainer {
             world.setBlockMetadataWithNotify(p_149689_2_, p_149689_3_, p_149689_4_, 4, 2);
         }
         if(p_149689_6_.hasDisplayName()){
-            ((TileEntityFireFurnace)world.getTileEntity(p_149689_2_, p_149689_3_, p_149689_4_)).func_145951_a(p_149689_6_.getDisplayName());
+            ((TileEntityFurnaceFire)world.getTileEntity(p_149689_2_, p_149689_3_, p_149689_4_)).func_145951_a(p_149689_6_.getDisplayName());
         }
     }
     @Override
     public void breakBlock(World world, int x, int y, int z, Block block, int p_149749_6_) {
         if(!field_149934_M){
-        	TileEntityFireFurnace tileentityfurnace = (TileEntityFireFurnace)world.getTileEntity(x, y, z);
+        	TileEntityFurnaceFire tileentityfurnace = (TileEntityFurnaceFire)world.getTileEntity(x, y, z);
 
             if(tileentityfurnace != null){
                 for(int i1 = 0; i1 < tileentityfurnace.getSizeInventory(); ++i1){
@@ -218,7 +238,14 @@ public class ModBlockFireFurnace extends BlockContainer {
     @Override
     @SideOnly(Side.CLIENT)
     public Item getItem(World world, int x, int y, int z) {
-    	//TODO: Replace with custom TileEntity
-        return Item.getItemFromBlock(Blocks.furnace);
+        return Item.getItemFromBlock(MBlocks.fire_furnace);
+    }
+    @Override
+    public int getRenderType() {
+        return RenderModBlockIDs.FURNACE_FIRE;
+    }
+    @Override
+    public boolean isFlammable(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+    	return false;
     }
 }

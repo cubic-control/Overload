@@ -6,5 +6,6 @@ public class RegTileEntities {
 	public static void RegisterTileEntites(){
 		GameRegistry.registerTileEntity(TileEntityLightPyramidEntity.class, "light_pyramid.TileEntity");
 		GameRegistry.registerTileEntity(TileEntityDuplicator.class, "duplicator.TileEntity");
+		GameRegistry.registerTileEntity(TileEntityFurnaceFire.class, "fire_furnace.TileEntity");
 	}
 }

@@ -18,7 +18,7 @@ import com.cubic_control.overload.lib.RefStrings;
 
 @SideOnly(Side.CLIENT)
 public class RenderGiantNightmare extends RenderBiped{
-	private static final ResourceLocation Resource = new ResourceLocation(RefStrings.MODID + ":textures/mobs/nightmare.png");
+	private static final ResourceLocation Resource = new ResourceLocation(RefStrings.MODID + ":textures/mobs/nightmare/nightmare.png");
     /** Scale of the model to use */
     private float scale;
     private static final String __OBFID = "CL_00000998";

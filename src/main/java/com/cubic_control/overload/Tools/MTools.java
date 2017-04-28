@@ -154,7 +154,7 @@ public class MTools {
 		scythe = new ModItemScythe(ToolMaterial.WOOD, "scythe");
 		StalkingSpear = new ModItemSword(ToolMaterial.EMERALD, "StalkingSpear");
 		d_scythe = new ModItemDeathScythe(ModToolMaterial.d_ToolMaterial, "d_scythe");
-		cubic_sword = new ModItemCubicSword(ToolMaterial.WOOD, "cubic_sword");
+		cubic_sword = new ModItemCubicSword(ModToolMaterial.cubic_tools, "cubic_sword");
 		DayAxe = new ModItemTimeAxe(ToolMaterial.EMERALD, "DayAxe", 1000);
 	}
 }

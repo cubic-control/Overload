@@ -47,7 +47,7 @@ public class MEntities {
 		EntityRegistry.registerModEntity(EntityNightmareSteve.class, "Nightmare Steve", 28, MainRegistry.instance, 64, 1, true);
 		EntityRegistry.registerModEntity(EntityNightmareAlex.class, "Nightmare Alex", 29, MainRegistry.instance, 64, 1, true);
 		EntityRegistry.registerModEntity(EntityNightmareHerobrine.class, "Nightmare Herobrine", 30, MainRegistry.instance, 64, 1, true);
-		EntityRegistry.registerModEntity(EntityNull.class, "Null", 29, MainRegistry.instance, 31, 1, true);
+		EntityRegistry.registerModEntity(EntityNull.class, "Null", 31, MainRegistry.instance, 64, 1, true);
 		EntityRegistry.registerModEntity(EntityPumpkin.class, "Pumpkin", 32, MainRegistry.instance, 64, 1, true);
 		EntityRegistry.registerModEntity(EntityHeadless.class, "Headless", 33, MainRegistry.instance, 64, 1, true);
 		EntityRegistry.registerModEntity(EntityFakeHeadless.class, "Fake Headless Horseman", 34, MainRegistry.instance, 64, 1, true);

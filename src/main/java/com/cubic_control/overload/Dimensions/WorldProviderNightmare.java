@@ -122,7 +122,7 @@ public class WorldProviderNightmare extends WorldProvider{
 	/** can the player respawn in this dimension? */
 	public boolean canRespawnHere()
 	{
-		return true;
+		return false;
 	}
 
 	@Override

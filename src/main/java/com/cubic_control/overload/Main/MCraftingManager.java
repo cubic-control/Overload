@@ -32,6 +32,7 @@ public class MCraftingManager {
 		GameRegistry.addRecipe(new ItemStack(MItems.carnelian_machete), "  X", " Y ", "Y  ", 'X', MItems.amethyst, 'Y', Items.stick);
 		GameRegistry.addRecipe(new ItemStack(MItems.jade_machete), "  X", " Y ", "Y  ", 'X', MItems.jade, 'Y', Items.stick);
 		GameRegistry.addRecipe(new ItemStack(MItems.jasper_machete), "  X", " Y ", "Y  ", 'X', MItems.jasper, 'Y', Items.stick);
+		GameRegistry.addRecipe(new ItemStack(MTools.cubic_sword), "BrR", "BnR", "BiR", 'B', MBlocks.blue_block, 'R', MBlocks.red_block, 'r', MItems.rainbow_shard, 'n', MItems.Nightmare_Gem, 'i', MItems.iron_nightmare_sword);
 		//Ender-rite
 		GameRegistry.addRecipe(new ItemStack(MItems.ender_rite_sword), "X", "X", "Y", 'X', MItems.ender_rite_shard, 'Y', Items.stick);
 		GameRegistry.addRecipe(new ItemStack(MItems.ender_rite_pickaxe), "XXX", " Y ", " Y ", 'X', MItems.ender_rite_shard, 'Y', Items.stick);
@@ -147,6 +148,11 @@ public class MCraftingManager {
 		GameRegistry.addRecipe(new ItemStack(MArmor.ender_rite_chestplate), "X X", "XXX", "XXX", 'X', MItems.ender_rite_shard);
 		GameRegistry.addRecipe(new ItemStack(MArmor.ender_rite_leggings), "XXX", "X X", "X X", 'X', MItems.ender_rite_shard);
 		GameRegistry.addRecipe(new ItemStack(MArmor.ender_rite_boots), "X X", "X X", 'X', MItems.ender_rite_shard);
+		//Ruby
+		GameRegistry.addRecipe(new ItemStack(MArmor.ruby_helmet), "XXX", "X X", 'X', MItems.ruby);
+		GameRegistry.addRecipe(new ItemStack(MArmor.ruby_chestplate), "X X", "XXX", "XXX", 'X', MItems.ruby);
+		GameRegistry.addRecipe(new ItemStack(MArmor.ruby_leggings), "XXX", "X X", "X X", 'X', MItems.ruby);
+		GameRegistry.addRecipe(new ItemStack(MArmor.ruby_boots), "X X", "X X", 'X', MItems.ruby);
 		//Color Armor
 			//Rainbow
 				//Iron

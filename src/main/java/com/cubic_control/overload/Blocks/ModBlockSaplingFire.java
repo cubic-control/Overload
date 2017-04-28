@@ -35,7 +35,7 @@ public class ModBlockSaplingFire extends BlockSapling implements IGrowable{
 	private static WorldGenerator tree;
 	private static WorldGenerator treeBig;
 	
-	protected ModBlockSaplingFire(String name, Material material) {
+	protected ModBlockSaplingFire(String name) {
 		super();
 		treeBig = new WorldGenFireBigTree(true, 10, 1, 5);
 		tree = new WorldGenFireTrees(true);
@@ -163,9 +163,12 @@ public class ModBlockSaplingFire extends BlockSapling implements IGrowable{
 
 	@Override
 	public void onPlantGrow(World world, int x, int y, int z, int sourceX, int sourceY, int sourceZ) {
-		if (this == MBlocks.fire_dirt || this == MBlocks.fire_grass)
-		{
+		if(this == MBlocks.fire_dirt || this == MBlocks.fire_grass){
 			world.setBlock(x, y, z, MBlocks.fire_dirt, 0, 2);
 		}
 	}
+	@Override
+    public boolean isFlammable(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+    	return false;
+    }
 }

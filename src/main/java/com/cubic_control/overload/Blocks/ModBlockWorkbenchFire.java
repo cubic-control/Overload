@@ -12,7 +12,9 @@ import net.minecraft.block.BlockWorkbench;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.IIcon;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.ForgeDirection;
 
 public class ModBlockWorkbenchFire extends BlockWorkbench{
 	
@@ -61,6 +63,10 @@ public class ModBlockWorkbenchFire extends BlockWorkbench{
         	parEntityPlayer.openGui(MainRegistry.instance, ID, parWorld, i2, i3, i4);
             return true;
         }
+    }
+	@Override
+    public boolean isFlammable(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+    	return false;
     }
 
 }

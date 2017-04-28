@@ -29,7 +29,7 @@ public class ModArmorMaterial {
 	public static ArmorMaterial diamond = EnumHelper.addArmorMaterial("diamond", 34, new int[]{4, 9, 7, 4}, 11);
 	/**Misc_Armor*/
 	public static ArmorMaterial ender_rite_armor = EnumHelper.addArmorMaterial("ender_rite_armor", 40, new int[]{4, 9, 7, 4}, 30);
-	public static ArmorMaterial ruby_armor = EnumHelper.addArmorMaterial("ruby_armor", 33, new int[]{3, 8, 6, 3}, 10);
+	public static ArmorMaterial ruby_armor = EnumHelper.addArmorMaterial("ruby_armor", 44, new int[]{3, 8, 6, 3}, 70);
 	public static ArmorMaterial flight_armor = EnumHelper.addArmorMaterial("flight_armor", 25, new int[]{0, 0, 0, 5}, 20);
 	public static ArmorMaterial light_armor = EnumHelper.addArmorMaterial("light_armor", 85, new int[]{4, 7, 6, 3}, 95);
 	public static ArmorMaterial death_armor = EnumHelper.addArmorMaterial("death_armor", 70, new int[]{5, 8, 7, 4}, 65);

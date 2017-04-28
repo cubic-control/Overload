@@ -94,6 +94,7 @@ import com.cubic_control.overload.Render.RenderInjuredSteve;
 import com.cubic_control.overload.Render.RenderJeff;
 import com.cubic_control.overload.Render.RenderMantisMan;
 import com.cubic_control.overload.Render.RenderModBlockBluestoneWire;
+import com.cubic_control.overload.Render.RenderModBlockFurnaceFire;
 import com.cubic_control.overload.Render.RenderNightmare;
 import com.cubic_control.overload.Render.RenderNightmareAlex;
 import com.cubic_control.overload.Render.RenderNightmareCubic;
@@ -191,5 +192,6 @@ public class ClientProxy extends ServerProxy{
 	public void registerRenders() {
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityLightPyramidEntity.class, new TileEntityLightPyramidRenderer());
 		RenderingRegistry.registerBlockHandler(new RenderModBlockBluestoneWire());
+		RenderingRegistry.registerBlockHandler(new RenderModBlockFurnaceFire());
 	}
 }
