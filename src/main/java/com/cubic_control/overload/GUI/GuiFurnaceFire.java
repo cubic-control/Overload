@@ -6,6 +6,7 @@ import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.World;
 
 import org.lwjgl.opengl.GL11;
 
@@ -17,9 +18,9 @@ public class GuiFurnaceFire extends GuiContainer{
     private static final ResourceLocation furnaceGuiTextures = new ResourceLocation(RefStrings.MODID+":textures/gui/container/fire_furnace.png");
     private TileEntityFurnaceFire tileFurnace;
 
-    public GuiFurnaceFire(InventoryPlayer par1InventoryPlayer, TileEntityFurnaceFire par2TileEntityFurnace) {
-        super(new ContainerFurnaceFire(par1InventoryPlayer, par2TileEntityFurnace));
-        this.tileFurnace = par2TileEntityFurnace;
+    public GuiFurnaceFire(InventoryPlayer par1InventoryPlayer, World world, int x, int y, int z) {
+        super(new ContainerFurnaceFire(par1InventoryPlayer, world, x, y, z));
+        this.tileFurnace = (TileEntityFurnaceFire)world.getTileEntity(x, y, z);
     }
     
     protected void drawGuiContainerForegroundLayer(int p_146979_1_, int p_146979_2_) {

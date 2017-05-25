@@ -26,122 +26,7 @@ public class MCraftingManager {
 	public static void addCraftingRec(){
 	//Tools
 		GameRegistry.addRecipe(new ItemStack(MTools.scythe), "XXY", " Y ", "Y Z", 'X', Items.iron_ingot, 'Y', Items.stick, 'Z', MItems.black_shard);
-		GameRegistry.addRecipe(new ItemStack(MItems.amethyst_machete), "  X", " Y ", "Y  ", 'X', MItems.amethyst, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MItems.aventurine_machete), "  X", " Y ", "Y  ", 'X', MItems.aventurine, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MItems.beryl_machete), "  X", " Y ", "Y  ", 'X', MItems.beryl, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MItems.carnelian_machete), "  X", " Y ", "Y  ", 'X', MItems.amethyst, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MItems.jade_machete), "  X", " Y ", "Y  ", 'X', MItems.jade, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MItems.jasper_machete), "  X", " Y ", "Y  ", 'X', MItems.jasper, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.cubic_sword), "BrR", "BnR", "BiR", 'B', MBlocks.blue_block, 'R', MBlocks.red_block, 'r', MItems.rainbow_shard, 'n', MItems.Nightmare_Gem, 'i', MItems.iron_nightmare_sword);
-		//Ender-rite
-		GameRegistry.addRecipe(new ItemStack(MItems.ender_rite_sword), "X", "X", "Y", 'X', MItems.ender_rite_shard, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MItems.ender_rite_pickaxe), "XXX", " Y ", " Y ", 'X', MItems.ender_rite_shard, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MItems.ender_rite_axe), "XX ","XY "," Y ", 'X', MItems.ender_rite_shard, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MItems.ender_rite_axe), " XX"," YX"," Y ", 'X', MItems.ender_rite_shard, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MItems.ender_rite_spade), "X","Y","Y",'X',MItems.ender_rite_shard,'Y',Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MItems.ender_rite_hoe), "XX "," Y "," Y ",'X',MItems.ender_rite_shard,'Y',Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MItems.ender_rite_hoe), " XX"," Y "," Y ",'X',MItems.ender_rite_shard,'Y',Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MItems.ender_rite_machete), "  X"," Y ","Y  ",'X',MItems.ender_rite_shard,'Y',Items.stick);
-		//Nightmare Swords
-		GameRegistry.addRecipe(new ItemStack(MItems.black_nightmare_sword), " X ", " X ", " Y ", 'X', MItems.black_shard, 'Y', MItems.Nightmare_Gem);
-		GameRegistry.addRecipe(new ItemStack(MItems.blue_nightmare_sword), " X ", " X ", " Y ", 'X', MItems.blue_shard, 'Y', MItems.Nightmare_Gem);
-		GameRegistry.addRecipe(new ItemStack(MItems.cyan_nightmare_sword), " X ", " X ", " Y ", 'X', MItems.cyan_shard, 'Y', MItems.Nightmare_Gem);
-		GameRegistry.addRecipe(new ItemStack(MItems.diamond_nightmare_sword), " X ", " X ", " Y ", 'X', Items.diamond, 'Y', MItems.Nightmare_Gem);
-		GameRegistry.addRecipe(new ItemStack(MItems.gold_nightmare_sword), " X ", " X ", " Y ", 'X', Items.gold_ingot, 'Y', MItems.Nightmare_Gem);
-		GameRegistry.addRecipe(new ItemStack(MItems.green_nightmare_sword), " X ", " X ", " Y ", 'X', MItems.green_shard, 'Y', MItems.Nightmare_Gem);
-		GameRegistry.addRecipe(new ItemStack(MItems.iron_nightmare_sword), " X ", " X ", " Y ", 'X', Items.iron_ingot, 'Y', MItems.Nightmare_Gem);
-		GameRegistry.addRecipe(new ItemStack(MItems.lime_nightmare_sword), " X ", " X ", " Y ", 'X', MItems.lime_shard, 'Y', MItems.Nightmare_Gem);
-		GameRegistry.addRecipe(new ItemStack(MItems.magenta_nightmare_sword), " X ", " X ", " Y ", 'X', MItems.magenta_shard, 'Y', MItems.Nightmare_Gem);
-		GameRegistry.addRecipe(new ItemStack(MItems.orange_nightmare_sword), " X ", " X ", " Y ", 'X', MItems.orange_shard, 'Y', MItems.Nightmare_Gem);
-		GameRegistry.addRecipe(new ItemStack(MItems.pink_nightmare_sword), " X ", " X ", " Y ", 'X', MItems.pink_shard, 'Y', MItems.Nightmare_Gem);
-		GameRegistry.addRecipe(new ItemStack(MItems.purple_nightmare_sword), " X ", " X ", " Y ", 'X', MItems.green_shard, 'Y', MItems.Nightmare_Gem);
-		GameRegistry.addRecipe(new ItemStack(MItems.red_nightmare_sword), " X ", " X ", " Y ", 'X', MItems.red_shard, 'Y', MItems.Nightmare_Gem);
-		GameRegistry.addRecipe(new ItemStack(MItems.stone_nightmare_sword), " X ", " X ", " Y ", 'X', Blocks.stone, 'Y', MItems.Nightmare_Gem);
-		GameRegistry.addRecipe(new ItemStack(MItems.white_nightmare_sword), " X ", " X ", " Y ", 'X', MItems.white_shard, 'Y', MItems.Nightmare_Gem);
-		GameRegistry.addRecipe(new ItemStack(MItems.wooden_nightmare_sword), " X ", " X ", " Y ", 'X', Blocks.planks, 'Y', MItems.Nightmare_Gem);
-		GameRegistry.addRecipe(new ItemStack(MItems.yellow_nightmare_sword), " X ", " X ", " Y ", 'X', MItems.yellow_shard, 'Y', MItems.Nightmare_Gem);
-		GameRegistry.addRecipe(new ItemStack(MItems.ender_rite_nightmare_sword), " X ", " X ", " Y ", 'X', MItems.ender_rite_shard, 'Y', MItems.Nightmare_Gem);
-		//Stones
-			//Ice
-		GameRegistry.addRecipe(new ItemStack(MTools.ice_stone_sword), "X", "X", "Y", 'X', MBlocks.ice_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.ice_stone_axe), "XX ", "XY ", " Y ", 'X', MBlocks.ice_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.ice_stone_axe), " XX", " YX", " Y ", 'X', MBlocks.ice_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.ice_stone_hoe), "XX ", " Y ", " Y ", 'X', MBlocks.ice_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.ice_stone_hoe), " XX", " Y ", " Y ", 'X', MBlocks.ice_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.ice_stone_pickaxe), "XXX", " Y ", " Y ", 'X', MBlocks.ice_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.ice_stone_spade), "X", "Y", "Y", 'X', MBlocks.ice_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.ice_stone_machete), "  X", " X ", "Y  ", 'X', MBlocks.ice_cobblestone, 'Y', Items.stick);
-			//Fire
-		GameRegistry.addRecipe(new ItemStack(MTools.fire_stone_sword), "X", "X", "Y", 'X', MBlocks.fire_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.fire_stone_axe), "XX ", "XY ", " Y ", 'X', MBlocks.fire_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.fire_stone_axe), " XX", " YX", " Y ", 'X', MBlocks.fire_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.fire_stone_hoe), "XX ", " Y ", " Y ", 'X', MBlocks.fire_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.fire_stone_hoe), " XX", " Y ", " Y ", 'X', MBlocks.fire_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.fire_stone_pickaxe), "XXX", " Y ", " Y ", 'X', MBlocks.fire_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.fire_stone_spade), "X", "Y", "Y", 'X', MBlocks.fire_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.fire_stone_machete), "  X", " X ", "Y  ", 'X', MBlocks.fire_cobblestone, 'Y', Items.stick);
-			//Nightmare
-			//Sandstone
-		GameRegistry.addRecipe(new ItemStack(MTools.sandstone_sword), "X", "X", "Y", 'X', MBlocks.sandstone_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.sandstone_axe), "XX ", "XY ", " Y ", 'X', MBlocks.sandstone_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.sandstone_axe), " XX", " YX", " Y ", 'X', MBlocks.sandstone_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.sandstone_hoe), "XX ", " Y ", " Y ", 'X', MBlocks.sandstone_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.sandstone_hoe), " XX", " Y ", " Y ", 'X', MBlocks.sandstone_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.sandstone_pickaxe), "XXX", " Y ", " Y ", 'X', MBlocks.sandstone_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.sandstone_spade), "X", "Y", "Y", 'X', MBlocks.sandstone_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.sandstone_machete), "  X", " X ", "Y  ", 'X', MBlocks.sandstone_cobblestone, 'Y', Items.stick);
-			//Marble
-		GameRegistry.addRecipe(new ItemStack(MTools.marble_sword), "X", "X", "Y", 'X', MBlocks.marble_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.marble_axe), "XX ", "XY ", " Y ", 'X', MBlocks.marble_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.marble_axe), " XX", " YX", " Y ", 'X', MBlocks.marble_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.marble_hoe), "XX ", " Y ", " Y ", 'X', MBlocks.marble_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.marble_hoe), " XX", " Y ", " Y ", 'X', MBlocks.marble_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.marble_pickaxe), "XXX", " Y ", " Y ", 'X', MBlocks.marble_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.marble_spade), "X", "Y", "Y", 'X', MBlocks.marble_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.marble_machete), "  X", " X ", "Y  ", 'X', MBlocks.marble_cobblestone, 'Y', Items.stick);
-			//Granite
-			//Diorite
-			//Andesite
-			//Slate
-		GameRegistry.addRecipe(new ItemStack(MTools.slate_sword), "X", "X", "Y", 'X', MBlocks.slate_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.slate_axe), "XX ", "XY ", " Y ", 'X', MBlocks.slate_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.slate_axe), " XX", " YX", " Y ", 'X', MBlocks.slate_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.slate_hoe), "XX ", " Y ", " Y ", 'X', MBlocks.slate_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.slate_hoe), " XX", " Y ", " Y ", 'X', MBlocks.slate_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.slate_pickaxe), "XXX", " Y ", " Y ", 'X', MBlocks.slate_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.slate_spade), "X", "Y", "Y", 'X', MBlocks.slate_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.slate_machete), "  X", " X ", "Y  ", 'X', MBlocks.slate_cobblestone, 'Y', Items.stick);
-			//Stone
-		GameRegistry.addRecipe(new ItemStack(MTools.stone_machete), "  X", " X ", "Y  ", 'X', Blocks.cobblestone, 'Y', Items.stick);
-			//Red Sandstone
-		GameRegistry.addRecipe(new ItemStack(MTools.red_sandstone_sword), "X", "X", "Y", 'X', MBlocks.red_sandstone_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.red_sandstone_axe), "XX ", "XY ", " Y ", 'X', MBlocks.red_sandstone_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.red_sandstone_axe), " XX", " YX", " Y ", 'X', MBlocks.red_sandstone_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.red_sandstone_hoe), "XX ", " Y ", " Y ", 'X', MBlocks.red_sandstone_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.red_sandstone_hoe), " XX", " Y ", " Y ", 'X', MBlocks.red_sandstone_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.red_sandstone_pickaxe), "XXX", " Y ", " Y ", 'X', MBlocks.red_sandstone_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.red_sandstone_spade), "X", "Y", "Y", 'X', MBlocks.red_sandstone_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.red_sandstone_machete), "  X", " X ", "Y  ", 'X', MBlocks.red_sandstone_cobblestone, 'Y', Items.stick);
-			//Basalt
-			//Rhyolite
-		GameRegistry.addRecipe(new ItemStack(MTools.rhyolite_sword), "X", "X", "Y", 'X', MBlocks.rhyolite_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.rhyolite_axe), "XX ", "XY ", " Y ", 'X', MBlocks.rhyolite_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.rhyolite_axe), " XX", " YX", " Y ", 'X', MBlocks.rhyolite_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.rhyolite_hoe), "XX ", " Y ", " Y ", 'X', MBlocks.rhyolite_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.rhyolite_hoe), " XX", " Y ", " Y ", 'X', MBlocks.rhyolite_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.rhyolite_pickaxe), "XXX", " Y ", " Y ", 'X', MBlocks.rhyolite_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.rhyolite_spade), "X", "Y", "Y", 'X', MBlocks.rhyolite_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.rhyolite_machete), "  X", " X ", "Y  ", 'X', MBlocks.rhyolite_cobblestone, 'Y', Items.stick);
-			//Dacite
-			//Trachyte
-		GameRegistry.addRecipe(new ItemStack(MTools.trachyte_sword), "X", "X", "Y", 'X', MBlocks.trachyte_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.trachyte_axe), "XX ", "XY ", " Y ", 'X', MBlocks.trachyte_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.trachyte_axe), " XX", " YX", " Y ", 'X', MBlocks.trachyte_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.trachyte_hoe), "XX ", " Y ", " Y ", 'X', MBlocks.trachyte_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.trachyte_hoe), " XX", " Y ", " Y ", 'X', MBlocks.trachyte_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.trachyte_pickaxe), "XXX", " Y ", " Y ", 'X', MBlocks.trachyte_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.trachyte_spade), "X", "Y", "Y", 'X', MBlocks.trachyte_cobblestone, 'Y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(MTools.trachyte_machete), "  X", " X ", "Y  ", 'X', MBlocks.trachyte_cobblestone, 'Y', Items.stick);
+		GameRegistry.addRecipe(new ItemStack(MTools.cubic_sword), "BrR", "BnR", "BiR", 'B', MBlocks.blue_block, 'R', MBlocks.red_block, 'r', MItems.rainbow_shard, 'n', MItems.Nightmare_Gem, 'i', MTools.iron_nightmare_sword);
 	//Armor
 		//Ender-rite
 		GameRegistry.addRecipe(new ItemStack(MArmor.ender_rite_helmet), "XXX", "X X", 'X', MItems.ender_rite_shard);
@@ -398,6 +283,10 @@ public class MCraftingManager {
 		GameRegistry.addRecipe(new ItemStack(MBlocks.dark_brick, 2), "X", "X", 'X', MBlocks.dark_brick_side);
 		GameRegistry.addShapedRecipe(new ItemStack(MBlocks.light_pyramid), " X ", "X X", "XXX", 'X', MItems.light_shard);
 		GameRegistry.addRecipe(new ItemStack(MBlocks.super_slime), "XXX", "XXX", "XXX", 'X', MItems.super_slime_ball);
+		GameRegistry.addRecipe(new ItemStack(MBlocks.fire_furnace), "XXX", "X X", "XXX", 'X', MBlocks.fire_cobblestone);
+		GameRegistry.addRecipe(new ItemStack(MBlocks.ice_furnace), "XXX", "X X", "XXX", 'X', MBlocks.ice_cobblestone);
+		GameRegistry.addRecipe(new ItemStack(MBlocks.duplicator), "bWb", "rWr", "gWg", 'b', MItems.Blue_Part, 'W', MBlocks.white_block, 'r', MItems.rainbow_shard, 'g', MItems.Green_Part);
+		GameRegistry.addRecipe(new ItemStack(MBlocks.c_bomb), "rNr", "NtN", "gNg", 'r', MItems.Red_Part, 'N', MItems.Nightmare_Gem, 't', Blocks.tnt, 'g', MItems.Green_Part);
 		//Ice
 		GameRegistry.addRecipe(new ItemStack(MBlocks.ice_stonebrick, 4), "XX", "XX", 'X', MBlocks.ice_stone_polished);
 		GameRegistry.addRecipe(new ItemStack(MBlocks.ice_stone_polished, 2), "X", "X", 'X', MBlocks.ice_stone);

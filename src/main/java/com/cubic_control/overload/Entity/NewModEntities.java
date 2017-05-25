@@ -52,7 +52,7 @@ public class NewModEntities {
 				EntityRegistry.addSpawn(EntityJeffTheKiller.class, 5, 1, 2, EnumCreatureType.monster, zombieSpawnBiomes);
 				EntityRegistry.addSpawn(EntityZombieCow.class, 15, 1, 8, EnumCreatureType.monster, zombieSpawnBiomes);
 				EntityRegistry.addSpawn(EntityMantisMan.class, 15, 5, 25, EnumCreatureType.monster, BiomeGenBase.forest);
-				EntityRegistry.addSpawn(EntityStalker.class, 5, 1, 3, EnumCreatureType.monster, BiomeGenBase.getBiomeGenArray()[i]);
+				EntityRegistry.addSpawn(EntityStalker.class, 5, 1, 2, EnumCreatureType.monster, BiomeGenBase.getBiomeGenArray()[i]);
 				EntityRegistry.addSpawn(EntityFireAssassin.class, 5, 1, 5, EnumCreatureType.monster, fireSpawnBiomes);
 				EntityRegistry.addSpawn(EntityIceAssassin.class, 5, 1, 5, EnumCreatureType.monster, iceSpawnBiomes);
 				EntityRegistry.addSpawn(EntityFireArcher.class, 5, 1, 5, EnumCreatureType.monster, fireSpawnBiomes);

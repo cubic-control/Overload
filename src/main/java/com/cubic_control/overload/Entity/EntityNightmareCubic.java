@@ -96,17 +96,17 @@ public class EntityNightmareCubic extends EntityMob{
 	    {
 	        if (this.worldObj.difficultySetting == EnumDifficulty.HARD)
 	        {
-	                this.setCurrentItemOrArmor(0, new ItemStack(MItems.ender_rite_nightmare_sword));
+	                this.setCurrentItemOrArmor(0, new ItemStack(MTools.ender_rite_nightmare_sword));
 	        }
 	        
 	        if (this.worldObj.difficultySetting == EnumDifficulty.NORMAL)
 	        {
-	                this.setCurrentItemOrArmor(0, new ItemStack(MItems.iron_nightmare_sword));
+	                this.setCurrentItemOrArmor(0, new ItemStack(MTools.iron_nightmare_sword));
 	        }
 	        
 	        if (this.worldObj.difficultySetting == EnumDifficulty.EASY)
 	        {
-	                this.setCurrentItemOrArmor(0, new ItemStack(MItems.cyan_nightmare_sword));
+	                this.setCurrentItemOrArmor(0, new ItemStack(MTools.cyan_nightmare_sword));
 	        }
 	    }
 	    

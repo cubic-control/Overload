@@ -48,7 +48,6 @@ public class Gem_Ores extends BlockOre{
         		this == MBlocks.Topaz_Ore ? MItems.topaz : (
         		this == MBlocks.Vermarine_Ore ? MItems.vermarine : Item.getItemFromBlock(this)))))))))))))));
     }
-	
 	@Override
 	public void dropXpOnBlockBreak(World p_149657_1_, int p_149657_2_,
 			int p_149657_3_, int p_149657_4_, int p_149657_5_) {

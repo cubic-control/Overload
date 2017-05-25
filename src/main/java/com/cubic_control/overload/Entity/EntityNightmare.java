@@ -1,6 +1,8 @@
 package com.cubic_control.overload.Entity;
 
+import com.cubic_control.overload.Achievements.MAchievements;
 import com.cubic_control.overload.Item.MItems;
+import com.cubic_control.overload.Tools.MTools;
 
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EnumCreatureAttribute;
@@ -84,17 +86,17 @@ public class EntityNightmare extends EntityMob{
 	    {
 	        if (this.worldObj.difficultySetting == EnumDifficulty.HARD)
 	        {
-	                this.setCurrentItemOrArmor(0, new ItemStack(MItems.diamond_nightmare_sword));
+	                this.setCurrentItemOrArmor(0, new ItemStack(MTools.diamond_nightmare_sword));
 	        }
 	        
 	        if (this.worldObj.difficultySetting == EnumDifficulty.NORMAL)
 	        {
-	                this.setCurrentItemOrArmor(0, new ItemStack(MItems.iron_nightmare_sword));
+	                this.setCurrentItemOrArmor(0, new ItemStack(MTools.iron_nightmare_sword));
 	        }
 	        
 	        if (this.worldObj.difficultySetting == EnumDifficulty.EASY)
 	        {
-	                this.setCurrentItemOrArmor(0, new ItemStack(MItems.black_nightmare_sword));
+	                this.setCurrentItemOrArmor(0, new ItemStack(MTools.black_nightmare_sword));
 	        }
 	    }
 	    
@@ -113,5 +115,13 @@ public class EntityNightmare extends EntityMob{
 	    }
 	    
 	    protected void fall(float par1) {}
+	    
+	    @Override
+		public void onDeath(DamageSource source) {
+			if(source.getSourceOfDamage() instanceof EntityPlayer){
+				((EntityPlayer)source.getSourceOfDamage()).addStat(MAchievements.achievementFearless, 1);
+			}
+			super.onDeath(source);
+		}
 
 }

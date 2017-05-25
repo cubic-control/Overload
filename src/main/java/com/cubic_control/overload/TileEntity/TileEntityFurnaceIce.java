@@ -1,10 +1,6 @@
 package com.cubic_control.overload.TileEntity;
 
-import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockFurnace;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -22,7 +18,14 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityFurnace;
 
-public class TileEntityIceFurnace extends TileEntityFurnace implements ISidedInventory {
+import com.cubic_control.overload.Blocks.MBlocks;
+import com.cubic_control.overload.Blocks.ModBlockFurnaceIce;
+
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
+public class TileEntityFurnaceIce extends TileEntity implements ISidedInventory {
     private static final int[] slotsTop = new int[] {0};
     private static final int[] slotsBottom = new int[] {2, 1};
     private static final int[] slotsSides = new int[] {1};
@@ -34,8 +37,9 @@ public class TileEntityIceFurnace extends TileEntityFurnace implements ISidedInv
     public int currentItemBurnTime;
     /** The number of ticks that the current item has been cooking for */
     public int furnaceCookTime;
-    private String field_145958_o;
-    private static final String __OBFID = "CL_00000357";
+    private String localizedName;
+    
+    public int furnaceBurnSpeed = 300; //Speed at which the furnace cooks.
     
     @Override
     public int getSizeInventory() {
@@ -86,15 +90,15 @@ public class TileEntityIceFurnace extends TileEntityFurnace implements ISidedInv
     }
     @Override
     public String getInventoryName() {
-        return this.hasCustomInventoryName() ? this.field_145958_o : "container.ice_furnace";
+        return this.hasCustomInventoryName() ? this.localizedName : "container.ice_furnace";
     }
     @Override
     public boolean hasCustomInventoryName() {
-        return this.field_145958_o != null && this.field_145958_o.length() > 0;
+        return this.localizedName != null && this.localizedName.length() > 0;
     }
-    @Override
+    
     public void func_145951_a(String name) {
-        this.field_145958_o = name;
+        this.localizedName = name;
     }
     @Override
     public void readFromNBT(NBTTagCompound compound) {
@@ -102,7 +106,7 @@ public class TileEntityIceFurnace extends TileEntityFurnace implements ISidedInv
         NBTTagList nbttaglist = compound.getTagList("Items", 10);
         this.furnaceItemStacks = new ItemStack[this.getSizeInventory()];
 
-        for(int i = 0; i < nbttaglist.tagCount(); ++i){
+        for(int i = 0; i < nbttaglist.tagCount(); i++){
             NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
             byte b0 = nbttagcompound1.getByte("Slot");
 
@@ -112,10 +116,11 @@ public class TileEntityIceFurnace extends TileEntityFurnace implements ISidedInv
         }
         this.furnaceBurnTime = compound.getShort("BurnTime");
         this.furnaceCookTime = compound.getShort("CookTime");
-        this.currentItemBurnTime = getItemBurnTime(this.furnaceItemStacks[1]);
+        this.currentItemBurnTime = (int)compound.getShort("CurrentItemBurnTime");
+        //this.currentItemBurnTime = getItemBurnTime(this.furnaceItemStacks[1]);
 
         if(compound.hasKey("CustomName", 8)){
-            this.field_145958_o = compound.getString("CustomName");
+            this.localizedName = compound.getString("CustomName");
         }
     }
     @Override
@@ -123,9 +128,10 @@ public class TileEntityIceFurnace extends TileEntityFurnace implements ISidedInv
         super.writeToNBT(compound);
         compound.setShort("BurnTime", (short)this.furnaceBurnTime);
         compound.setShort("CookTime", (short)this.furnaceCookTime);
+        compound.setShort("CurrentItemBurnTime", (short) this.currentItemBurnTime);
         NBTTagList nbttaglist = new NBTTagList();
 
-        for(int i = 0; i < this.furnaceItemStacks.length; ++i){
+        for(int i = 0; i < this.furnaceItemStacks.length; i++){
             if(this.furnaceItemStacks[i] != null){
                 NBTTagCompound nbttagcompound1 = new NBTTagCompound();
                 nbttagcompound1.setByte("Slot", (byte)i);
@@ -136,27 +142,27 @@ public class TileEntityIceFurnace extends TileEntityFurnace implements ISidedInv
         compound.setTag("Items", nbttaglist);
 
         if(this.hasCustomInventoryName()){
-        	compound.setString("CustomName", this.field_145958_o);
+        	compound.setString("CustomName", this.localizedName);
         }
     }
     @Override
     public int getInventoryStackLimit() {
         return 64;
     }
-    @Override
+    
     @SideOnly(Side.CLIENT)
     public int getCookProgressScaled(int p_145953_1_) {
-        return this.furnaceCookTime * p_145953_1_ / 200;
+        return this.furnaceCookTime * p_145953_1_ / this.furnaceBurnSpeed;
     }
-    @Override
+    
     @SideOnly(Side.CLIENT)
     public int getBurnTimeRemainingScaled(int p_145955_1_) {
         if(this.currentItemBurnTime == 0){
-            this.currentItemBurnTime = 200;
+            this.currentItemBurnTime = this.furnaceBurnSpeed;
         }
         return this.furnaceBurnTime * p_145955_1_ / this.currentItemBurnTime;
     }
-    @Override
+    
     public boolean isBurning() {
         return this.furnaceBurnTime > 0;
     }
@@ -187,7 +193,7 @@ public class TileEntityIceFurnace extends TileEntityFurnace implements ISidedInv
             if(this.isBurning() && this.canSmelt()){
                 ++this.furnaceCookTime;
 
-                if(this.furnaceCookTime == 200){
+                if(this.furnaceCookTime == this.furnaceBurnSpeed){
                     this.furnaceCookTime = 0;
                     this.smeltItem();
                     flag1 = true;
@@ -197,7 +203,7 @@ public class TileEntityIceFurnace extends TileEntityFurnace implements ISidedInv
             }
             if(flag != this.furnaceBurnTime > 0){
                 flag1 = true;
-                BlockFurnace.updateFurnaceBlockState(this.furnaceBurnTime > 0, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
+                ModBlockFurnaceIce.updateFurnaceBlockState(this.furnaceBurnTime > 0, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
             }
         }
         if(flag1){
@@ -217,7 +223,7 @@ public class TileEntityIceFurnace extends TileEntityFurnace implements ISidedInv
             return result <= getInventoryStackLimit() && result <= this.furnaceItemStacks[2].getMaxStackSize(); //Forge BugFix: Make it respect stack sizes properly.
         }
     }
-    @Override
+    
     public void smeltItem() {
         if(this.canSmelt()){
             ItemStack itemstack = FurnaceRecipes.smelting().getSmeltingResult(this.furnaceItemStacks[0]);
@@ -271,7 +277,8 @@ public class TileEntityIceFurnace extends TileEntityFurnace implements ISidedInv
     }
     @Override
     public boolean isUseableByPlayer(EntityPlayer player) {
-        return this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord) != this ? false : player.getDistanceSq((double)this.xCoord + 0.5D, (double)this.yCoord + 0.5D, (double)this.zCoord + 0.5D) <= 64.0D;
+    	return true;
+    	//return this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord) != this ? false : player.getDistanceSq((double)this.xCoord + 0.5D, (double)this.yCoord + 0.5D, (double)this.zCoord + 0.5D) <= 64.0D;
     }
     @Override
     public void openInventory() {}

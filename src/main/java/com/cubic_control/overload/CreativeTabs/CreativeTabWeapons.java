@@ -3,6 +3,7 @@ package com.cubic_control.overload.CreativeTabs;
 import com.cubic_control.overload.Armor.MArmor;
 import com.cubic_control.overload.Blocks.MBlocks;
 import com.cubic_control.overload.Item.MItems;
+import com.cubic_control.overload.Tools.MTools;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
@@ -16,7 +17,7 @@ public class CreativeTabWeapons extends CreativeTabs {
 
 	@Override
 	public Item getTabIconItem() {
-		return MItems.ender_rite_machete;
+		return MTools.ender_rite_machete;
 	}
 
 }

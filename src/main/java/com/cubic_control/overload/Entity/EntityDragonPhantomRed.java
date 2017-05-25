@@ -3,6 +3,8 @@ package com.cubic_control.overload.Entity;
 import java.util.Iterator;
 import java.util.List;
 
+import com.cubic_control.overload.Achievements.MAchievements;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
@@ -567,4 +569,11 @@ public class EntityDragonPhantomRed extends EntityMob implements IEntityMultiPar
     {
         return 5.0F;
     }
+    @Override
+   	public void onDeath(DamageSource source) {
+   		if(source.getSourceOfDamage() instanceof EntityPlayer){
+   			((EntityPlayer)source.getSourceOfDamage()).addStat(MAchievements.achievementSlayer, 1);
+   		}
+   		super.onDeath(source);
+   	}
 }

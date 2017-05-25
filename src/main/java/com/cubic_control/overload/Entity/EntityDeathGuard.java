@@ -87,7 +87,7 @@ public class EntityDeathGuard extends EntityMob{
 	protected void addRandomArmor() {
 		Random rand = new Random();
 		if(rand.nextInt(100) < 50){
-			this.setCurrentItemOrArmor(0, new ItemStack(MItems.white_nightmare_sword));
+			this.setCurrentItemOrArmor(0, new ItemStack(MTools.white_nightmare_sword));
 			this.setCurrentItemOrArmor(1, new ItemStack(MArmor.white_boots));
 			this.setCurrentItemOrArmor(2, new ItemStack(MArmor.white_leggings));
 			this.setCurrentItemOrArmor(3, new ItemStack(MArmor.white_chestplate));
@@ -97,7 +97,7 @@ public class EntityDeathGuard extends EntityMob{
 				this.enchantEquipment();
 			}
 		}else{
-			this.setCurrentItemOrArmor(0, new ItemStack(MItems.black_nightmare_sword));
+			this.setCurrentItemOrArmor(0, new ItemStack(MTools.black_nightmare_sword));
 			this.setCurrentItemOrArmor(1, new ItemStack(MArmor.black_boots));
 			this.setCurrentItemOrArmor(2, new ItemStack(MArmor.black_leggings));
 			this.setCurrentItemOrArmor(3, new ItemStack(MArmor.black_chestplate));

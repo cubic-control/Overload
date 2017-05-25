@@ -10,6 +10,7 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotFurnace;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -19,11 +20,11 @@ public class ContainerFurnaceFire extends Container{
     private int lastBurnTime;
     private int lastItemBurnTime;
     
-    public ContainerFurnaceFire(InventoryPlayer player, TileEntityFurnaceFire furnace) {
-        this.tileFurnace = furnace;
-        this.addSlotToContainer(new Slot(furnace, 0, 56, 17));
-        this.addSlotToContainer(new Slot(furnace, 1, 56, 53));
-        this.addSlotToContainer(new SlotFurnace(player.player, furnace, 2, 116, 35));
+    public ContainerFurnaceFire(InventoryPlayer player, World world, int x, int y, int z) {
+        this.tileFurnace = (TileEntityFurnaceFire)world.getTileEntity(x, y, z);
+        this.addSlotToContainer(new Slot(this.tileFurnace, 0, 56, 17));
+        this.addSlotToContainer(new Slot(this.tileFurnace, 1, 56, 53));
+        this.addSlotToContainer(new SlotFurnace(player.player, this.tileFurnace, 2, 116, 35));
         int i;
 
         for(i = 0; i < 3; ++i){

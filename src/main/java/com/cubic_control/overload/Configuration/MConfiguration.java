@@ -19,8 +19,8 @@ public class MConfiguration extends Configuration{
 	public static boolean DropOverride;
 	public static boolean TextureOverride;
 	public static boolean SpawnEndOres;
-	public static boolean EnableHeadlessMount;
-	public static boolean canJeffOpenDoors;
+	
+	public static int potionID_frostbite;
 
 	/**
 	 * Creates Config file in custom folder in .minecraft folder.
@@ -37,6 +37,7 @@ public class MConfiguration extends Configuration{
 		addDimensionIDs();
 		addBiomeIDs();
 		addBooleans();
+		addInts();
 
 	    if(config.hasChanged()){
 	    	config.save();
@@ -86,8 +87,11 @@ public class MConfiguration extends Configuration{
 		DropOverride = config.getBoolean("DropOverride", ConfigTypes.BOOLEANS, true, "Enable override of vanila drops.");
 		TextureOverride = config.getBoolean("TextureOverride", ConfigTypes.BOOLEANS, true, "Enable override of vanila textures.");
 		SpawnEndOres = config.getBoolean("SpawnEndOres", ConfigTypes.BOOLEANS, true, "Enable spawning of End ores.");
-		EnableHeadlessMount = config.getBoolean("EnableHeadlessMount", ConfigTypes.BOOLEANS, true, "Enable Horse for Headless Horseman.");
-		canJeffOpenDoors = config.getBoolean("canJeffOpenDoors", ConfigTypes.BOOLEANS, true, "Lets Jeff The Killer open your doors!");
+	}
+	
+	public static void addInts(){
+		config.getCategory(ConfigTypes.INTS);
+		potionID_frostbite = config.getInt("potionID_frostbite", ConfigTypes.INTS, 32, 0, 256, "sets the ID for the frostbite potion effect.");
 	}
 	
 	public static Configuration getConfig(){

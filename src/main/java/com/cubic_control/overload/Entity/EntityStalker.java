@@ -17,7 +17,7 @@ import net.minecraft.world.World;
 import com.cubic_control.cubic_core.Utils.CubicUtils;
 import com.cubic_control.overload.Entity.AI.EntityAIStalking;
 
-public class EntityStalker extends EntityCreature{
+public class EntityStalker extends EntityFakeMob{
 
 	public EntityStalker(World par1World) {
 		super(par1World);

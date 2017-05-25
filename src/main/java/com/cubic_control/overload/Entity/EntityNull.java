@@ -82,17 +82,17 @@ public class EntityNull extends EntityMob{
 	    {
 	        if (this.rand.nextFloat() < (this.worldObj.difficultySetting == EnumDifficulty.HARD ? 0.05F : 0.01F))
 	        {
-	                this.setCurrentItemOrArmor(0, new ItemStack(MItems.diamond_nightmare_sword));
+	                this.setCurrentItemOrArmor(0, new ItemStack(MTools.diamond_nightmare_sword));
 	        }
 	        
 	        if (this.rand.nextFloat() < (this.worldObj.difficultySetting == EnumDifficulty.NORMAL ? 0.05F : 0.01F))
 	        {
-	                this.setCurrentItemOrArmor(0, new ItemStack(MItems.iron_nightmare_sword));
+	                this.setCurrentItemOrArmor(0, new ItemStack(MTools.iron_nightmare_sword));
 	        }
 	        
 	        if (this.rand.nextFloat() < (this.worldObj.difficultySetting == EnumDifficulty.EASY ? 0.05F : 0.01F))
 	        {
-	                this.setCurrentItemOrArmor(0, new ItemStack(MItems.black_nightmare_sword));
+	                this.setCurrentItemOrArmor(0, new ItemStack(MTools.black_nightmare_sword));
 	        }
 	    }
 	    

@@ -53,94 +53,15 @@ public class MItems {
 		InitializeItem();
 		registerItem();
 	}
-	public static ToolMaterial ender_rite_tools = EnumHelper.addToolMaterial("ender_rite_tools", 4, 1964, 9.0F, 4.0F, 30);
-	public static ToolMaterial c_tools = EnumHelper.addToolMaterial("c_tools", 2, 350, 6.5F, 2.5F, 28);
-	public static ToolMaterial nightmare_c_tools = EnumHelper.addToolMaterial("nightmare_c_tools", 3, 2009, 7.3F, 3.3F, 100);
-	public static ToolMaterial ruby_tools = EnumHelper.addToolMaterial("ruby_tools", 3, 1561, 8.0F, 3.0F, 10);
-		//Gem Tools
-	public static ToolMaterial Aventurine_Tools = EnumHelper.addToolMaterial("Aventurine_Tools", 3, 1537, 8.37F, 3.37F, 57);
-	public static ToolMaterial Amethyst_Tools = EnumHelper.addToolMaterial("Amethyst_Tools", 3, 1500, 8.5F, 3.5F, 50);
-	public static ToolMaterial Beryl_Tools = EnumHelper.addToolMaterial("Beryl_Tools", 3, 2561, 8.3F, 3.3F, 50);
-	public static ToolMaterial Carnelian_Tools = EnumHelper.addToolMaterial("Carnelian_Tools", 3, 1437, 8.7F, 3.7F, 37);
-	public static ToolMaterial Jade_Tools = EnumHelper.addToolMaterial("Jade_Tools", 3, 1567, 8.3F, 3.3F, 67);
-	public static ToolMaterial Jasper_Tools = EnumHelper.addToolMaterial("Jasper_Tools", 3, 1687, 8.2F, 3.2F, 50);
+	
 //Armor
 	public static Item ruby_horse_armor;
 //Tools
-	public static Item ender_rite_pickaxe;
-	public static Item ender_rite_axe;
-	public static Item ender_rite_spade;
-	public static Item ender_rite_sword;
-	public static Item ender_rite_hoe;
-	public static Item ender_rite_machete;
-	//Nightmare Swords
-	public static Item black_nightmare_sword;
-	public static Item blue_nightmare_sword;
-	public static Item cyan_nightmare_sword;
-	public static Item diamond_nightmare_sword;
-	public static Item gold_nightmare_sword;
-	public static Item green_nightmare_sword;
-	public static Item iron_nightmare_sword;
-	public static Item lime_nightmare_sword;
-	public static Item magenta_nightmare_sword;
-	public static Item orange_nightmare_sword;
-	public static Item pink_nightmare_sword;
-	public static Item purple_nightmare_sword;
-	public static Item red_nightmare_sword;
-	public static Item stone_nightmare_sword;
-	public static Item white_nightmare_sword;
-	public static Item wooden_nightmare_sword;
-	public static Item yellow_nightmare_sword;
-	public static Item ender_rite_nightmare_sword;
-		//Gems
-	public static Item aventurine_nightmare_sword;
-	public static Item amethyst_nightmare_sword;
-	public static Item beryl_nightmare_sword;
-	public static Item carnelian_nightmare_sword;
-	public static Item jade_nightmare_sword;
-	public static Item jasper_nightmare_sword;
 	//battlegear2
 	public static Item ender_rite_dagger;
 	public static Item ender_rite_mace;
 	public static Item ender_rite_spear;
 	public static Item ender_rite_waraxe;
-	//Gem Tools
-	public static Item aventurine_pickaxe;
-	public static Item aventurine_axe;
-	public static Item aventurine_spade;
-	public static Item aventurine_sword;
-	public static Item aventurine_hoe;
-	public static Item aventurine_machete;
-	public static Item amethyst_pickaxe;
-	public static Item amethyst_axe;
-	public static Item amethyst_spade;
-	public static Item amethyst_sword;
-	public static Item amethyst_hoe;
-	public static Item amethyst_machete;
-	public static Item beryl_pickaxe;
-	public static Item beryl_axe;
-	public static Item beryl_spade;
-	public static Item beryl_sword;
-	public static Item beryl_hoe;
-	public static Item beryl_machete;
-	public static Item carnelian_pickaxe;
-	public static Item carnelian_axe;
-	public static Item carnelian_spade;
-	public static Item carnelian_sword;
-	public static Item carnelian_hoe;
-	public static Item carnelian_machete;
-	public static Item jade_pickaxe;
-	public static Item jade_axe;
-	public static Item jade_spade;
-	public static Item jade_sword;
-	public static Item jade_hoe;
-	public static Item jade_machete;
-	public static Item jasper_pickaxe;
-	public static Item jasper_axe;
-	public static Item jasper_spade;
-	public static Item jasper_sword;
-	public static Item jasper_hoe;
-	public static Item jasper_machete;
 //Items
 	public static Item ender_rite_shard;
 	public static Item bluestone;
@@ -175,6 +96,7 @@ public class MItems {
 	public static Item fire_door;
 	public static Item super_slime_ball;
 	public static Item teleporter;
+	public static Item cubic_head;
 	//Mob Drops
 	public static Item ice_egg;
 	public static Item ice_feather;
@@ -252,74 +174,6 @@ public class MItems {
 	public static void InitializeItem(){
 	//Armor
 		ruby_horse_armor = new ruby_Horse_Armor("ruby_horse_armor").setTextureName(RefStrings.MODID + ":ruby_horse_armor");
-	//Tools
-		ender_rite_pickaxe = new ModItemPickaxe(ender_rite_tools, "ender_rite_pickaxe", "ender_rite_pickaxe");
-		ender_rite_axe = new ModItemAxe(ender_rite_tools, "ender_rite_axe", "ender_rite_axe");
-		ender_rite_spade = new ModItemSpade(ender_rite_tools, "ender_rite_spade", "ender_rite_spade");
-		ender_rite_sword = new ModItemSword(ender_rite_tools, "ender_rite_sword", "ender_rite_sword");
-		ender_rite_hoe = new ModItemHoe(ender_rite_tools, "ender_rite_hoe", "ender_rite_hoe");
-		ender_rite_machete = new ModItemMachete(ender_rite_tools, "ender_rite_machete", "ender_rite_machete");
-		//Nightmare Swords
-		black_nightmare_sword = new ModItemNightmareSword(nightmare_c_tools, "black_nightmare_sword", "black_sword");
-		blue_nightmare_sword = new ModItemNightmareSword(nightmare_c_tools, "blue_nightmare_sword", "blue_sword");
-		cyan_nightmare_sword = new ModItemNightmareSword(nightmare_c_tools, "cyan_nightmare_sword", "cyan_sword");
-		diamond_nightmare_sword = new ModItemNightmareSword(ModToolMaterial.nightmare_diamond_tools, "diamond_nightmare_sword", "diamond_sword");
-		gold_nightmare_sword = new ModItemNightmareSword(ModToolMaterial.nightmare_gold_tools, "gold_nightmare_sword", "gold_sword");
-		green_nightmare_sword = new ModItemNightmareSword(nightmare_c_tools, "green_nightmare_sword", "green_sword");
-		iron_nightmare_sword = new ModItemNightmareSword(ModToolMaterial.nightmare_iron_tools, "iron_nightmare_sword", "iron_sword");
-		lime_nightmare_sword = new ModItemNightmareSword(nightmare_c_tools, "lime_nightmare_sword", "lime_sword");
-		magenta_nightmare_sword = new ModItemNightmareSword(nightmare_c_tools, "magenta_nightmare_sword", "magenta_sword");
-		orange_nightmare_sword = new ModItemNightmareSword(nightmare_c_tools, "orange_nightmare_sword", "orange_sword");
-		pink_nightmare_sword = new ModItemNightmareSword(nightmare_c_tools, "pink_nightmare_sword", "pink_sword");
-		purple_nightmare_sword = new ModItemNightmareSword(nightmare_c_tools, "purple_nightmare_sword", "purple_sword");
-		red_nightmare_sword = new ModItemNightmareSword(nightmare_c_tools, "red_nightmare_sword", "red_sword");
-		stone_nightmare_sword = new ModItemNightmareSword(ModToolMaterial.nightmare_stone_tools, "stone_nightmare_sword", "stone_sword");
-		white_nightmare_sword = new ModItemNightmareSword(nightmare_c_tools, "white_nightmare_sword", "white_sword");
-		wooden_nightmare_sword = new ModItemNightmareSword(ModToolMaterial.nightmare_wooden_tools, "wooden_nightmare_sword", "wooden_sword");
-		yellow_nightmare_sword = new ModItemNightmareSword(nightmare_c_tools, "yellow_nightmare_sword", "yellow_sword");
-		ender_rite_nightmare_sword = new ModItemNightmareSword(ModToolMaterial.nightmare_ender_rite_tools, "ender_rite_nightmare_sword", "ender_rite_sword");
-			//Gems
-		aventurine_nightmare_sword = new ModItemNightmareSword(ModToolMaterial.nightmare_aventurine_tools, "aventurine_nightmare_sword", "aventurine_sword");
-		amethyst_nightmare_sword = new ModItemNightmareSword(ModToolMaterial.nightmare_amethyst_tools, "amethyst_nightmare_sword", "amethyst_sword");
-		beryl_nightmare_sword = new ModItemNightmareSword(ModToolMaterial.nightmare_beryl_tools, "beryl_nightmare_sword", "beryl_sword");
-		carnelian_nightmare_sword = new ModItemNightmareSword(ModToolMaterial.nightmare_carnelian_tools, "carnelian_nightmare_sword", "carnelian_sword");
-		//Gems Tools
-		aventurine_pickaxe = new ModItemPickaxe(Aventurine_Tools, "aventurine_pickaxe", "gems/tools/aventurine_pickaxe");
-		aventurine_axe = new ModItemAxe(Aventurine_Tools, "aventurine_axe", "gems/tools/aventurine_axe");
-		aventurine_spade = new ModItemSpade(Aventurine_Tools, "aventurine_spade", "gems/tools/aventurine_spade");
-		aventurine_sword = new ModItemSword(Aventurine_Tools, "aventurine_sword", "gems/tools/aventurine_sword");
-		aventurine_hoe = new ModItemHoe(Aventurine_Tools, "aventurine_hoe", "gems/tools/aventurine_hoe");
-		aventurine_machete = new ModItemMachete(Aventurine_Tools, "aventurine_machete", "gems/tools/aventurine_machete");
-		amethyst_pickaxe = new ModItemPickaxe(Amethyst_Tools, "amethyst_pickaxe", "gems/tools/amethyst_pickaxe");
-		amethyst_axe = new ModItemAxe(Amethyst_Tools, "amethyst_axe", "gems/tools/amethyst_axe");
-		amethyst_spade = new ModItemSpade(Amethyst_Tools, "amethyst_spade", "gems/tools/amethyst_spade");
-		amethyst_sword = new ModItemSword(Amethyst_Tools, "amethyst_sword", "gems/tools/amethyst_sword");
-		amethyst_hoe = new ModItemHoe(Amethyst_Tools, "amethyst_hoe", "gems/tools/amethyst_hoe");
-		amethyst_machete = new ModItemMachete(Amethyst_Tools, "amethyst_machete", "gems/tools/amethyst_machete");
-		beryl_pickaxe = new ModItemPickaxe(Beryl_Tools, "beryl_pickaxe", "gems/tools/beryl_pickaxe");
-		beryl_axe = new ModItemAxe(Beryl_Tools, "beryl_axe", "gems/tools/beryl_axe");
-		beryl_spade = new ModItemSpade(Beryl_Tools, "beryl_spade", "gems/tools/beryl_spade");
-		beryl_sword = new ModItemSword(Beryl_Tools, "beryl_sword", "gems/tools/beryl_sword");
-		beryl_hoe = new ModItemHoe(Beryl_Tools, "beryl_hoe", "gems/tools/beryl_hoe");
-		beryl_machete = new ModItemMachete(Beryl_Tools, "beryl_machete", "gems/tools/beryl_machete");
-		carnelian_pickaxe = new ModItemPickaxe(Carnelian_Tools, "carnelian_pickaxe", "gems/tools/carnelian_pickaxe");
-		carnelian_axe = new ModItemAxe(Carnelian_Tools, "carnelian_axe", "gems/tools/carnelian_axe");
-		carnelian_spade = new ModItemSpade(Carnelian_Tools, "carnelian_spade", "gems/tools/carnelian_spade");
-		carnelian_sword = new ModItemSword(Carnelian_Tools, "carnelian_sword", "gems/tools/carnelian_sword");
-		carnelian_hoe = new ModItemHoe(Carnelian_Tools, "carnelian_hoe", "gems/tools/carnelian_hoe");
-		carnelian_machete = new ModItemMachete(Carnelian_Tools, "carnelian_machete", "gems/tools/carnelian_machete");
-		jade_pickaxe = new ModItemPickaxe(Jade_Tools, "jade_pickaxe", "gems/tools/jade_pickaxe");
-		jade_axe = new ModItemAxe(Jade_Tools, "jade_axe", "gems/tools/jade_axe");
-		jade_spade = new ModItemSpade(Jade_Tools, "jade_spade", "gems/tools/jade_spade");
-		jade_sword = new ModItemSword(Jade_Tools, "jade_sword", "gems/tools/jade_sword");
-		jade_hoe = new ModItemHoe(Jade_Tools, "jade_hoe", "gems/tools/jade_hoe");
-		jade_machete = new ModItemMachete(Jade_Tools, "jade_machete", "gems/tools/jade_machete");
-		jasper_pickaxe = new ModItemPickaxe(Jasper_Tools, "jasper_pickaxe", "gems/tools/jasper_pickaxe");
-		jasper_axe = new ModItemAxe(Jasper_Tools, "jasper_axe", "gems/tools/jasper_axe");
-		jasper_spade = new ModItemSpade(Jasper_Tools, "jasper_spade", "gems/tools/jasper_spade");
-		jasper_sword = new ModItemSword(Jasper_Tools, "jasper_sword", "gems/tools/jasper_sword");
-		jasper_hoe = new ModItemHoe(Jasper_Tools, "jasper_hoe", "gems/tools/jasper_hoe");
-		jasper_machete = new ModItemMachete(Jasper_Tools, "jasper_machete", "gems/tools/jasper_machete");
 	//Items
 		ender_rite_shard = new ModItem("ender_rite_shard", "ender_rite_shard");
 		bluestone = new ItemBluestone("bluestone").setTextureName(RefStrings.MODID + ":bluestone");
@@ -354,6 +208,7 @@ public class MItems {
 		fire_door = new ModItemDoor("fire_door", "door_fire");
 		super_slime_ball = new ModItem("super_slimeball");
 		teleporter = new ModItemTeleporter("teleporter");
+		cubic_head = new ModItem("nohelm").setCreativeTab(null);
 		//Mob Drops
 		ice_egg = new ModItemEgg("ice_egg");
 		ice_feather = new ModItem("ice_feather", "ice_feather");
@@ -426,55 +281,57 @@ public class MItems {
 		white_pumpkin_seeds = new ModItemSeeds(MBlocks.white_pumpkin_stem, Blocks.farmland, "white_pumpkin_seeds");
 		blue_pumpkin_seeds = new ModItemSeeds(MBlocks.blue_pumpkin_stem, Blocks.farmland, "blue_pumpkin_seeds");
 		//SpawnEggs
-		ModSpawnEgg = new ModItemMonsterPlacer("Zombie Alex", 0xFAC020, 0x34E3AF, "Zombie Alex");
-		ModSpawnEgg = new ModItemMonsterPlacer("Zombie jeb_", 0x287A23, 0x34E3AF, "Zombie jeb_");
-		ModSpawnEgg = new ModItemMonsterPlacer("Zombie Notch", 0xfaebd7, 0x34E3AF, "Zombie Notch");
-		ModSpawnEgg = new ModItemMonsterPlacer("Zombie Dinnerbone", 0x0008FF, 0x34E3AF, "Zombie Dinnerbone");
-		ModSpawnEgg = new ModItemMonsterPlacer("Zombie cubic_control", 0xB54CCF, 0x34E3AF, "Zombie cubic_control");
-		ModSpawnEgg = new ModItemMonsterPlacer("Zombie super_sonic_10", 0x572C0E, 0x34E3AF, "Zombie super_sonic_10");
-		ModSpawnEgg = new ModItemMonsterPlacer("Zombie Cow", 0xAAD490, 0x85755E, "Zombie Cow");
-		ModSpawnEgg = new ModItemMonsterPlacer("Jeff The Killer", 0xFFFFFF, 0x8A0707, "Jeff The Killer");
-		ModSpawnEgg = new ModItemMonsterPlacer("Injured Steve", 0xFF4000, 0x00BFFF, "Injured Steve");
-		ModSpawnEgg = new ModItemMonsterPlacer("Mantis Man", 0x4AC25C, 0x73FF88, "Mantis Man");
+		ModSpawnEgg = new ModItemMonsterPlacer("Zombie-Alex", 0xFAC020, 0x34E3AF, "Zombie-Alex");
+		ModSpawnEgg = new ModItemMonsterPlacer("Zombie-jeb_", 0x287A23, 0x34E3AF, "Zombie-jeb_");
+		ModSpawnEgg = new ModItemMonsterPlacer("Zombie-Notch", 0xfaebd7, 0x34E3AF, "Zombie-Notch");
+		ModSpawnEgg = new ModItemMonsterPlacer("Zombie-Dinnerbone", 0x0008FF, 0x34E3AF, "Zombie-Dinnerbone");
+		ModSpawnEgg = new ModItemMonsterPlacer("Zombie-cubic_control", 0xB54CCF, 0x34E3AF, "Zombie-cubic_control");
+		ModSpawnEgg = new ModItemMonsterPlacer("Zombie-super_sonic_10", 0x572C0E, 0x34E3AF, "Zombie-super_sonic_10");
+		ModSpawnEgg = new ModItemMonsterPlacer("ZombieCow", 0xAAD490, 0x85755E, "ZombieCow");
+		ModSpawnEgg = new ModItemMonsterPlacer("JeffTheKiller", 0xFFFFFF, 0x8A0707, "JeffTheKiller");
+		ModSpawnEgg = new ModItemMonsterPlacer("InjuredSteve", 0xFF4000, 0x00BFFF, "InjuredSteve");
+		ModSpawnEgg = new ModItemMonsterPlacer("MantisMan", 0x4AC25C, 0x73FF88, "MantisMan");
 		ModSpawnEgg = new ModItemMonsterPlacer("Stalker", 0xC70E0E, 0x000000, "Stalker");
-		ModSpawnEgg = new ModItemMonsterPlacer("Nightmare Cubic", 0x2E298A, 0xFFFFFF, "Nightmare Cubic");
-		ModSpawnEgg = new ModItemMonsterPlacer("Dead Angel", 0x000000, 0xFFFFFF, "Dead Angel");
-		ModSpawnEgg = new ModItemMonsterPlacer("Stalking Warrior", 0xB50000, 0x000000, "Stalking Warrior");
+		ModSpawnEgg = new ModItemMonsterPlacer("FrostedCow", 0x0015FF, 0x9000FF, "FrostedCow");
+		ModSpawnEgg = new ModItemMonsterPlacer("FrostedPig", 0x00D0FF, 0xFF00F7, "FrostedPig");
+		ModSpawnEgg = new ModItemMonsterPlacer("FrostedChicken", 0x00FFF2, 0x7300FF, "FrostedChicken");
+		ModSpawnEgg = new ModItemMonsterPlacer("FrostedSheep", 0x1D20CF, 0xF2FFFD, "FrostedSheep");
+		ModSpawnEgg = new ModItemMonsterPlacer("FireAssassin", 0xFF744A, 0x7D8F7C, "FireAssassin");
+		ModSpawnEgg = new ModItemMonsterPlacer("IceAssassin", 0x4AD5FF, 0x7D8F7C, "IceAssassin");
+		ModSpawnEgg = new ModItemMonsterPlacer("FireArcher", 0xF07160, 0xCFCFCF, "FireArcher");
+		ModSpawnEgg = new ModItemMonsterPlacer("IceArcher", 0x60DFF0, 0xCFCFCF, "IceArcher");
+		ModSpawnEgg = new ModItemMonsterPlacer("FireGuard", 0xBF0300, 0x828282, "FireGuard");
+		ModSpawnEgg = new ModItemMonsterPlacer("IceGuard", 0x00BCBF, 0x828282, "IceGuard");
+		ModSpawnEgg = new ModItemMonsterPlacer("FireWarrior", 0xFF455B, 0x666666, "FireWarrior");
+		ModSpawnEgg = new ModItemMonsterPlacer("IceWarrior", 0x45FFE9, 0x666666, "IceWarrior");
+		ModSpawnEgg = new ModItemMonsterPlacer("PlasticCow", 0x806547, 0x949494, "PlasticCow");
+		ModSpawnEgg = new ModItemMonsterPlacer("PlasticChicken", 0xEDEDED, 0xFF6E6E, "PlasticChicken");
+		ModSpawnEgg = new ModItemMonsterPlacer("FireVillager", 0xD60019, 0xDEDEDE, "FireVillager");
+		ModSpawnEgg = new ModItemMonsterPlacer("IceVillager", 0x00D6BD, 0xDEDEDE, "IceVillager");
+			//Nightmares
+		ModSpawnEgg = new ModItemMonsterPlacer("NightmareCubic", 0x2E298A, 0xFFFFFF, "NightmareCubic");
+		ModSpawnEgg = new ModItemMonsterPlacer("DeadAngel", 0x000000, 0xFFFFFF, "DeadAngel");
+		ModSpawnEgg = new ModItemMonsterPlacer("StalkingWarrior", 0xB50000, 0x000000, "StalkingWarrior");
 		ModSpawnEgg = new ModItemMonsterPlacer("Unknown", 0x00BFFF, 0xFFFFFF, "Unknown");
-		ModSpawnEgg = new ModItemMonsterPlacer("Nightmare Villager", 0xBB00FF, 0x00FFA6, "Nightmare Villager");
-		ModSpawnEgg = new ModItemMonsterPlacer("Nightmare Steve", 0x1105F2, 0xFFFFFF, "Nightmare Steve");
-		ModSpawnEgg = new ModItemMonsterPlacer("Nightmare Alex", 0x2C8A29, 0xFFFFFF, "Nightmare Alex");
-		ModSpawnEgg = new ModItemMonsterPlacer("Nightmare Herobrine", 0x858585, 0xFFFFFF, "Nightmare Herobrine");
+		ModSpawnEgg = new ModItemMonsterPlacer("NightmareVillager", 0xBB00FF, 0x00FFA6, "NightmareVillager");
+		ModSpawnEgg = new ModItemMonsterPlacer("NightmareSteve", 0x1105F2, 0xFFFFFF, "NightmareSteve");
+		ModSpawnEgg = new ModItemMonsterPlacer("NightmareAlex", 0x2C8A29, 0xFFFFFF, "NightmareAlex");
+		ModSpawnEgg = new ModItemMonsterPlacer("NightmareHerobrine", 0x858585, 0xFFFFFF, "NightmareHerobrine");
 		ModSpawnEgg = new ModItemMonsterPlacer("Null", 0x000000, 0x858585, "Null");
 		ModSpawnEgg = new ModItemMonsterPlacer("Pumpkin", 0xDB9A00, 0x000000, "Pumpkin");
 		ModSpawnEgg = new ModItemMonsterPlacer("Headless", 0xB6B7B8, 0xFFFFFF, "Headless");
-		ModSpawnEgg = new ModItemMonsterPlacer("Fake Headless Horseman", 0x858585, 0x961B1B, "Fake Headless Horseman");
-		ModSpawnEgg = new ModItemMonsterPlacer("Frosted Cow", 0x0015FF, 0x9000FF, "Frosted Cow");
-		ModSpawnEgg = new ModItemMonsterPlacer("Frosted Pig", 0x00D0FF, 0xFF00F7, "Frosted Pig");
-		ModSpawnEgg = new ModItemMonsterPlacer("Frosted Chicken", 0x00FFF2, 0x7300FF, "Frosted Chicken");
-		ModSpawnEgg = new ModItemMonsterPlacer("Frosted Sheep", 0x1D20CF, 0xF2FFFD, "Frosted Sheep");
+		ModSpawnEgg = new ModItemMonsterPlacer("FakeHeadlessHorseman", 0x858585, 0x961B1B, "FakeHeadlessHorseman");
 		ModSpawnEgg = new ModItemMonsterPlacer("Nightmare", 0xFFFFFF, 0x000000, "Nightmare");
-		ModSpawnEgg = new ModItemMonsterPlacer("Giant Nightmare", 0xdcd9cd, 0x1A1A1A, "Giant Nightmare");
-		ModSpawnEgg = new ModItemMonsterPlacer("Fire Assassin", 0xFF744A, 0x7D8F7C, "Fire Assassin");
-		ModSpawnEgg = new ModItemMonsterPlacer("Ice Assassin", 0x4AD5FF, 0x7D8F7C, "Ice Assassin");
-		ModSpawnEgg = new ModItemMonsterPlacer("Fire Archer", 0xF07160, 0xCFCFCF, "Fire Archer");
-		ModSpawnEgg = new ModItemMonsterPlacer("Ice Archer", 0x60DFF0, 0xCFCFCF, "Ice Archer");
-		ModSpawnEgg = new ModItemMonsterPlacer("Fire Guard", 0xBF0300, 0x828282, "Fire Guard");
-		ModSpawnEgg = new ModItemMonsterPlacer("Ice Guard", 0x00BCBF, 0x828282, "Ice Guard");
-		ModSpawnEgg = new ModItemMonsterPlacer("Fire Warrior", 0xFF455B, 0x666666, "Fire Warrior");
-		ModSpawnEgg = new ModItemMonsterPlacer("Ice Warrior", 0x45FFE9, 0x666666, "Ice Warrior");
-		ModSpawnEgg = new ModItemMonsterPlacer("Death Guard", 0x00B5B5, 0xB5B5B5, "Death Guard");
-		ModSpawnEgg = new ModItemMonsterPlacer("Plastic Cow", 0x806547, 0x949494, "Plastic Cow");
-		ModSpawnEgg = new ModItemMonsterPlacer("Plastic Chicken", 0xEDEDED, 0xFF6E6E, "Plastic Chicken");
-		ModSpawnEgg = new ModItemMonsterPlacer("Fire Villager", 0xD60019, 0xDEDEDE, "Fire Villager");
-		ModSpawnEgg = new ModItemMonsterPlacer("Ice Villager", 0x00D6BD, 0xDEDEDE, "Ice Villager");
+		ModSpawnEgg = new ModItemMonsterPlacer("GiantNightmare", 0xdcd9cd, 0x1A1A1A, "GiantNightmare");
+		ModSpawnEgg = new ModItemMonsterPlacer("DeathGuard", 0x00B5B5, 0xB5B5B5, "DeathGuard");
+		ModSpawnEgg = new ModItemMonsterPlacer("606", 0x606060, 0x060606, "606");
 			//Dragons
-		ModSpawnEgg = new ModItemMonsterPlacer("Dragon Phantom White", 0xFFFFFF, 0xC4C0C0, "Dragon Phantom White");
-		ModSpawnEgg = new ModItemMonsterPlacer("Dragon Phantom Blue", 0x0000FF, 0xC4C0C0, "Dragon Phantom Blue");
-		ModSpawnEgg = new ModItemMonsterPlacer("Dragon Phantom Green", 0x00FF80, 0xC4C0C0, "Dragon Phantom Green");
-		ModSpawnEgg = new ModItemMonsterPlacer("Dragon Phantom Light Blue", 0x6BA5E8, 0xC4C0C0, "Dragon Phantom Light Blue");
-		ModSpawnEgg = new ModItemMonsterPlacer("Dragon Phantom Red", 0xFF007F, 0xC4C0C0, "Dragon Phantom Red");
-		ModSpawnEgg = new ModItemMonsterPlacer("Dragon Phantom Yellow", 0xFEFF00, 0xC4C0C0, "Dragon Phantom Yellow");
+		ModSpawnEgg = new ModItemMonsterPlacer("DragonPhantomWhite", 0xFFFFFF, 0xC4C0C0, "DragonPhantomWhite");
+		ModSpawnEgg = new ModItemMonsterPlacer("DragonPhantomBlue", 0x0000FF, 0xC4C0C0, "DragonPhantomBlue");
+		ModSpawnEgg = new ModItemMonsterPlacer("DragonPhantomGreen", 0x00FF80, 0xC4C0C0, "DragonPhantomGreen");
+		ModSpawnEgg = new ModItemMonsterPlacer("DragonPhantomLightBlue", 0x6BA5E8, 0xC4C0C0, "DragonPhantomLightBlue");
+		ModSpawnEgg = new ModItemMonsterPlacer("DragonPhantomRed", 0xFF007F, 0xC4C0C0, "DragonPhantomRed");
+		ModSpawnEgg = new ModItemMonsterPlacer("DragonPhantomYellow", 0xFEFF00, 0xC4C0C0, "DragonPhantomYellow");
 			//Bosses
 		ModSpawnEgg = new ModItemMonsterPlacer("Death", 0xB50000, 0xB5B5B5, "Death");
 		if (MainRegistry.isOtherModLoaded) {

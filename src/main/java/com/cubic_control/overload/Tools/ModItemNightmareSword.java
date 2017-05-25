@@ -1,6 +1,7 @@
 package com.cubic_control.overload.Tools;
 
 import com.cubic_control.overload.CreativeTabs.MCreativeTabs;
+import com.cubic_control.overload.Item.MItems;
 import com.cubic_control.overload.lib.RefStrings;
 import com.google.common.collect.Multimap;
 
@@ -33,9 +34,17 @@ public class ModItemNightmareSword extends ItemSword
         GameRegistry.registerItem(this, string);
 	}
 	
+	public ModItemNightmareSword(ToolMaterial p_i45356_1_, String string, String texture, ItemStack stack) {
+		super(p_i45356_1_);
+		this.setCreativeTab(MCreativeTabs.tabWeapons);
+        this.setUnlocalizedName(string);
+        this.setTextureName(RefStrings.MODID + ":nightmare/" + texture);
+        GameRegistry.registerItem(this, string);
+        GameRegistry.addRecipe(new ItemStack(this), " X ", " X ", " Y ", 'X', stack, 'Y', MItems.Nightmare_Gem);
+	}
+	
 	@Override
-	public boolean hitEntity(ItemStack par1ItemStack, EntityLivingBase par2EntityLivingBase, EntityLivingBase par3EntityLivingBase)
-    {
+	public boolean hitEntity(ItemStack par1ItemStack, EntityLivingBase par2EntityLivingBase, EntityLivingBase par3EntityLivingBase) {
 		par2EntityLivingBase.setFire(4);
         par1ItemStack.damageItem(1, par3EntityLivingBase);
         return true;

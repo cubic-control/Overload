@@ -2,21 +2,12 @@ package com.cubic_control.overload.Blocks;
 
 import java.util.Random;
 
-import com.cubic_control.overload.CreativeTabs.MCreativeTabs;
-import com.cubic_control.overload.Main.MainRegistry;
-import com.cubic_control.overload.TileEntity.TileEntityDuplicator;
-import com.cubic_control.overload.lib.RefStrings;
-
-import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
@@ -25,6 +16,16 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+
+import com.cubic_control.overload.CreativeTabs.MCreativeTabs;
+import com.cubic_control.overload.Main.MainRegistry;
+import com.cubic_control.overload.Render.RenderModBlockIDs;
+import com.cubic_control.overload.TileEntity.TileEntityDuplicator;
+import com.cubic_control.overload.lib.RefStrings;
+
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class ModBlockDuplicator extends BlockContainer{
 	public IIcon[] icons = new IIcon[6];
@@ -50,7 +51,6 @@ public class ModBlockDuplicator extends BlockContainer{
 		this.setStepSound(soundTypeMetal);
 		GameRegistry.registerBlock(this, name);
 	}
-	
 	@Override
 	public Item getItemDropped(int i1, Random rand, int i2) {
         return Item.getItemFromBlock(MBlocks.duplicator);
@@ -120,7 +120,6 @@ public class ModBlockDuplicator extends BlockContainer{
             TileEntityDuplicator tileentity = (TileEntityDuplicator)world.getTileEntity(x, y, z);
             
             if(tileentity != null){
-            	//player.func_146100_a(tileentity);
             	player.openGui(MainRegistry.instance, 5, world, x, y, z);
             }
             return true;
@@ -150,6 +149,9 @@ public class ModBlockDuplicator extends BlockContainer{
             world.setBlockMetadataWithNotify(x, y, z, 4, 2);
             world.markBlockRangeForRenderUpdate(x, y, z, x, y, z);
         }
+        if(stack.hasDisplayName()){
+            ((TileEntityDuplicator)world.getTileEntity(x, y, z)).func_145951_a(stack.getDisplayName());
+        }
     }
 	@Override
 	public boolean hasComparatorInputOverride() {
@@ -163,6 +165,10 @@ public class ModBlockDuplicator extends BlockContainer{
 	@Override
     public Item getItem(World world, int x, int y, int z) {
         return Item.getItemFromBlock(MBlocks.duplicator);
+    }
+	@Override
+    public int getRenderType() {
+        return RenderModBlockIDs.FURNACE;
     }
 
 }

@@ -242,7 +242,7 @@ public class ModBlockFurnaceFire extends BlockContainer {
     }
     @Override
     public int getRenderType() {
-        return RenderModBlockIDs.FURNACE_FIRE;
+        return RenderModBlockIDs.FURNACE;
     }
     @Override
     public boolean isFlammable(IBlockAccess world, int x, int y, int z, ForgeDirection face) {

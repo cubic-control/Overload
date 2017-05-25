@@ -9,21 +9,20 @@ import net.minecraft.entity.ai.EntityAITasks;
 import net.minecraft.entity.ai.EntityAITasks.EntityAITaskEntry;
 
 public class EntityUtil {
-	public static void cancelCurrentTasks(EntityLiving ent) {
-	    Iterator<?> iterator = ent.tasks.taskEntries.iterator();
-
-	    List<EntityAITasks.EntityAITaskEntry> currentTasks = new ArrayList<EntityAITasks.EntityAITaskEntry>();
-	    while (iterator.hasNext()) {
-	      EntityAITaskEntry entityaitaskentry = (EntityAITasks.EntityAITaskEntry) iterator.next();
-	      if(entityaitaskentry != null) {
-	        currentTasks.add(entityaitaskentry);
-	      }
-	    }
-	    //Only available way to stop current execution is to remove all current tasks, then re-add them 
-	    for (EntityAITaskEntry task : currentTasks) {
-	      ent.tasks.removeTask(task.action);
-	      ent.tasks.addTask(task.priority, task.action);
-	    }
-	    ent.getNavigator().clearPathEntity();
-	  }
+	public static void cancelCurrentTasks(EntityLiving entity) {
+		Iterator<?> iterator = entity.tasks.taskEntries.iterator();
+		List<EntityAITasks.EntityAITaskEntry> currentTasks = new ArrayList<EntityAITasks.EntityAITaskEntry>();
+		
+		while(iterator.hasNext()){
+			EntityAITaskEntry entry = (EntityAITasks.EntityAITaskEntry)iterator.next();
+			if(entry != null){
+				currentTasks.add(entry);
+			}
+		}
+		for(EntityAITaskEntry task : currentTasks){
+			entity.tasks.removeTask(task.action);
+			entity.tasks.addTask(task.priority, task.action);
+		}
+		entity.getNavigator().clearPathEntity();
+	}
 }

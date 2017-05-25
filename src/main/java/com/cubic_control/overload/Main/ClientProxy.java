@@ -3,10 +3,13 @@ package com.cubic_control.overload.Main;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelChicken;
 import net.minecraft.client.model.ModelCow;
+import net.minecraft.client.model.ModelHorse;
 import net.minecraft.client.model.ModelPig;
 import net.minecraft.client.model.ModelSheep1;
 import net.minecraft.client.model.ModelSheep2;
 
+import com.cubic_control.overload.Entity.Entity606;
+import com.cubic_control.overload.Entity.EntityCBombPrimed;
 import com.cubic_control.overload.Entity.EntityDeadAngel;
 import com.cubic_control.overload.Entity.EntityDeath;
 import com.cubic_control.overload.Entity.EntityDeathGuard;
@@ -28,6 +31,7 @@ import com.cubic_control.overload.Entity.EntityFrostedPig;
 import com.cubic_control.overload.Entity.EntityFrostedSheep;
 import com.cubic_control.overload.Entity.EntityGiantNightmare;
 import com.cubic_control.overload.Entity.EntityHeadless;
+import com.cubic_control.overload.Entity.EntityHeadlessMount;
 import com.cubic_control.overload.Entity.EntityIceArcher;
 import com.cubic_control.overload.Entity.EntityIceAssassin;
 import com.cubic_control.overload.Entity.EntityIceGuard;
@@ -64,6 +68,8 @@ import com.cubic_control.overload.Models.ModelNewBiped;
 import com.cubic_control.overload.Models.ModelZombieBiped;
 import com.cubic_control.overload.Models.ModelZombieSlim;
 import com.cubic_control.overload.Models.ModelZombie_Cow;
+import com.cubic_control.overload.Render.Render606;
+import com.cubic_control.overload.Render.RenderCBombPrimed;
 import com.cubic_control.overload.Render.RenderDeadAngel;
 import com.cubic_control.overload.Render.RenderDeath;
 import com.cubic_control.overload.Render.RenderDeathGuard;
@@ -85,6 +91,7 @@ import com.cubic_control.overload.Render.RenderFrostedPig;
 import com.cubic_control.overload.Render.RenderFrostedSheep;
 import com.cubic_control.overload.Render.RenderGiantNightmare;
 import com.cubic_control.overload.Render.RenderHeadless;
+import com.cubic_control.overload.Render.RenderHeadlessMount;
 import com.cubic_control.overload.Render.RenderIceArcher;
 import com.cubic_control.overload.Render.RenderIceAssassin;
 import com.cubic_control.overload.Render.RenderIceGuard;
@@ -94,7 +101,7 @@ import com.cubic_control.overload.Render.RenderInjuredSteve;
 import com.cubic_control.overload.Render.RenderJeff;
 import com.cubic_control.overload.Render.RenderMantisMan;
 import com.cubic_control.overload.Render.RenderModBlockBluestoneWire;
-import com.cubic_control.overload.Render.RenderModBlockFurnaceFire;
+import com.cubic_control.overload.Render.RenderModBlockFurnace;
 import com.cubic_control.overload.Render.RenderNightmare;
 import com.cubic_control.overload.Render.RenderNightmareAlex;
 import com.cubic_control.overload.Render.RenderNightmareCubic;
@@ -169,6 +176,8 @@ public class ClientProxy extends ServerProxy{
 		RenderingRegistry.registerEntityRenderingHandler(EntityNightmare.class, new RenderNightmare(new ModelBiped(), 0.5f));
 		RenderingRegistry.registerEntityRenderingHandler(EntityGiantNightmare.class, new RenderGiantNightmare(new ModelBiped(), 0.5f, 5.0f));
 		RenderingRegistry.registerEntityRenderingHandler(EntityDeathGuard.class, new RenderDeathGuard(new ModelBiped64x64(), 0.5f));
+		RenderingRegistry.registerEntityRenderingHandler(Entity606.class, new Render606(new ModelBiped(), 0.5f));
+		RenderingRegistry.registerEntityRenderingHandler(EntityHeadlessMount.class, new RenderHeadlessMount(new ModelHorse(), 0.5f));
 				//Dragons
 		RenderingRegistry.registerEntityRenderingHandler(EntityDragonPhantomWhite.class, new RenderDragonPhantomWhite());
 		RenderingRegistry.registerEntityRenderingHandler(EntityDragonPhantomBlue.class, new RenderDragonPhantomBlue());
@@ -186,12 +195,14 @@ public class ClientProxy extends ServerProxy{
 		//Plastic Animals
 		RenderingRegistry.registerEntityRenderingHandler(EntityPlasticCow.class, new RenderPlasticCow(new ModelCow(), 0.5f));
 		RenderingRegistry.registerEntityRenderingHandler(EntityPlasticChicken.class, new RenderPlasticChicken(new ModelChicken(), 0.5f));
+		/**Other**/
+		RenderingRegistry.registerEntityRenderingHandler(EntityCBombPrimed.class, new RenderCBombPrimed());
 	}
 	public ModelBiped getArmorModel(int id){ return null; }
 	
 	public void registerRenders() {
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityLightPyramidEntity.class, new TileEntityLightPyramidRenderer());
 		RenderingRegistry.registerBlockHandler(new RenderModBlockBluestoneWire());
-		RenderingRegistry.registerBlockHandler(new RenderModBlockFurnaceFire());
+		RenderingRegistry.registerBlockHandler(new RenderModBlockFurnace());
 	}
 }

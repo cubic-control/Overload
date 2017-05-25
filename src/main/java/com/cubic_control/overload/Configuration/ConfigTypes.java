@@ -8,4 +8,5 @@ public class ConfigTypes {
 	public static String DIMENSIONS = "dimensions";
 	public static String BOOLEANS = "booleans";
 	public static String FLOATS = "floats";
+	public static String INTS = "ints";
 }

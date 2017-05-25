@@ -47,8 +47,13 @@ public class EntityJeffTheKiller extends EntityMob{
 
 	public EntityJeffTheKiller(World par1World) {
 		super(par1World);
+		this.getNavigator().setBreakDoors(true);
+		this.getNavigator().setEnterDoors(true);
 		this.tasks.addTask(0, new EntityAISwimming(this));
 		this.tasks.addTask(1, new EntityAIAttackOnCollide(this, 1.0D, true));
+		this.tasks.addTask(2, new EntityAIMoveIndoors(this));
+		this.tasks.addTask(3, new EntityAIRestrictOpenDoor(this));
+		this.tasks.addTask(4, new EntityAIOpenDoor(this, true));
 		this.tasks.addTask(5, new EntityAIMoveTowardsRestriction(this, 0.3F));
 		this.tasks.addTask(6, new EntityAIMoveThroughVillage(this, 1.0D, true));
 		this.tasks.addTask(8, new EntityAIWatchClosest(this, Entity.class, 8.0F));
@@ -56,79 +61,61 @@ public class EntityJeffTheKiller extends EntityMob{
 		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
 		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, Entity.class, 0, true));
 		this.setSize(0.6F, 1.8F);
-		
-		if(MConfiguration.canJeffOpenDoors){
-			this.getNavigator().setBreakDoors(true);
-			this.getNavigator().setEnterDoors(true);
-			this.tasks.addTask(2, new EntityAIMoveIndoors(this));
-			this.tasks.addTask(3, new EntityAIRestrictOpenDoor(this));
-			this.tasks.addTask(4, new EntityAIOpenDoor(this, true));
-		}
 	}
-	protected void applyEntityAttributes()
-    {
+	@Override
+	protected void applyEntityAttributes() {
         super.applyEntityAttributes();
-        if (this.worldObj.difficultySetting == EnumDifficulty.HARD){
+        if(this.worldObj.difficultySetting == EnumDifficulty.HARD){
         	this.getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(200.0D);
         	this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
         	this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(20.0D);
         	this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(200.0D);
         }
-        if (this.worldObj.difficultySetting == EnumDifficulty.NORMAL){
+        if(this.worldObj.difficultySetting == EnumDifficulty.NORMAL){
         	this.getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(100.0D);
         	this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.5D);
         	this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10.0D);
         	this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(100.0D);
         }
-        if (this.worldObj.difficultySetting == EnumDifficulty.EASY){
+        if(this.worldObj.difficultySetting == EnumDifficulty.EASY){
         	this.getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(90.0D);
             this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.4D);
             this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(5.0D);
             this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(90.0D);
         }
     }
-	protected void entityInit()
-    {
+	@Override
+	protected void entityInit() {
         super.entityInit();
         this.getDataWatcher().addObject(15, Byte.valueOf((byte)0));
         this.getDataWatcher().addObject(16, Byte.valueOf((byte)0));
         this.getDataWatcher().addObject(17, Byte.valueOf((byte)0));
     }
-	protected boolean isAIEnabled()
-    {
-        return true;
+	@Override
+	protected boolean isAIEnabled() {return true;}
+	@Override
+	protected int getExperiencePoints(EntityPlayer player) {
+        return (super.getExperiencePoints(player) + this.rand.nextInt(50))*2;
     }
-	protected int getExperiencePoints(EntityPlayer par1EntityPlayer)
-    {
-        return super.getExperiencePoints(par1EntityPlayer);
-    }
-
-    /**
-     * Returns the sound this mob makes on death.
-     */
-    protected String getDeathSound()
-    {
+	@Override
+    protected String getDeathSound() {
         return RefStrings.MODID + ":Jeff.death";
     }
-    protected void func_145780_a(int p_145780_1_, int p_145780_2_, int p_145780_3_, Block p_145780_4_)
-    {
+	@Override
+    protected void func_145780_a(int x, int y, int z, Block block) {
         this.playSound(RefStrings.MODID + ":Jeff.step", 0.15F, 1.0F);
     }
-    protected Item getDropItem()
-    {
+	@Override
+    protected Item getDropItem() {
         return Items.bone;
     }
-    /**
-     * Get this Entity's EnumCreatureAttribute
-     */
-    public EnumCreatureAttribute getCreatureAttribute()
-    {
+	@Override
+    public EnumCreatureAttribute getCreatureAttribute() {
         return EnumCreatureAttribute.UNDEFINED;
     }
-    protected void dropRareDrop(int par1)
-    {
-        switch (this.rand.nextInt(4))
-        {
+	@Override
+    protected void dropRareDrop(int i1) {
+        switch(this.rand.nextInt(4)){
             case 0:
                 this.dropItem(Items.redstone, 1);
                 break;
@@ -140,16 +127,16 @@ public class EntityJeffTheKiller extends EntityMob{
                 break;
             case 3:
             	this.dropItem(MTools.jeff_knife, 1);
+            	break;
         }
     }
-    
-    public IEntityLivingData onSpawnWithEgg(IEntityLivingData data)
-    {
+	@Override
+    public IEntityLivingData onSpawnWithEgg(IEntityLivingData data) {
         data = super.onSpawnWithEgg(data);
         
         this.setCurrentItemOrArmor(0, new ItemStack(MTools.jeff_knife));
         
         return data;
     }
-
+	
 }

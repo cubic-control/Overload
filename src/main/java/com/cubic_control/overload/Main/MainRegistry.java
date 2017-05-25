@@ -7,6 +7,7 @@ import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 
+import com.cubic_control.overload.Achievements.MAchievements;
 import com.cubic_control.overload.Armor.MArmor;
 import com.cubic_control.overload.Biomes.MBiomes;
 import com.cubic_control.overload.Blocks.MBlocks;
@@ -20,6 +21,7 @@ import com.cubic_control.overload.Events.MEventHandler;
 import com.cubic_control.overload.Food.MFoods;
 import com.cubic_control.overload.GUI.GuiHandler;
 import com.cubic_control.overload.Item.MItems;
+import com.cubic_control.overload.Potions.MPotions;
 import com.cubic_control.overload.TileEntity.RegTileEntities;
 import com.cubic_control.overload.Tools.MTools;
 import com.cubic_control.overload.World.MWorld;
@@ -63,6 +65,7 @@ public class MainRegistry {
 		}
 		MConfiguration.createConfig();
 		MCreativeTabs.initialiseTabs();
+		MPotions.createPotions();
 		MBlocks.mainRegistry();
 		RegTileEntities.RegisterTileEntites();
 		MFoods.mainRegistry();
@@ -76,14 +79,15 @@ public class MainRegistry {
 		NewModEntities.preinit();
 		Dimension.registerWorldProvider();
 		Dimension.registerDimensions();
-		proxy.registerRenderInfo();
+		MAchievements.createAchievements();
 		
-		MOreDictionary.reg();
+		//MOreDictionary.reg();
 	}
 	@EventHandler
 	public static void load(FMLInitializationEvent event){
 		MEventHandler.registerEvents();
 		FMLCommonHandler.instance().bus().register(instance);
+		proxy.registerRenderInfo();
 	}
 	@EventHandler
 	public static void Postload(FMLPostInitializationEvent PostEvent){

@@ -28,7 +28,7 @@ public class MBlocks {
 		InitializeBlock();
 		NetworkRegistry.INSTANCE.registerGuiHandler(MainRegistry.instance, new GuiHandler());
 		MinecraftForge.EVENT_BUS.register(new VanilaBlockDropChanger());
-		MinecraftForge.EVENT_BUS.register(new VanilaBlockTextureChanger());
+		VanilaBlockTextureChanger.start();
 	}
 	public static Block ender_rite_ore;
 	public static Block ender_rite_block;
@@ -71,6 +71,7 @@ public class MBlocks {
 	public static Block rainbow_fire;
 	public static Block rainbow_portal;
 	public static Block super_slime;
+	public static Block c_bomb;
 	//Ice
 	public static Block ice_stone;
 	public static Block ice_stone_polished;
@@ -89,6 +90,10 @@ public class MBlocks {
 	public static Block ice_portal;
 	public static Block ice_crafting_table;
 	public static Block door_ice;
+	public static Block ice_furnace;
+	public static Block ice_furnace_lit;
+	public static Block lava_cold;
+	public static Block lava_cold_flowing;
 		//Stairs
 	public static Block ice_stone_stairs;
 	public static Block ice_stone_polished_stairs;
@@ -602,6 +607,7 @@ public class MBlocks {
 		rainbow_fire = new ModBlockFireRainbow("rainbow_fire");
 		rainbow_portal = new ModBlockPortalRainbow("rainbow_portal");
 		super_slime = new ModBlockSuperSlime("super_slime");
+		c_bomb = new ModBlockCBomb("c-bomb");
 		//Ice
 		ice_stone = new ModStone("ice_stone");
 		ice_stone_polished = new ModBlock(Material.rock, "ice_stone_polished", "pickaxe", 0, 3f, 30f, Block.soundTypeStone);
@@ -620,6 +626,9 @@ public class MBlocks {
 		ice_portal = new ModBlockPortalIce("ice_portal");
 		ice_crafting_table = new ModBlockWorkbenchIce("ice_crafting_table", 2f, 15f);
 		door_ice = new ModBlockDoor(ice_planks, "door_ice", 2f, 15f);
+		ice_furnace = new ModBlockFurnaceIce(false, "ice_furnace");
+		ice_furnace_lit = new ModBlockFurnaceIce(true, "ice_furnace");
+		lava_cold = new ModBlockStaticLiquid(Material.ice, "cold_lava_still").setLightLevel(1.0F);
 			//Stairs
 		ice_stone_stairs = new ModBlockStairs("ice_stone_stairs", ice_stone, 0, "pickaxe", "ice_stone");
 		ice_stone_polished_stairs = new ModBlockStairs("ice_stone_polished", ice_stone_polished);

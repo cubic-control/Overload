@@ -6,6 +6,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 import java.util.Random;
 
+import com.cubic_control.overload.Achievements.MAchievements;
 import com.cubic_control.overload.Dimensions.DimensionIDs;
 import com.cubic_control.overload.Util.NightmareRealmTeleporter;
 import com.cubic_control.overload.lib.RefStrings;
@@ -189,12 +190,14 @@ public class ModBlockPortalNightmare extends BlockBreakable
 	public void onEntityCollidedWithBlock(World world, int x, int y, int z, Entity entity) {
 		if ((entity.ridingEntity == null) && (entity.riddenByEntity == null) && ((entity instanceof EntityPlayerMP))) {
 			EntityPlayerMP thePlayer = (EntityPlayerMP)entity;
-			if (thePlayer.timeUntilPortal > 0) {
+			if(thePlayer.timeUntilPortal > 0) {
 				thePlayer.timeUntilPortal = 10;
-			} else if (thePlayer.dimension != DimensionIDs.Nightmare_Realm) {
+			}else if(thePlayer.dimension != DimensionIDs.Nightmare_Realm) {
 				thePlayer.timeUntilPortal = 10;
 				thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, DimensionIDs.Nightmare_Realm, new NightmareRealmTeleporter(thePlayer.mcServer.worldServerForDimension(DimensionIDs.Nightmare_Realm)));
-			} else {
+				
+				thePlayer.addStat(MAchievements.achievementWTYN, 1);
+			}else{
 				thePlayer.timeUntilPortal = 10;
 				thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 0, new NightmareRealmTeleporter(thePlayer.mcServer.worldServerForDimension(0)));
 			}

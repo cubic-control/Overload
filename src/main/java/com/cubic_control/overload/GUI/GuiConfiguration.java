@@ -28,6 +28,7 @@ public class GuiConfiguration extends GuiConfig{
 		list.add(new ConfigElement(MConfiguration.config.getCategory(ConfigTypes.BIOMES)));
 		list.add(new ConfigElement(MConfiguration.config.getCategory(ConfigTypes.DIMENSIONS)));
 		list.add(new ConfigElement(MConfiguration.config.getCategory(ConfigTypes.BOOLEANS)));
+		list.add(new ConfigElement(MConfiguration.config.getCategory(ConfigTypes.INTS)));
 		return list;
 	}
 

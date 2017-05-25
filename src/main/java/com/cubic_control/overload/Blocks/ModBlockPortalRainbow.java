@@ -6,6 +6,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 import java.util.Random;
 
+import com.cubic_control.overload.Achievements.MAchievements;
 import com.cubic_control.overload.CreativeTabs.MCreativeTabs;
 import com.cubic_control.overload.Dimensions.DimensionIDs;
 import com.cubic_control.overload.Util.RainbowRealmTeleporter;
@@ -195,6 +196,8 @@ public class ModBlockPortalRainbow extends BlockBreakable
 			}else if(thePlayer.dimension != DimensionIDs.Rainbow_Realm){
 				thePlayer.timeUntilPortal = 10;
 				thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, DimensionIDs.Rainbow_Realm, new RainbowRealmTeleporter(thePlayer.mcServer.worldServerForDimension(DimensionIDs.Rainbow_Realm)));
+				
+				thePlayer.addStat(MAchievements.achievementRainbows, 1);
 			}else{
 				thePlayer.timeUntilPortal = 10;
 				thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 0, new RainbowRealmTeleporter(thePlayer.mcServer.worldServerForDimension(0)));

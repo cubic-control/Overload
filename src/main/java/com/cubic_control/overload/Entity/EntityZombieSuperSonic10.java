@@ -8,6 +8,7 @@ import java.util.Random;
 import java.util.UUID;
 
 import com.cubic_control.overload.Item.MItems;
+import com.cubic_control.overload.Tools.MTools;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
@@ -115,7 +116,7 @@ public class EntityZombieSuperSonic10 extends EntityZombie{
     }
     
     protected void addRandomArmor() {
-		this.setCurrentItemOrArmor(0, new ItemStack(MItems.red_nightmare_sword));
+		this.setCurrentItemOrArmor(0, new ItemStack(MTools.red_nightmare_sword));
 	}
     
     public IEntityLivingData onSpawnWithEgg(IEntityLivingData data) {

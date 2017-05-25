@@ -1,22 +1,23 @@
 package com.cubic_control.overload.Render;
 
-import org.lwjgl.opengl.GL11;
-
-import com.cubic_control.overload.Blocks.MBlocks;
-
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.world.IBlockAccess;
+
+import org.lwjgl.opengl.GL11;
+
+import com.cubic_control.overload.Blocks.MBlocks;
+
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 
-public class RenderModBlockFurnaceFire implements ISimpleBlockRenderingHandler{
+public class RenderModBlockFurnace implements ISimpleBlockRenderingHandler{
 
 	@Override
 	public void renderInventoryBlock(Block block, int metadata, int modelId, RenderBlocks renderer) {
 		int meta = 3;
 		
-		if(block == MBlocks.fire_furnace_lit){
+		if(block == MBlocks.fire_furnace_lit || block == MBlocks.ice_furnace_lit){
 			meta = 1;
 		}
 		Tessellator tessellator = Tessellator.instance;
@@ -72,7 +73,7 @@ public class RenderModBlockFurnaceFire implements ISimpleBlockRenderingHandler{
 
 	@Override
 	public int getRenderId() {
-		return RenderModBlockIDs.FURNACE_FIRE;
+		return RenderModBlockIDs.FURNACE;
 	}
 
 }

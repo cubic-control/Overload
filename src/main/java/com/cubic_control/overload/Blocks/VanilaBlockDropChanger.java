@@ -10,8 +10,8 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 public class VanilaBlockDropChanger {
 	
 	@SubscribeEvent
-	public void yourPlayerHarvestEvent(HarvestDropsEvent event){
-		if (event.harvester != null) {
+	public void onHarvestDropsEvent(HarvestDropsEvent event){
+		if(event.harvester != null){
 			if(MConfiguration.DropOverride == true){
 				if(event.block == Blocks.sandstone){
 					event.drops.clear();

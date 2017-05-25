@@ -1,5 +1,6 @@
 package com.cubic_control.overload.Entity;
 
+import com.cubic_control.overload.Achievements.MAchievements;
 import com.cubic_control.overload.Armor.MArmor;
 import com.cubic_control.overload.Item.MItems;
 import com.cubic_control.overload.Tools.MTools;
@@ -139,6 +140,13 @@ public class EntityDeath extends EntityMob implements IBossDisplayData{
 			this.timeUntilNextGuard = 100;
 		}
 		return super.attackEntityFrom(par1DamageSource, par2);
+	}
+	@Override
+	public void onDeath(DamageSource source) {
+		if(source.getSourceOfDamage() instanceof EntityPlayer){
+			((EntityPlayer)source.getSourceOfDamage()).addStat(MAchievements.achievementDeath, 1);
+		}
+		super.onDeath(source);
 	}
 
 }

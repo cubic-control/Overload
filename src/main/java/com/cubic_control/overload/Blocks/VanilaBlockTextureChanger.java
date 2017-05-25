@@ -10,9 +10,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class VanilaBlockTextureChanger {
 	
-	@EventHandler
-	public void preInit(FMLPreInitializationEvent event) 
-	{
+	public static void start(){
 		if(MConfiguration.TextureOverride){
 			//Blocks.sandstone.setBlockTextureName(RefStrings.MODID + ":" + "sandstone");
 		}

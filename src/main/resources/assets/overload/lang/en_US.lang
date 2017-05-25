@@ -168,6 +168,7 @@ item.Blue_Part.name=Blue Pannel
 item.Green_Part.name=Green Pannel
 item.Red_Part.name=Red Pannel
 item.Nightmare_Gem.name=Nightmare Gem
+item.teleporter.name=Teleporter
   //SEEDS
 item.seeds_white_melon.name=White Melon Seeds
 item.seeds_blue_melon.name=Blue Melon Seeds
@@ -517,45 +518,74 @@ itemGroup.tabTools=Overload Tools
 itemGroup.tabArmor=Overload Armor
 itemGroup.tabWeapons=Overload Weapons
 
+//Containers
+container.duplicator=Duplicator
+container.fire_furnace=Fire Furnace
+container.ice_furnace=Ice Furnace
+
+//Potions
+potion.frostbite=Frostbite
+
+//Achievements
+    //Rainbow Line
+achievement.colours=Colours!
+achievement.colours.desc=Collect A Colour Shard
+achievement.colorful=Colorful!
+achievement.colorful.desc=Collect A Rainbow Shard
+achievement.rainbows=Into The Colours!
+achievement.rainbows.desc=Enter The Rainbow Realm
+    //Nightmare Line
+achievement.nightmare=Start Your Nightmare
+achievement.nightmare.desc=Collect A Nightmare Gem!
+achievement.wtyn=Welcome To Your Nightmare!
+achievement.wtyn.desc=Enter The Nightmare Realm!
+achievement.fearless=Fearless!
+achievement.fearless.desc=Defeat A Nightmare!
+achievement.slayer=Dragon Slayer!
+achievement.slayer.desc=Defeat A Phantom Dragon!
+achievement.light=The Power Of Light!
+achievement.light.desc=Collect A Light Shard!
+achievement.death=Defying Death
+achievement.death.desc=Defeat Death
+
 //Entity
     //Monsters
-entity.overload.Zombie Alex.name=Zombie Alex
-entity.overload.Zombie jeb_.name=Zombie jeb_
-entity.overload.Zombie Notch.name=Zombie Notch
-entity.overload.Zombie Dinnerbone.name=Zombie Dinnerbone
-entity.overload.Zombie DryAxe.name=Zombie DryAxe
-entity.overload.Zombie cubic_control.name=Zombie cubic_control
-entity.overload.Zombie super_sonic_10.name=Zombie super_sonic_10
-entity.overload.Zombie Cow.name=Zombie Cow
-entity.overload.Jeff The Killer.name=Jeff The Killer
-entity.overload.Injured Steve.name=Injured Steve
-entity.overload.Mantis Man.name=Mantis Man
+entity.overload.Zombie-Alex.name=Zombie Alex
+entity.overload.Zombie-jeb_.name=Zombie jeb_
+entity.overload.Zombie-Notch.name=Zombie Notch
+entity.overload.Zombie-Dinnerbone.name=Zombie Dinnerbone
+entity.overload.Zombie-cubic_control.name=Zombie cubic_control
+entity.overload.Zombie-super_sonic_10.name=Zombie super_sonic_10
+entity.overload.ZombieCow.name=Zombie Cow
+entity.overload.JeffTheKiller.name=Jeff The Killer
+entity.overload.InjuredSteve.name=Injured Steve
+entity.overload.MantisMan.name=Mantis Man
 entity.overload.Stalker.name=Stalker
         //Nightmares
-entity.overload.Nightmare Cubic.name=Nightmare Cubic
-entity.overload.Dead Angel.name=Dead Angel
-entity.overload.Stalking Warrior.name=Stalking Warrior
+entity.overload.NightmareCubic.name=Nightmare Cubic
+entity.overload.DeadAngel.name=Dead Angel
+entity.overload.StalkingWarrior.name=Stalking Warrior
 entity.overload.Unknown.name=Unknown
-entity.overload.Nightmare Villager.name=Nightmare Villager
-entity.overload.Nightmare Steve.name=Nightmare Steve
-entity.overload.Nightmare Alex.name=Nightmare Alex
-entity.overload.Nightmare Herobrine.name=Nightmare Herobrine
+entity.overload.NightmareVillager.name=Nightmare Villager
+entity.overload.NightmareSteve.name=Nightmare Steve
+entity.overload.NightmareAlex.name=Nightmare Alex
+entity.overload.NightmareHerobrine.name=Nightmare Herobrine
 entity.overload.Null.name=Null
 entity.overload.Pumpkin.name=Pumpkin
 entity.overload.Headless.name=Headless
-entity.overload.Fake Headless Horseman.name=Fake Headless Horseman
+entity.overload.FakeHeadlessHorseman.name=Fake Headless Horseman
 entity.overload.Nightmare.name=Nightmare
         //Dragons
-entity.overload.Dragon Phantom White.name=Dragon Phantom White
-entity.overload.Dragon Phantom Blue.name=Dragon Phantom Blue
-entity.overload.Dragon Phantom Green.name=Dragon Phantom Green
-entity.overload.Dragon Phantom Light Blue.name=Dragon Phantom Light Blue
-entity.overload.Dragon Phantom Red.name=Dragon Phantom Red
-entity.overload.Dragon Phantom Yellow.name=Dragon Phantom Yellow
+entity.overload.DragonPhantomWhite.name=Dragon Phantom White
+entity.overload.DragonPhantomBlue.name=Dragon Phantom Blue
+entity.overload.DragonPhantomGreen.name=Dragon Phantom Green
+entity.overload.DragonPhantomLightBlue.name=Dragon Phantom Light Blue
+entity.overload.DragonPhantomRed.name=Dragon Phantom Red
+entity.overload.DragonPhantomYellow.name=Dragon Phantom Yellow
         //Bosses
 entity.overload.Death.name=Death
     //Animals
-entity.overload.Frosted Cow.name=Frosted Cow
-entity.overload.Frosted Pig.name=Frosted Pig
-entity.overload.Frosted Chicken.name=Frosted Chicken
-entity.overload.Frosted Sheep.name=Frosted Sheep
+entity.overload.FrostedCow.name=Frosted Cow
+entity.overload.FrostedPig.name=Frosted Pig
+entity.overload.FrostedChicken.name=Frosted Chicken
+entity.overload.FrostedSheep.name=Frosted Sheep
