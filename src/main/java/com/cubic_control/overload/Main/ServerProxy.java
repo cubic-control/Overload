@@ -16,22 +16,8 @@ import com.google.common.collect.Iterators;
 import cpw.mods.fml.common.registry.EntityRegistry;
 
 public class ServerProxy {
-	public void registerRenderInfo(){
-		MAchievements.achievementInstalled.registerStat();
-		//Rainbow Line
-		MAchievements.achievementColours.registerStat();
-		MAchievements.achievementColorful.registerStat();
-		MAchievements.achievementRainbows.registerStat();
-		//Ice Line
-		//Fire Line
-		//Nightmare Line
-		MAchievements.achievementNightmare.registerStat();
-		MAchievements.achievementWTYN.registerStat();
-		MAchievements.achievementFearless.registerStat();
-		MAchievements.achievementSlayer.registerStat();
-		MAchievements.achievementLight.registerStat();
-		MAchievements.achievementDeath.registerStat();
-	}
+	public void registerRenderInfo(){}
+	
 	public int addArmor(String armor){
 		return 0;
 	}	

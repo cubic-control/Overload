@@ -122,6 +122,12 @@ public class MTools {
 	public static ModItemSpade marble_spade;
 	public static ModItemMachete marble_machete;
 		//Granite
+	public static ModItemSword granite_sword;
+	public static ModItemAxe granite_axe;
+	public static ModItemHoe granite_hoe;
+	public static ModItemPickaxe granite_pickaxe;
+	public static ModItemSpade granite_spade;
+	public static ModItemMachete granite_machete;
 		//Diorite
 		//Andesite
 		//Slate
@@ -272,6 +278,12 @@ public class MTools {
 		marble_spade = new ModItemSpade(ModToolMaterial.marble_tools, "marble_spade", new ItemStack(MBlocks.marble_cobblestone));
 		marble_machete = new ModItemMachete(ModToolMaterial.marble_tools, "marble_machete", new ItemStack(MBlocks.marble_cobblestone));
 			//Granite
+		granite_sword = new ModItemSword(ModToolMaterial.granite_tools, "granite_sword", new ItemStack(MBlocks.granite_cobblestone));
+		granite_axe = new ModItemAxe(ModToolMaterial.granite_tools, "granite_axe", new ItemStack(MBlocks.granite_cobblestone));
+		granite_hoe = new ModItemHoe(ModToolMaterial.granite_tools, "granite_hoe", new ItemStack(MBlocks.granite_cobblestone));
+		granite_pickaxe = new ModItemPickaxe(ModToolMaterial.granite_tools, "granite_pickaxe", new ItemStack(MBlocks.granite_cobblestone));
+		granite_spade = new ModItemSpade(ModToolMaterial.granite_tools, "granite_spade", new ItemStack(MBlocks.granite_cobblestone));
+		granite_machete = new ModItemMachete(ModToolMaterial.granite_tools, "granite_machete", new ItemStack(MBlocks.granite_cobblestone));
 			//Diorite
 			//Andesite
 			//Slate

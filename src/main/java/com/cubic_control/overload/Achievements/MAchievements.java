@@ -25,20 +25,20 @@ public class MAchievements {
 	public static Achievement achievementDeath;
 	
 	public static void createAchievements(){
-		achievementInstalled = new Achievement("achievement.installed", "installed", 0, -4, MItems.cubic_head, null);
+		achievementInstalled = new Achievement("achievement.installed", "installed", 0, -4, MItems.cubic_head, null).registerStat();
 		//Rainbow Line
-		achievementColours = new Achievement("achievement.colours", "colours", -2, 0, MItems.blue_shard, achievementInstalled);
-		achievementColorful = new Achievement("achievement.colorful", "colorful", -2, 2, MItems.rainbow_shard, achievementColours);
-		achievementRainbows = new Achievement("achievement.rainbows", "rainbows", -2, 4, MBlocks.rainbow_portal, achievementColorful);
+		achievementColours = new Achievement("achievement.colours", "colours", -2, 0, MItems.blue_shard, achievementInstalled).registerStat();
+		achievementColorful = new Achievement("achievement.colorful", "colorful", -2, 2, MItems.rainbow_shard, achievementColours).registerStat();
+		achievementRainbows = new Achievement("achievement.rainbows", "rainbows", -2, 4, MBlocks.rainbow_portal, achievementColorful).registerStat();
 		//Ice Line
 		//Fire Line
 		//Nightmare Line
-		achievementNightmare = new Achievement("achievement.nightmare", "nightmare", 2, 0, MItems.Nightmare_Gem, achievementInstalled);
-		achievementWTYN = new Achievement("achievement.wtyn", "wtyn", 2, 2, Item.getItemFromBlock(MBlocks.nightmare_portal), achievementNightmare);
-		achievementFearless = new Achievement("achievement.fearless", "fearless", 3, 4, MTools.black_nightmare_sword, achievementWTYN);
-		achievementSlayer = new Achievement("achievement.slayer", "slayer", 1, 4, MTools.white_nightmare_sword, achievementWTYN);
-		achievementLight = new Achievement("achievement.light", "light", 3, 6, MItems.light_shard, achievementFearless);
-		achievementDeath = new Achievement("achievement.death", "death", 2, 10, MItems.death_heart, achievementWTYN);
+		achievementNightmare = new Achievement("achievement.nightmare", "nightmare", 2, 0, MItems.Nightmare_Gem, achievementInstalled).registerStat();
+		achievementWTYN = new Achievement("achievement.wtyn", "wtyn", 2, 2, Item.getItemFromBlock(MBlocks.nightmare_portal), achievementNightmare).registerStat();
+		achievementFearless = new Achievement("achievement.fearless", "fearless", 3, 4, MTools.black_nightmare_sword, achievementWTYN).registerStat();
+		achievementSlayer = new Achievement("achievement.slayer", "slayer", 1, 4, MTools.white_nightmare_sword, achievementWTYN).registerStat();
+		achievementLight = new Achievement("achievement.light", "light", 3, 6, MItems.light_shard, achievementFearless).registerStat();
+		achievementDeath = new Achievement("achievement.death", "death", 2, 10, MItems.death_heart, achievementWTYN).registerStat();
 		
 		AchievementPage.registerAchievementPage(new AchievementPage("Overload Achievements", new Achievement[]{
 				achievementInstalled,

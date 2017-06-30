@@ -49,8 +49,8 @@ public class ControlOre implements IWorldGenerator {
 		addOre(MBlocks.ender_rite_ore, Blocks.stone, random, world, chunkX, chunkZ, 5, 45, 1, 5, 15);
 		addOre(MBlocks.nightmare_ore, Blocks.stone, random, world, chunkX, chunkZ, 0, 25, 1, 3, 20);
 		addOre(MBlocks.bubblegum_ore, Blocks.stone, random, world, chunkX, chunkZ, 25, 45, 1, 5, 35);
-		addOre(MBlocks.clay_dark, Blocks.clay, random, world, chunkX, chunkZ, 0, 256, 1, 5, 35);
-		addOre(MBlocks.clay_light, Blocks.clay, random, world, chunkX, chunkZ, 0, 256, 1, 5, 35);
+		addOre(MBlocks.clay_dark, Blocks.clay, random, world, chunkX, chunkZ, 0, 256, 1, 5, 50);
+		addOre(MBlocks.clay_light, Blocks.clay, random, world, chunkX, chunkZ, 0, 256, 1, 5, 50);
 		addOre(MBlocks.ruby_ore, Blocks.stone, random, world, chunkX, chunkZ, 0, 35, 1, 8, 22);
 		//Stones
 		addOre(MBlocks.andesite, Blocks.stone, random, world, chunkX, chunkZ, 0, 256, 5, 15, 30);

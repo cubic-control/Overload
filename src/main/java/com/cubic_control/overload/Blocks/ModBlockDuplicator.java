@@ -28,8 +28,6 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ModBlockDuplicator extends BlockContainer{
-	public IIcon[] icons = new IIcon[6];
-	private String texture;
 	@SideOnly(Side.CLIENT)
     private IIcon blockIconTop;
     @SideOnly(Side.CLIENT)
@@ -38,6 +36,8 @@ public class ModBlockDuplicator extends BlockContainer{
     private IIcon blockIconBottom;
     @SideOnly(Side.CLIENT)
     private IIcon blockIconBack;
+    @SideOnly(Side.CLIENT)
+    private IIcon blockIconFlipped;
 
 	public ModBlockDuplicator(String name) {
 		super(Material.iron);
@@ -86,31 +86,55 @@ public class ModBlockDuplicator extends BlockContainer{
     }
 	@Override
 	public IIcon getIcon(int side, int meta) {
-	    return this.icons[side];
-		//return side == 1 ? this.blockIconTop : (side == 0 ? this.blockIconBottom : (side != meta ? this.blockIcon : this.blockIconFront));
+		if(side == 1){
+			return this.blockIconTop;
+		}else if(side == 0){
+			return this.blockIconBottom;
+		}else if(side == 2){
+			if(meta == 1){
+				return this.blockIconFront;
+			}else if(meta == 3){
+				return this.blockIconBack;
+			}else{
+				return this.blockIcon;
+			}
+		}else if(side == 3){
+			if(meta == 1){
+				return this.blockIconBack;
+			}else if(meta == 3){
+				return this.blockIconFront;
+			}else{
+				return this.blockIcon;
+			}
+		}else if(side == 4){
+			if(meta == 2){
+				return this.blockIconBack;
+			}else if(meta == 4){
+				return this.blockIconFront;
+			}else{
+				return this.blockIcon;
+			}
+		}else if(side == 5){
+			if(meta == 4){
+				return this.blockIconBack;
+			}else if(meta == 2){
+				return this.blockIconFront;
+			}else{
+				return this.blockIcon;
+			}
+		}else{
+			return null;
+		}
 	}
 	
 	@Override
 	public void registerBlockIcons(IIconRegister reg) {
-	    for(int i = 0; i < 6; i ++){
-	    	if(i == 0){
-	    		texture = "bottom";
-	    	}else if(i == 1){
-	    		texture = "top";
-	    	}else if(i == 2){
-	    		texture = "front";
-	    	}else if(i == 3){
-	    		texture = "back";
-	    	}else if(i == 4 || i == 5){
-	    		texture = "side";
-	    	}
-	        this.icons[i] = reg.registerIcon(this.textureName + "_" + texture);
-	    }
-	    //this.blockIcon = reg.registerIcon(this.getTextureName()+"_side");
-	    //this.blockIconFront = reg.registerIcon(this.getTextureName()+"_front");
-	    //this.blockIconTop = reg.registerIcon(this.getTextureName()+"_top");
-	    //this.blockIconBottom = reg.registerIcon(this.getTextureName()+"_bottom");
-	    //this.blockIconBack = reg.registerIcon(this.getTextureName()+"_back");
+	    this.blockIcon = reg.registerIcon(this.getTextureName()+"_side");
+	    this.blockIconFront = reg.registerIcon(this.getTextureName()+"_front");
+	    this.blockIconTop = reg.registerIcon(this.getTextureName()+"_top");
+	    this.blockIconBottom = reg.registerIcon(this.getTextureName()+"_bottom");
+	    this.blockIconBack = reg.registerIcon(this.getTextureName()+"_back");
+	    this.blockIconFlipped = reg.registerIcon(this.getTextureName()+"_side_flipped");
 	}
 	@Override
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int i4, float f1, float f2, float f3) {

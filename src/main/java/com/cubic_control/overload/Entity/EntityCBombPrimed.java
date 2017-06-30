@@ -67,6 +67,8 @@ public class EntityCBombPrimed extends Entity{
     }
 
     private void explode() {
+    	//TNT = 4.0F
+    	//C-Bomb was 120.0F
         float f = 120.0F + this.rand.nextFloat();
         this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, f, true);
     }

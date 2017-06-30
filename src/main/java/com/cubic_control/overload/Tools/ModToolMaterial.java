@@ -27,6 +27,7 @@ public class ModToolMaterial {
 	public static ToolMaterial nightmare_tools = EnumHelper.addToolMaterial("nightmare_tools", 1, 250, 4.3F, 1.5F, 50);
 	public static ToolMaterial sandstone_tools = EnumHelper.addToolMaterial("sandstone_tools", 1, 220, 4.4F, 1.4F, 50);
 	public static ToolMaterial marble_tools = EnumHelper.addToolMaterial("marble_tools", 1, 200, 4.5F, 1.5F, 50);
+	public static ToolMaterial granite_tools = EnumHelper.addToolMaterial("granite_tools", 1, 235, 4.7F, 1.1F, 50);
 	public static ToolMaterial slate_tools = EnumHelper.addToolMaterial("slate_tools", 1, 230, 4.49F, 1.49F, 50);
 	public static ToolMaterial red_sandstone_tools = EnumHelper.addToolMaterial("red_sandstone_tools", 1, 230, 4.45F, 1.45F, 50);
 	public static ToolMaterial rhyolite_tools = EnumHelper.addToolMaterial("rhyolite_tools", 1, 200, 4.35F, 1.45F, 50);
